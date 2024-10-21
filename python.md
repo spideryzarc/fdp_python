@@ -174,7 +174,7 @@ O índice [Tiobe](https://www.tiobe.com/tiobe-index/) é uma medida da popularid
 
 # Formas de Utilizar Python
 
-- **Iterativo**: **Shell** ou **Console**, os comandos são executados imediatamente.
+- **Interativo**: **Shell** ou **Console**, os comandos são executados imediatamente.
 - **Script**: Arquivo com extensão `.py` que contém um conjunto de instruções.
 - **Notebook**: Ambiente interativo que permite combinar texto, código e gráficos. (Jupyter, Google Colab, etc.)
 
