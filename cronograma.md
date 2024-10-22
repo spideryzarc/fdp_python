@@ -1,3 +1,17 @@
+---
+title: "Cronograma: Fundamentos de Programação"
+author: Albert E. F. Muritiba
+date: 22-02-2024
+output: pdf_document
+---
+
+# Identificação
+
+- **Curso**: Fundamentos de Programação
+- **Professor**: Albert E. F. Muritiba
+- **Período**: 2024.1
+- **Notas de Aula**: [slides](https://spideryzarc.github.io/fdp_python/python.html)
+
 # Cronograma do Curso de Fundamentos de Programação
 
 ## Semana 1: Primeiros Passos com Python
@@ -26,6 +40,8 @@
 - Introdução ao laço `for`.
 - Iteração em listas e strings com `for`.
 - Aplicação prática: cálculo de somatórios e manipulação de listas.
+
+## Avaliação 1: Prova 1
 
 ## Semana 6: Listas em Python
 - Estruturas de dados homogêneas: introdução a listas.
@@ -67,6 +83,8 @@
 - Manipulação de arquivos CSV.
 - Context manager (`with`) para controle de arquivos.
 
+## Avaliação 2: Prova 2
+
 ## Semana 14: Revisão e Projeto Intermediário
 - Revisão dos conceitos até aqui.
 - Projeto prático envolvendo estruturas de controle, funções e manipulação de dados.
@@ -89,3 +107,13 @@
 ## Semana 18: Projeto Final
 - Projeto integrador que envolva Python e C.
 - Manipulação de arquivos, uso de ponteiros, funções e estruturas de controle.
+
+
+# Avaliação
+
+- **Provas**: 40%
+- **Trabalhos Práticos**: 30%
+- **Projeto Final**: 30%
+
+
+

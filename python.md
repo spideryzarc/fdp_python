@@ -6,8 +6,8 @@ class: lead
 footer: "Lab. C.D. - Albert E. F. Muritiba"
 paginate: true
 backgroundColor: #d6e0e1
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
-# backgroundImage: url('bg/light_wall4.jpg')
+#backgroundImage: url('https://marp.app/assets/hero-background.svg')
+#backgroundImage: url('https://spideryzarc.github.io/labCD/bg/light_wall4.jpg')
 style: |
   .small{
     font-size: 0.75rem;
@@ -18,13 +18,13 @@ style: |
 # Deus é bom o tempo todo
 ---
 
-# Fundamentos de Programação em Python
+# Fundamentos de Programação (Python)
 
-> **Objetivo:** Apresentar os conceitos básicos de lógica de programação e suas aplicações em Python.
+> **Objetivo:** Apresentar os conceitos básicos de lógica de programação e suas aplicações em **Python**.
 
 ![bg vertical right:35% 80%](empty.svg)
 
-<!-- _backgroundImage: url('bg/light_desk.jpg') -->
+<!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/light_desk.jpg') -->
 
 ---
 
@@ -37,15 +37,19 @@ Se ele deixar a raposa junto com a ovelha, esta e comida. A ovelha, por sua vez,
 Quais passos o fazendeiro deve fazer para conseguir atravessar o rio sem perder os
 animais ou o feno?
 
+![bg right:40%](images/raposa.jpeg)
 
 ---
 
 # O Que é um Computador?
 
 * É uma máquina de fazer contas ?
-• É uma máquina de processar dados ?
-• É uma máquina inteligente ?
-• **É Mágica?**
+* É uma máquina de processar dados ?
+* É uma máquina inteligente ?
+* **É Mágica?**
+
+<!-- imagem de um computador mágico -->
+![bg right:53%](images/magica.jpeg)
 
 ---
 
@@ -53,7 +57,11 @@ animais ou o feno?
 
 Sua tarefa e projetar uma máquina que produza bolos de Maçãs.
 
-O que você precisa saber para projetar essa máquina?
+**O que você precisa saber para projetar essa máquina?**
+
+
+<!-- imagem de um bolo de maçã -->
+![bg right:40%](images/bolo.jpg)
 
 ---
 
@@ -61,32 +69,39 @@ O que você precisa saber para projetar essa máquina?
 
 ---
 
-- Você aprendeu a fazer um bolo de maçã.
-- Juntou seu diploma de engenharia e, depois de algumas tentativas, conseguiu fazer sua máquina de fazer bolos de maçã.
+* Você aprendeu a fazer um bolo de maçã.
+* Juntou seu diploma de engenharia e, depois de algumas tentativas, conseguiu fazer sua máquina de fazer bolos de maçã.
+* Sua maquina recebe maçãs açúcar, farinha, manteiga e canela. E produz bolos.     
+*  **Sucesso!!**
   
-Sua maquina recebe maçãs açúcar, farinha, manteiga e canela. E produz bolos. **Sucesso!!**
+
+![bg left:45%](images/maquina.jpeg)
 
 ---
 
-Mas o tempo da colheita de maçãs acabou e agora você precisa fazer bolos de **pera**.
+Mas o tempo da colheita de maçãs acabou e agora você precisa fazer bolos de **abacaxi**.
 
 **O que você faz?**
 
-- Coloca peras na máquina e vê o que acontece?
+- Coloca abacaxis na máquina e vê o que acontece?
 - Desmonta a máquina e tenta fazer outra?
 - Projeta e constrói uma nova máquina?
 - Outra coisa?
+
+<!-- imagem de um bolos de abacaxi -->
+![bg right:40%](images/bolo_abacaxi.jpeg)
 
 ---
 
 # E se ...
 
-Você inventasse uma máquina que pudesse receber os **ingredientes** e a **receita** e produzir o bolo?
+Você inventasse uma máquina que pudesse receber os **ingredientes** e a **receita** e produzir o bolo seguindo a receita?
+
+* Nesta maquina, você deve fornecer os ingredientes e a receita.
+* **Não** é uma máquina de fazer bolos de maçã ou de abacaxi.
 
 ---
 
-Nesta maquina, você deve fornecer os ingredientes e a receita.
-- Não é uma máquina de fazer bolos de maçã ou pera,
 
 ##### <!--fit--> É uma máquina de executar receitas!
 
@@ -108,7 +123,7 @@ Nesta maquina, você deve fornecer os ingredientes e a receita.
 - A **receita** é o **algoritmo** ou **programa**.
 - A **saída** é o bolo.
 
-> Programar é saber **escrever a receita** para que a **máquina** possa produzir o **bolo**.
+##### <!--fit --> Saber **programar** é saber **escrever a receita** para <br> a **máquina** que faz o **bolo**.
 
 
 ---
@@ -116,6 +131,9 @@ Nesta maquina, você deve fornecer os ingredientes e a receita.
 # Python
 
 Neste curso, vamos aprender a **programar** em **Python**, em seguida, aprenderemos um pouco de **C**.
+
+
+![bg right:40% 50%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png)
 
 ---
 
@@ -273,4 +291,33 @@ Seja curioso!
 - O que acontece se você colocar uns espaços a mais?
 
 > O que afeta a **sintaxe** e o que afeta a **semântica**?
+
+---
+
+# Atribuição de Variáveis
+
+As variáveis são abstrações que representam valores armazenados na memória de trabalho do computador (RAM).
+
+```python
+mensagem = "Hello, World!"
+x = 10
+y = 3.14
+print(mensagem, x, y)
+>> Hello, World! 10 3.14
+```
+> No Python, basta **atribuir** um valor a uma variável para criá-la.
+
+---
+
+## Identificadores
+
+- **Identificador**: Nome dado a uma variável, função, classe, módulo, etc.
+- **Regras**:
+  - Deve começar com uma letra ou `_`.
+  - Pode conter letras, números e `_`.
+  - Não pode conter espaços ou caracteres especiais.
+  - **Case-sensitive** (diferencia maiúsculas de minúsculas).
+  
+> Embora seja possível usar acentos e caracteres especiais, **não é recomendado**.	
+
 ---
