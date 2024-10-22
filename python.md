@@ -83,10 +83,10 @@ Mas o tempo da colheita de maçãs acabou e agora você precisa fazer bolos de *
 
 **O que você faz?**
 
-- Coloca abacaxis na máquina e vê o que acontece?
-- Desmonta a máquina e tenta fazer outra?
-- Projeta e constrói uma nova máquina?
-- Outra coisa?
+* Coloca abacaxis na máquina e vê o que acontece?
+* Desmonta a máquina e tenta fazer outra?
+* Projeta e constrói uma nova máquina?
+* Outra coisa?
 
 <!-- imagem de um bolos de abacaxi -->
 ![bg right:40%](images/bolo_abacaxi.jpeg)
@@ -229,6 +229,38 @@ print("Hello, World!")
 
 ---
 
+Num **script** Python, você pode escrever várias instruções, uma após a outra.
+
+```python 
+print("Hello, World!")
+print("Python é legal!")
+print("Vamos aprender a programar!")
+>>
+Hello, World!
+Python é legal!
+Vamos aprender a programar!
+```
+
+As instruções são executadas **sequencialmente**, de cima para baixo.
+
+---
+## Regras Básicas
+
+- As instruções devem estar **alinhadas**.
+
+  ```python
+  print("Hello, World!")
+    print("Esta instrução está errada!")
+  ```
+
+- **Duas instruções** não podem estar na mesma linha.
+  
+  ```python
+  print("Hello, World!") print("Esta instrução está errada!")
+  ```
+ 
+---
+
 # Conceitos Básicos de Programação
 
 - **Saída**: Exibir dados para o usuário.
@@ -244,14 +276,13 @@ print("Hello, World!")
 
 # Sintaxe vs Semântica
 
-- **Sintaxe**: Conjunto de regras que definem a estrutura de um programa (gramática).
-- **Semântica**: Significado das instruções e como elas são executadas.
+* **Sintaxe**: Conjunto de regras que definem a estrutura de um programa (gramática).
+* **Semântica**: Significado das instruções e como elas são executadas.
 
-Um programa com erro de sintaxe não é executado. 
-Um programa com erro de semântica é executado, mas produz resultados incorretos.
+Um programa com **erro de sintaxe não é executado**. 
+Um programa com** erro de semântica** é executado, mas produz **resultados incorretos**.
 <br>
-> Toda linguagem tem uma gramática formalizada, mas nós não aprendemos assim. 
-> Nós aprendemos a falar **errando** e **corrigindo** (por exemplo, quando crianças).
+> Embora material descreva algumas regras de sintaxe explicitamente, a maioria das regras acaba sendo aprendida de forma implícita, com a **prática**.
 
 ---
 
@@ -261,8 +292,10 @@ Um programa com erro de semântica é executado, mas produz resultados incorreto
 
 ```python
 print("Hello, World!")
->> Hello, World!
+>> 
+Hello, World!
 ```
+
 
 ---
 
@@ -303,9 +336,10 @@ mensagem = "Hello, World!"
 x = 10
 y = 3.14
 print(mensagem, x, y)
->> Hello, World! 10 3.14
+>> 
+Hello, World! 10 3.14
 ```
-> No Python, basta **atribuir** um valor a uma variável para criá-la.
+> No Python, basta **atribuir** um valor a um **identificador** para criar uma variável.
 
 ---
 
