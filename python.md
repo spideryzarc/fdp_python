@@ -173,12 +173,12 @@ O índice [Tiobe](https://www.tiobe.com/tiobe-index/) é uma medida da popularid
 
 ## Por que Python?
 
-- **Simples e Fácil de Aprender**
-- **Versátil e Poderoso**
-- **Comunidade Ativa**
-- **Grande Biblioteca Padrão**
-- **Open Source**
-- **Multiplataforma**
+* **Simples e Fácil de Aprender**
+* **Versátil e Poderoso**
+* **Comunidade Ativa**
+* **Grande Biblioteca Padrão**
+* **Open Source**
+* **Multiplataforma**
 
 ---
 
@@ -220,16 +220,18 @@ Em caso de dúvidas, há uma infinidade de tutoriais na internet.
 
 # Primeiro Programa em Python
 
+Crie um arquivo chamado `aula1.py` e adicione o seguinte código:
+
 ```python
 print("Hello, World!")
 ```
 
 > **print()**: Função que exibe uma mensagem na tela. [doc](https://docs.python.org/3/library/functions.html#print)
-
+> Os arquivos `.py` são chamados de **scripts** e são simplesmente arquivos de texto plenos.
 
 ---
 
-Num **script** Python, você pode escrever várias instruções, uma após a outra.
+Num *script* Python, você pode escrever várias instruções, uma após a outra.
 
 ```python 
 print("Hello, World!")
@@ -263,12 +265,12 @@ As instruções são executadas **sequencialmente**, de cima para baixo.
 
 # Conceitos Básicos de Programação
 
-- **Saída**: Exibir dados para o usuário.
-- **Entrada**: Receber dados do usuário.
-- **Atribuição**: Armazenar dados em variáveis e realizar operações.
-- **Seleção**: Tomar decisões com base em condições.
-- **Repetição**: Executar um bloco de código várias vezes.
-- **Funções**: Agrupar instruções em um bloco reutilizável.
+* **Saída**: Exibir dados para o usuário.
+* **Atribuição**: Armazenar dados em variáveis e realizar operações.
+* **Entrada**: Receber dados do usuário.
+* **Seleção**: Tomar decisões com base em condições.
+* **Repetição**: Executar um bloco de código várias vezes.
+* **Funções**: Agrupar instruções em um bloco reutilizável.
 
 > Vamos aprender cada um desses conceitos ao longo do curso.
 
@@ -280,7 +282,7 @@ As instruções são executadas **sequencialmente**, de cima para baixo.
 * **Semântica**: Significado das instruções e como elas são executadas.
 
 Um programa com **erro de sintaxe não é executado**. 
-Um programa com** erro de semântica** é executado, mas produz **resultados incorretos**.
+Um programa com **erro de semântica** é executado, mas produz **resultados incorretos**.
 <br>
 > Embora material descreva algumas regras de sintaxe explicitamente, a maioria das regras acaba sendo aprendida de forma implícita, com a **prática**.
 
@@ -302,11 +304,13 @@ Hello, World!
 ```python
 print("Hello, World!")
 ```
+<br>
 
-- Essa estrutura é chamada de **comando** ou **instrução**.
-- O texto entre aspas é chamado de **string**.
-- Os elementos entre parênteses são chamados de **argumentos** ou **parâmetros**.
-- Neste caso, a instrução é o chamado a uma **função**.
+* Essa estrutura é chamada de **comando** ou **instrução**.
+* `print` é uma **função** que exibe uma mensagem na tela.
+* O texto entre aspas é chamado de **string**.
+* Os elementos entre parênteses são chamados de **argumentos** ou **parâmetros**.
+<br><br>
 
 > Aprenderemos a fazer nossas próprias funções mais adiante. Por enquanto, vamos aprender a reconhecê-las por seus parênteses.
 
@@ -315,7 +319,7 @@ print("Hello, World!")
 ```python
 print("Hello, World!")
 ```
-Seja curioso! 
+**Seja curioso**, você **não** tem capacidade de **quebrar** o computador. Experimente!
 - O que acontece se você remover as aspas?
 - O que acontece se você remover os parênteses?
 - O que acontece se você remover a palavra `print`?
@@ -351,7 +355,331 @@ Hello, World! 10 3.14
   - Pode conter letras, números e `_`.
   - Não pode conter espaços ou caracteres especiais.
   - **Case-sensitive** (diferencia maiúsculas de minúsculas).
-  
+<br>
 > Embora seja possível usar acentos e caracteres especiais, **não é recomendado**.	
 
 ---
+
+## Tipos de Dados
+
+* Associado a cada variável, existe um **tipo de dado** que determina o que a variável pode armazenar.
+* Na maioria das vezes, nós não precisamos nos preocupar com isso, pois o Python é uma linguagem **dinamicamente tipada**.
+* Ou seja, o Python **infere** o tipo de dado automaticamente.
+* Uma variável **pode mudar de tipo** ao longo do programa.
+* Os tipos definem as **operações** que podem ser realizadas com os dados.
+
+---
+
+### Tipos Básicos
+
+- Numéricos:
+  - **int**: Números inteiros.
+  - **float**: Números de ponto flutuante.
+  - **complex**: Números complexos.
+- **str**: Sequência de caracteres (*string*).
+- **bool**: Valores lógicos (*True* ou *False*).
+- **None**: Valor nulo.
+<br>
+>Obs.: Existem outros tipos de dados mais complexos, como listas, tuplas, dicionários, conjuntos, etc.
+
+
+---
+
+#### Inteiros
+
+Valores inteiros, positivos ou negativos.
+
+* Exemplo de literais inteiros:
+  ```python
+  x = 10
+  y = -5
+  z = 0
+  w = int("10")
+  ```
+* Inteiros muito grandes podem ser representados sem problemas.
+  ```python
+  x = 1234567890123456789012345678901234567890
+  ```
+* Separadores de milhares são permitidos.
+  ```python
+  x = 1_000_000
+  ```
+
+---
+
+#### Ponto Flutuante
+
+* Ponto flutuante (*float*) é forma que o computador **emula** números reais.
+* Computadores não podem representar todos os números reais, pois é uma máquina **finita**.
+* Por isso, números de ponto flutuante são **aproximações**.
+* Exemplo de ponto flutuante:
+  ```python
+  x = 3.14
+  y = -0.5
+  z = 35e-3
+  w = float("3.14")
+  ```
+
+---
+
+#### Complexos
+
+* Números complexos são da forma `a + bj`, onde `a` e `b` são números reais e `j` é a unidade imaginária.
+  $$ j^2 = -1 $$
+* Exemplo de complexos:
+  ```python
+  x = 3 + 4j
+  y = 1 - 2j
+  z = complex(2, -3)
+  w = complex("5-6j")
+  ```
+
+---
+
+### Operações Aritméticas
+
+- **Adição**: `+`
+- **Subtração**: `-`
+- **Multiplicação**: `*`
+- **Divisão**: `/`
+- **Divisão Inteira**: `//`
+- **Resto da Divisão**: `%`
+- **Exponenciação**: `**`
+
+
+---
+
+### Divisão
+
+- A **divisão** em Python é um pouco diferente.
+- O operador `/` sempre retorna um número de ponto flutuante.
+- Para obter a parte inteira da divisão, use `//`.
+
+```python
+10 / 3
+>> 3.3333333333333335
+10 // 3
+>> 3
+```
+
+---
+
+### Resto da Divisão
+
+- O operador `%` retorna o **resto** da divisão.
+- Também conhecido como **módulo** ou **mod**.
+
+```python
+10 % 3
+>> 1
+-10 % 3
+>> 2
+```
+
+> Quando o dividendo é negativo, o sinal do resto é o mesmo do divisor. 
+> $$ -10 = 3 \times (-4) + 2 $$ 
+
+---
+
+### Teste Surpresa
+
+Responda sem executar o código.
+
+```python
+x = 3
+y = x % 2
+z = y % 2
+print(z)
+>>
+?????
+```
+
+---
+
+### Exponenciação
+
+- O operador `**` realiza a exponenciação.
+  $$ 2^3 = 8 $$
+
+```python
+2 ** 3
+>> 8
+```
+- Para raízes, use a exponenciação fracionária.
+  $$ \sqrt{9} = 9^{1/2} = 3 $$
+
+```python
+9 ** 0.5
+>> 3.0
+```
+
+---
+
+### Ordem de Precedência
+
+- **Parênteses** `()`
+- **Exponenciação** `**`
+- **Multiplicação** `*`, **Divisão** `/`, **Divisão Inteira** `//`, **Resto da Divisão** `%`
+- **Adição** `+`, **Subtração** `-`
+- **Mesma precedência**: da esquerda para a direita.
+<br>
+> Na dúvida, use **parênteses**!
+
+---
+
+### Uso dos Parênteses
+
+* Ao contrário da algebra, as linguagens de programação costumam permitir **apenas** o uso de **parênteses**.
+* Colchetes `[]` e chaves `{}` são usados para **outras finalidades**.
+
+$$ 5 \times \frac{\frac{3}{5+3}} {2^3} $$
+
+```python
+5 * (3 / (5 + 3)) / 2 ** 3
+>> 0.234375
+```
+Na dúvida, use **parênteses**!
+```python
+5 * ((3 / (5 + 3)) /(2 ** 3))
+>> 0.234375
+```
+
+---
+
+## Tipo Lógico (Booleano)
+
+- **bool**: Tipo de dado que representa valores lógicos.
+- Pode ser **True** ou **False**.
+
+```python
+x = True
+y = False
+z = bool("True")
+w = bool(0)
+```
+
+---
+
+### Operadores Lógicos (`not`, `and`, `or`)
+
+- `not`: Negação lógica. Inverte o valor.
+
+| `x` | `not x` |
+|-----|---------|
+| True | False |
+| False | True |
+
+```python	
+x = True
+y = not x
+print(y)
+>> False
+```
+
+---
+
+- `and`: Conjunção lógica. Equivale a **E** da lógica proposicional.
+
+
+| `x` | `y` | `x and y` |
+|-----|-----|-----------|
+| True | True | True |
+| True | False | False |
+| False | True | False |
+| False | False | False |
+
+```python
+x = True
+y = False
+z = x and y
+print(z)
+>> False
+```
+
+---
+
+- `or`: Disjunção lógica. Equivale a **OU** da lógica proposicional.
+
+| `x` | `y` | `x or y` |
+|-----|-----|----------|
+| True | True | True |
+| True | False | True |
+| False | True | True |
+| False | False | False |
+
+```python
+x = True
+y = False
+z = x or y
+print(z)
+>> True
+```
+
+---
+
+### Operadores Relacionais
+
+**Operadores relacionais** comparam dois valores e retornam um valor lógico.
+
+- **Igualdade**: `==`
+- **Diferença**: `!=`
+- **Maior que**: `>`
+- **Menor que**: `<`
+- **Maior ou igual**: `>=`
+- **Menor ou igual**: `<=`
+
+```python
+x = 10
+y = 5
+z = x > y
+print(z)
+>> True
+```
+
+---
+
+### Teste Surpresa
+
+Responda sem executar o código.
+
+```python
+x = 3
+y = 5
+z = x == y
+w = x != y
+print(z, w)
+>>
+?????
+```
+
+---
+
+### Observações sobre Operadores Relacionais
+
+- **Igualdade**: `==` (dois sinais de igual).
+- **Atribuição**: `=` (um sinal de igual).
+
+Uma boa prática é *ler* `==` como **igual a**, e `=` como **recebe**.
+
+Exemplo:
+```python
+x = 10
+```
+Lê-se: **x recebe 10**.
+
+---
+
+### Outra Observação
+
+**Não é comum em outras linguagens**, mas em Python é possível **encadear** operadores relacionais.
+
+```python
+x = 10
+y = 0 < x < 20
+print(y)
+>> True
+```
+
+---
+
+
