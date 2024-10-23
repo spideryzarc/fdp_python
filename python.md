@@ -3,7 +3,7 @@ marp: true
 title: "Fundamentos de Programação em Python"
 theme: default
 class: lead
-footer: "Lab. C.D. - Albert E. F. Muritiba"
+footer: "FdP - Albert E. F. Muritiba"
 paginate: true
 backgroundColor: #d6e0e1
 #backgroundImage: url('https://marp.app/assets/hero-background.svg')
@@ -25,7 +25,7 @@ style: |
 ![bg vertical right:35% 80%](empty.svg)
 
 <!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/light_desk.jpg') -->
-
+<!-- _footer: "" -->
 ---
 
 # Raposa
@@ -319,7 +319,8 @@ print("Hello, World!")
 ```python
 print("Hello, World!")
 ```
-**Seja curioso**, você **não** tem capacidade de **quebrar** o computador. Experimente!
+**Seja curioso!** Você **não** tem capacidade de **quebrar o computador programando. 
+### Experimente!
 - O que acontece se você remover as aspas?
 - O que acontece se você remover os parênteses?
 - O que acontece se você remover a palavra `print`?
@@ -400,7 +401,7 @@ Valores inteiros, positivos ou negativos.
   ```python
   x = 1234567890123456789012345678901234567890
   ```
-* Separadores de milhares são permitidos.
+* Você pode usar `_` para separar os dígitos.
   ```python
   x = 1_000_000
   ```
