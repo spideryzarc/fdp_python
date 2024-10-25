@@ -683,4 +683,319 @@ print(y)
 
 ---
 
+# Entrada de Dados
+
+- **input()**: Recebe uma entrada do usuário.
+- **Retorna** uma **string**.
+- **Exemplo**:
+  ```python
+  nome = input("Digite seu nome: ")
+  print("Olá,", nome)
+  ```
+
+---
+
+## Conversão de Tipos
+
+Devemos **converter** a entrada para o tipo desejado, se necessário.
+
+- **int()**: Converte para inteiro.
+- **float()**: Converte para ponto flutuante.
+
+```python
+x = input("Digite um número: ")
+y = int(x)
+print(y + 1)
+```
+
+---
+
+##### O programa abaixo está correto?
+
+O programa abaixo deve ler um número digitado pelo usuário e exibir o dobro desse número.
+
+```python
+x = input("Digite um número: ")
+y = x * 2
+print(y)
+```
+- A saída é o dobro do número digitado?
+- Ou a saída é o número digitado duas vezes?
+- Por que isso acontece?
+
+
+--- 
+
+# Exercícios, escreva um programa que:
+
+1. exiba a mensagem "Hello, World!".
+2. calcule e imprima a área de um círculo de raio 5.
+3. leia um número inteiro e exiba o seu sucessor e antecessor.
+4. leia uma temperatura em Celsius e exiba a temperatura em Fahrenheit.
+5. leia um peso e uma altura e exiba o IMC.
+6. leia um número e exiba o seu quadrado, cubo e raiz quadrada.
+7. leia um valor inteiro e exiba a sua decomposição em centenas, dezenas e unidades (use as operações de divisão e módulo).
+8. leia um quantidade de segundos e exiba o tempo em horas, minutos e segundos (use as operações de divisão e módulo).
+9. leia três valores e exiba a média aritmética.
+  
+
+---
+
+## Tipo *String*
+
+- `str`: Sequência de caracteres.
+- **Literais**:
+  - Aspas duplas: `"Hello, World!"`
+  - Aspas simples: `'Hello, World!'`
+  - Aspas triplas: `'''Hello, World!'''` ou `"""Hello, World!"""`
+- **Operações**: Concatenação `+`, Repetição `*`.
+
+> Veremos bem mais sobre *strings* em aulas futuras, por enquanto, vamos focar em **números**.
+
+---
+
+# Comentários
+
+- **Comentários** são trechos de texto ignorados pelo interpretador.
+- São utilizados para **documentar** o código.
+- As vezes, são utilizados para **desativar** trechos de código para **depuração**.
+- Em Python, os comentários são iniciados com `#`.
+
+```python
+# Este é um comentário
+print("Hello, World!")  # Este é outro comentário
+```
+
+> Tudo após o `#` é ignorado pelo interpretador.
+
+---
+
+## Comentários de Múltiplas Linhas
+
+- Python não possui um **comentário de múltiplas linhas**,
+- mas é possível utilizar **strings de múltiplas linhas**.
+
+```python
+"""
+Este é um comentário
+de múltiplas linhas.
+"""
+print("Hello, World!")
+```
+
+> As strings de múltiplas linhas são **ignoradas** pelo interpretador, já que não são **atribuídas** a nenhuma variável.
+
+---
+
+# Seleção 
+
+- **Seleção** é a capacidade de **tomar decisões** com base em **condições**.
+- **Condição**: Expressão que retorna um valor lógico.
+- **Estrutura de Seleção**:
+  ```python
+  if condicao:
+      # bloco de código
+  ```
+
+---
+
+## Estrutura `if`
+
+- Se a **condição** for verdadeira, o **bloco de código** é executado.
+- Se a **condição** for falsa, o **bloco de código** é ignorado.
+
+```python
+x = 10
+if x > 5:
+    print("x é maior que 5")
+print("Fim")
+```
+
+---
+
+## Bloco de Código
+
+Antes de continuar, vamos falar sobre **bloco de código**.
+
+- Um **bloco de código** é um conjunto de instruções **alinhadas**.
+- O **alinhamento** é feito com **espaços** ou **tabulações**. (Dê preferência a **tabulações**).
+- Ao contrário de outras linguagens, Python **não** possui **delimitadores de bloco** (como `{}` nas linguagens C-like).
+- Portanto, o **alinhamento** é **obrigatório** e interfere na **semântica** do código.
+
+---
+
+## Exemplo de Bloco de Código
+
+```python
+x = 10
+if x > 5:
+    print("x é maior que 5")
+    print("Isso está dentro do bloco")
+print("Isto não está no bloco")
+```
+Blocos aninhados:
+```python
+x = 10
+if x > 5:
+    print("x é maior que 5")
+    if x > 8:
+        print("x é maior que 8")
+        if x < 15:
+            print("x é menor que 15")
+print("Fim")
+```
+
+---
+
+# Exemplos Errados
+
+```python
+if x > 5:
+print("x é maior que 5")
+```
+```python
+if x > 5:
+    print("x é maior que 5")
+  print("Isso está errado")
+```
+```python
+if x > 5:
+print("x é maior que 5")
+  print("Isso está errado")
+```
+
+---
+
+- Um comando na mesma linha é permitido, desde que seja **uma única instrução**.
+
+```python
+if x > 5: print("x é maior que 5")
+```
+
+- Um bloco vazio pode ser representado por `pass`.
+
+```python
+if x > 5:
+    pass
+print("Fim")    
+```
+
+---
+
+## Estrutura `if-else`
+
+- Se a **condição** for verdadeira, somente o **bloco de código 1** é executado.
+- Se a **condição** for falsa, somente o **bloco de código 2** é executado.
+
+```python
+if condicao:
+    # bloco de código 1
+else:
+    # bloco de código 2
+```
+
+---
+
+## Exemplo de `if-else`
+
+```python
+x = 10
+if x > 5:
+    print("x é maior que 5")
+else:
+    print("x é menor ou igual a 5")
+print("Fim")
+```
+
+---
+
+## Estrutura `if-elif-else`
+
+- Devido a exigência de identação do Python, muitos se e senão aninhados podem tornar o código difícil de ler.
+```python	
+if condicao1:
+    # bloco de código 1
+else:
+    if condicao2:
+        # bloco de código 2
+    else:
+        if condicao3:
+            # bloco de código 3
+        else:
+            if condicao4:
+                # bloco de código 4
+            else:
+                if condicao5:
+                    # bloco de código 5
+                else:
+                    # bloco de código 6
+```
+
+---
+
+- Para resolver isso, o Python possui a estrutura `elif`.
+- `elif` é uma abreviação de **else if**.
+
+```python
+if condicao1:
+    # bloco de código 1
+elif condicao2:
+    # bloco de código 2
+elif condicao3:
+    # bloco de código 3
+elif condicao4:
+    # bloco de código 4
+elif condicao5:
+    # bloco de código 5
+else:
+    # bloco de código 6  
+```
+
+> Há uma outra estrutura chamada `match-case` que é mais recente e mais poderosa, mas não vamos abordá-la mais a frente.
+
+---
+
+## Exemplo de `if-elif-else`
+
+```python
+nota = float(input("Digite a nota: "))
+if nota >= 7:
+    print("Aprovado")
+elif nota >= 5:
+    print("Recuperação")
+else:
+    print("Reprovado")
+```
+
+---
+
+# Exercícios, escreva um programa que:
+
+1. leia um número e exiba se ele é par ou ímpar.
+2. leia um número e exiba se ele é positivo, negativo ou zero.
+3. leia três números e exiba o maior e o menor.
+4. leia os valores de `a`, `b` e `c` e exiba as raízes da equação de segundo grau ($ax^2+bx+c=0$).
+5. leia três valores e exiba se eles podem formar um triângulo. Caso positivo, exiba o tipo de triângulo (equilátero, isósceles ou escaleno). Dica: para formar um triângulo, a soma de dois lados menores deve ser maior que o terceiro lado.
+6. leia três valores e exiba a mediana.
+
+---
+
+6. leia o peso e a altura e exiba a classificação do IMC, conforme a tabela abaixo:
+
+| IMC | Classificação |
+|-----|---------------|
+| < 18.5 | Abaixo do peso |
+| 18.5 - 25 | Peso normal |
+| 25 - 30 | Sobrepeso |
+| 30 - 35 | Obesidade grau 1 |
+| 35 - 40 | Obesidade grau 2 |
+| >= 40 | Obesidade grau 3 |
+
+---
+
+# Repetição
+
+- **Repetição** é a capacidade de **executar um bloco de código várias vezes**.
+
+
 
