@@ -3,7 +3,7 @@ marp: true
 title: "Fundamentos de Programação em Python"
 theme: default
 class: lead
-footer: "FdP - Albert E. F. Muritiba"
+footer: "F.P. - Albert E. F. Muritiba"
 paginate: true
 backgroundColor: #d6e0e1
 #backgroundImage: url('https://marp.app/assets/hero-background.svg')
@@ -565,10 +565,10 @@ w = bool(0)
 
 - `not`: Negação lógica. Inverte o valor.
 
-| `x` | `not x` |
-|-----|---------|
-| True | False |
-| False | True |
+| `x`   | `not x` |
+| ----- | ------- |
+| True  | False   |
+| False | True    |
 
 ```python	
 x = True
@@ -582,12 +582,12 @@ print(y)
 - `and`: Conjunção lógica. Equivale a **E** da lógica proposicional.
 
 
-| `x` | `y` | `x and y` |
-|-----|-----|-----------|
-| True | True | True |
-| True | False | False |
-| False | True | False |
-| False | False | False |
+| `x`   | `y`   | `x and y` |
+| ----- | ----- | --------- |
+| True  | True  | True      |
+| True  | False | False     |
+| False | True  | False     |
+| False | False | False     |
 
 ```python
 x = True
@@ -601,12 +601,12 @@ print(z)
 
 - `or`: Disjunção lógica. Equivale a **OU** da lógica proposicional.
 
-| `x` | `y` | `x or y` |
-|-----|-----|----------|
-| True | True | True |
-| True | False | True |
-| False | True | True |
-| False | False | False |
+| `x`   | `y`   | `x or y` |
+| ----- | ----- | -------- |
+| True  | True  | True     |
+| True  | False | True     |
+| False | True  | True     |
+| False | False | False    |
 
 ```python
 x = True
@@ -931,6 +931,8 @@ else:
                     # bloco de código 6
 ```
 
+<!-- _footer: '' -->
+
 ---
 
 - Para resolver isso, o Python possui a estrutura `elif`.
@@ -977,25 +979,380 @@ else:
 4. leia os valores de `a`, `b` e `c` e exiba as raízes da equação de segundo grau ($ax^2+bx+c=0$).
 5. leia três valores e exiba se eles podem formar um triângulo. Caso positivo, exiba o tipo de triângulo (equilátero, isósceles ou escaleno). Dica: para formar um triângulo, a soma de dois lados menores deve ser maior que o terceiro lado.
 6. leia três valores e exiba a mediana.
+7. Um ano é bissexto se for divisível por 4, exceto os anos que são divisíveis por 100 mas não por 400. Leia um ano e exiba se ele é bissexto.
 
 ---
 
 6. leia o peso e a altura e exiba a classificação do IMC, conforme a tabela abaixo:
 
-| IMC | Classificação |
-|-----|---------------|
-| < 18.5 | Abaixo do peso |
-| 18.5 - 25 | Peso normal |
-| 25 - 30 | Sobrepeso |
-| 30 - 35 | Obesidade grau 1 |
-| 35 - 40 | Obesidade grau 2 |
-| >= 40 | Obesidade grau 3 |
+| IMC       | Classificação    |
+| --------- | ---------------- |
+| < 18.5    | Abaixo do peso   |
+| 18.5 - 25 | Peso normal      |
+| 25 - 30   | Sobrepeso        |
+| 30 - 35   | Obesidade grau 1 |
+| 35 - 40   | Obesidade grau 2 |
+| >= 40     | Obesidade grau 3 |
 
 ---
 
 # Repetição
 
-- **Repetição** é a capacidade de **executar um bloco de código várias vezes**.
+- **Repetição** ou *loop* é a capacidade de **executar um bloco de código várias vezes**.
+- *Python* possui **duas** estruturas de repetição: `while` e `for`.
+- É uma das características **mais importantes** da programação, já que computadores são muito **bons em repetir** tarefas.
+
+
+---
+
+## Estrutura `while`
+
+- **Enquanto** a **condição** for verdadeira, o **bloco de código** é executado.
+- Útil quando o número de repetições é **desconhecido**.
+- **Sintaxe**:
+  ```python
+  while condicao:
+      # bloco de código
+  ```
+
+---
+
+## Exemplo de `while`
+
+```python
+senha = "1234"
+tentativa = input("Digite a senha: ")
+while tentativa != senha:
+    print("Senha incorreta")
+    tentativa = input("Digite a senha: ")
+print("Senha correta")
+```
+
+<br>
+
+> Chamamos a variável associada à condição de **variável de controle**.
+
+---
+
+## Exemplo de `while`
+
+```python
+x = 1
+while x <= 10:
+    print(x)
+    x = x + 1
+```
+
+> Chamamos `x = x + 1` de **incremento**.
+
+---
+
+## *Loop* Infinito
+
+- Se a **condição** nunca se tornar **falsa**, o **loop** é **infinito**.
+- Um programa com um **loop infinito** **nunca termina**.
+- **Ctrl+C** interrompe a execução de um programa em **loop infinito** no terminal.
+
+```python
+x = int(input("Digite um número: "))
+while x != 10:
+    print(x)
+    x = x + 1
+```
+
+> O que acontece se você executar esse código?
+
+---
+
+## Algoritmos Elementares em *Loop*
+
+Para efeitos **didáticos**, vamos utilizar a **leitura de um número inteiro** para exemplificar algoritmos elementares. Quando o valor lido for 0, o *loop* **termina**.  
+
+- **Máximo ou Mínimo**: Encontrar o maior ou menor valor de uma sequência.
+
+```python
+x = int(input("Digite um número: "))
+maior = x #inicializa a variável com o primeiro valor
+while x != 0:
+    if x > maior: maior = x #atualiza o maior valor se necessário
+    x = int(input("Digite um número: "))
+print("Maior:", maior)
+```
+
+> Modifique o código para encontrar o **menor** valor.
+
+---
+
+- **Contagem**: Contar quantos elementos de uma sequência satisfazem uma condição.
+
+```python 
+x = int(input("Digite um número: "))
+cont = 0 #inicializa a variável com zero
+while x != 0:
+    if x % 2 == 0: cont = cont + 1 #incrementa o contador se o número for par
+    x = int(input("Digite um número: "))
+print("Quantidade de pares:", cont)
+```
+
+> Modifique o código para contar a quantidade de **ímpares**.
+
+---
+
+- **Soma ou Produto**: Calcular a soma ou o produto de uma sequência.
+
+```python
+x = int(input("Digite um número: "))
+soma = 0 #inicializa a variável com o elemento neutro da soma
+while x != 0:
+    soma = soma + x #incrementa a soma com o valor lido
+    x = int(input("Digite um número: "))
+print("Soma:", soma)
+```
+
+> Modifique o código para calcular o **produto**.
+
+---
+
+## Alguns Comentários
+
+* **Variáveis de controle** devem ser **inicializadas** antes do *loop*.
+* Algumas pessoas podem ter dificuldade com a utilização de *loops*.
+* **Prática** é a melhor forma de aprender a utilizá-los.
+* **Erros** são **normais** e **esperados**.
+  > Um quadro não é pintado linearmente, mas sim em camadas. Um livro não é escrito linearmente, mas sim em rascunhos e revisões. 
+  **Um programa não é escrito linearmente, mas sim em testes e correções.**
+
+---
+
+## *Loop Invariant*
+
+É um conceito **avançado**, mas que pode ajudar a entender o que um *loop* faz ou se ele está correto.
+
+- **Invariante**: Propriedade que é **verdadeira** antes e depois de cada **iteração**.
+- **Exemplo**:
+  ```python
+  soma = 0
+  x = 1
+  while x <= 10:
+      soma = soma + x
+      x = x + 1
+  print(soma)
+  ```
+  >**Invariante**: no fim de cada iteração, `soma` é a soma dos `x` primeiros números naturais.
+   
+
+---
+
+### **Exercício de Fixação:** Utilizando o `while` faça um programa que:
+
+1. Leia um número e exiba a tabuada de multiplicação desse número.
+2. Leia um número e exiba todos os pares de 0 até esse número.
+3. Leia um número e exiba todos os divisores desse número.
+4. Leia um número e exiba quantos divisores ele possui.
+5. Leia um número e diga se ele é primo ou não.
+
+
+---
+
+## Estrutura `for`
+
+- **Para cada** elemento de uma sequência, o **bloco de código** é executado.
+- Útil quando o número de repetições é **conhecido**.
+- **Sintaxe**:
+  ```python
+  for variavel in sequencia:
+      # bloco de código
+  ```
+
+---
+
+## Exemplo de `for`
+
+```python
+for x in range(10):
+    print(x)
+>>
+0
+1
+2
+...
+9
+```
+
+---
+
+## Função `range()`
+
+- **range()**: Gera uma sequência de números.
+- **Sintaxe:Semântica**:
+  - `range(stop)`: Gera números de `0` até `stop - 1`.
+  - `range(start, stop)`: Gera números de `start` até `stop - 1`.
+  - `range(start, stop, step)`: Gera números de `start` até `stop - 1` com incremento `step`.
+
+---
+
+## Exemplo de `range()`
+
+```python
+for x in range(1, 10, 2):
+    print(x)
+>>
+1
+3
+5
+7
+9
+```
+---
+
+## Função `range()` com Incremento Negativo
+
+- **Sintaxe:Semântica**:
+  - `range(start, stop, -step)`: Gera números de `start` até `stop + 1` com **decremento** `step`.
+
+```python
+for x in range(10, 0, -2):
+    print(x)
+>>
+10
+8
+6
+4
+2
+```
+
+---
+
+### Evitando Quebra de Linha do `print()`
+
+- Por padrão, o `print()` adiciona uma quebra de linha ao final.
+- Para **evitar** a quebra de linha, utilize o argumento `end`.
+
+```python
+for x in range(10):
+    print(x, end=" ") # substitui a quebra de linha por um espaço
+print() # imprime uma quebra de linha
+>>
+0 1 2 3 4 5 6 7 8 9
+```
+
+> Chamamos o argumento `end` de **parâmetro nomeado**. Veremos mais sobre isso em aulas futuras.
+
+---
+
+### *Loop* Aninhado
+
+- *Loops* podem ser **aninhados**.
+- O *loop* interno é executado **completo** para cada iteração do *loop* externo.
+
+```python
+for i in range(3):
+    for j in range(3):
+        print(i, j)
+```
+
+```python
+for i in range(3):
+    for j in range(i+1):
+        print(i, j)
+    print()
+```
+
+> Qual a diferença entre os dois códigos?
+
+---
+
+## Escapando de um *Loop*
+
+- **break**: Interrompe o *loop*.
+- **continue**: Pula para a próxima iteração.
+- Pode ser aplicado em *loops* `for` e `while`.
+
+```python
+for x in range(10):
+    if x == 5:
+        break
+    print(x, end=" ")
+>> 
+0 1 2 3 4
+```
+
+```python
+for x in range(10):
+    if x == 5:
+        continue
+    print(x, end=" ")
+>>
+0 1 2 3 4 6 7 8 9
+```
+
+<!-- _footer: '' -->
+
+---
+
+### Exemplo de `break`
+
+Encontre o primeiro número menor que 100 divisível por 6, 8 e 9.
+
+```python
+for x in range(9, 100):
+    if x % 6 == 0 and x % 8 == 0 and x % 9 == 0:
+        print(x)
+        break
+```
+
+---
+
+### Exemplo de `continue`
+
+Geralmente usamos o `continue` para evitar aninhamento excessivo.
+
+```python
+for i in range(3):
+    for j in range(3):
+        if i != j:
+            # bloco de código longo
+```
+Alternativa:
+```python
+for i in range(3):
+    for j in range(3):
+        if i == j: continue
+        # bloco de código longo
+```
+
+Observe que o `bloco de código longo` fica menos deslocado.
+
+---
+
+### Exercício de Fixação: Utilizando o `for` faça um programa que:
+
+1. Leia um número e exiba a tabuada de multiplicação desse número.
+2. Leia um número e exiba todos os pares de 0 até esse número.
+3. Leia um número e exiba todos os divisores desse número.
+4. Leia um número e exiba uma contagem **regressiva** até zero (incluso).
+5. Leia um número `n` e exiba a soma dos `n` primeiros ímpares. (sem contar o zero)
+6. Leia um número e diga se ele é primo ou não.
+
+---
+
+7. Leia um número e exiba um triângulo de números, conforme o exemplo abaixo:
+
+```
+Digite um número: 5
+1
+22
+333
+4444
+55555
+```
+
+8. Leia um número e calcule o fatorial desse número.
+
+
+
+
+
 
 
 
