@@ -1350,6 +1350,67 @@ Digite um número: 5
 8. Leia um número e calcule o fatorial desse número.
 
 
+---
+
+# Auto Avaliação
+
+Responda as perguntas:
+
+1. Sou capaz de prever, sem executar, o resultado de um programa simples em Python, como o exemplo abaixo?
+
+```python
+x = int(input("Digite um número: "))
+for i in range(x):
+    if i % 2 == 0 and i % 3 == 0:
+        print(i,end=" ")
+    else:
+        print(";")
+```
+> Você seria capaz de descrever o que o programa faz com suas palavras, sem executá-lo?
+---
+
+2. Compreendo bem o conceito de variável, memória e tipo de dado em Python?
+3. Sei diferenciar entre erro de sintaxe e erro de semântica?
+4. Consigo identificar e corrigir erros de em um programa Python, como o exemplo abaixo?
+
+```python
+x = input("Digite um número: ")
+If x = 5:
+    print("x é igual a 5")
+print("Não é 5")
+```
+5. Em relação a estruturas de Seleção:
+   - [ ] não sei do que se trata.
+   - [ ] sei o que é, mas não sei ler/interpretar.
+   - [ ] sei ler/interpretar, mas não sei escrever/criar.
+   - [ ] sei ler/interpretar e escrever/criar.
+
+---
+
+6. Em relação a estruturas de Repetição:
+   - [ ] não sei do que se trata.
+   - [ ] sei o que é, mas não sei ler/interpretar.
+   - [ ] sei ler/interpretar, mas não sei escrever/criar.
+   - [ ] sei ler/interpretar e escrever/criar mas tenho dificuldades com *loops* aninhados.
+   - [ ] tô de boa com *loops*, inclusive aninhados.
+
+---
+
+7. De modo geral, como você avalia seu desempenho até agora?
+   - [ ] Estou perdido(a).
+   - [ ] Estou acompanhando, mas com dificuldades.
+   - [ ] Estou acompanhando bem, sem dificuldades.
+   - [ ] Estou adiantado(a).
+   - [ ] Já sei tudo isso, posso dar aula.
+
+---
+
+# Conclusão 
+
+Este primeiro módulo foi uma **introdução** ao Python e à programação. Aprendemos sobre **variáveis**, **tipos de dados**, **operações aritméticas**, **saída de dados**, **entrada de dados**, **estruturas de seleção** e **estruturas de repetição**.
+
+Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso.
+
 
 
 
