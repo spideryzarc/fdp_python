@@ -78,12 +78,13 @@ output: pdf_document
 - Operações com dicionários: inserção, remoção e iteração.
 - Aplicações práticas com dados heterogêneos.
 
+
+## Avaliação 2: Prova 2
+
 ## Semana 13: Manipulação de Arquivos em Python
 - Leitura e escrita de arquivos.
 - Manipulação de arquivos CSV.
 - Context manager (`with`) para controle de arquivos.
-
-## Avaliação 2: Prova 2
 
 ## Semana 14: Revisão e Projeto Intermediário
 - Revisão dos conceitos até aqui.

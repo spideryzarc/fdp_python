@@ -1,6 +1,6 @@
 ---
 marp: true
-title: "Fundamentos de Programação em Python"
+title: "Introdução à lógica de programação e Python"
 theme: default
 class: lead
 footer: "F.P. - Albert E. F. Muritiba"
@@ -18,7 +18,7 @@ style: |
 # Deus é bom o tempo todo
 ---
 
-# Fundamentos de Programação (Python)
+# Lógica de Programação e Python
 
 > **Objetivo:** Apresentar os conceitos básicos de lógica de programação e suas aplicações em **Python**.
 
@@ -110,21 +110,28 @@ Você inventasse uma máquina que pudesse receber os **ingredientes** e a **rece
 
 # O que é um Computador?
 
-- É uma máquina que executa **instruções**.
-- As instruções são fornecidas por um **programa**.
-- O programa é um conjunto de **algoritmos**.
-- Um algoritmo é uma sequência de **passos** para resolver um problema.
+* É uma máquina que executa **instruções**.
+* As instruções são fornecidas por um **programa**.
+* O programa é um conjunto de **algoritmos**.
+* Um algoritmo é uma sequência de **passos** para resolver um problema.
+  * Lembram da **raposa**?
   
 ---
 
 # Metaforicamente
 
-- A **entrada** são os ingredientes.
-- A **receita** é o **algoritmo** ou **programa**.
-- A **saída** é o bolo.
+* A **entrada** são os ingredientes.
+* A **receita** é o **algoritmo** ou **programa**.
+* A **saída** é o bolo.
 
-##### <!--fit --> Saber **programar** é saber **escrever a receita** para <br> a **máquina** que faz o **bolo**.
+---
 
+<!-- _class: invert -->
+<!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/dark_lamp.jpg') -->
+
+##### <!--fit --> Saber **programar** é <br>saber **escrever a receita**<br> para  a **máquina** que faz o<br> **bolo**.
+
+![bg right:25%](empty.svg)
 
 ---
 
@@ -361,6 +368,35 @@ Hello, World! 10 3.14
 
 ---
 
+### Algumas Convenções
+
+- **snake_case**: `nome_da_variavel` - use para variáveis e funções.
+- **CamelCase**: `NomeDaVariavel` - use para classes. 
+- **UPPER_CASE**: `NOME_DA_VARIAVEL` - use para constantes.
+
+```python
+nome_completo = "Albert Einstein"
+PI = 3.14159
+```
+
+> Não abordaremos **classes** neste curso.
+
+> **Constantes** são variáveis cujo valor não deve ser alterado. Python não possui constantes, mas é uma **convenção** usar letras maiúsculas para indicar que uma variável é constante.
+
+---
+
+- Algumas **recomendações** para nomes de acordo com a **função** da variável:
+  - `n`,`size`: Número de elementos ou quantidade de algo.
+  - `i`,`j`,`k`: Índices de iteração ou contadores (inteiros).
+  - `x`,`y`,`z`: Coordenadas espaciais ou valores numéricos (reais).
+  - `delta`: Variação ou diferença.
+  - `epsilon`, `eps`: Tolerância (número muito pequeno).
+  - `flag`: Variável lógica que indica se alguma condição foi alcançada.
+
+
+
+---
+
 ## Tipos de Dados
 
 * Associado a cada variável, existe um **tipo de dado** que determina o que a variável pode armazenar.
@@ -491,8 +527,7 @@ x = 3
 y = x % 2
 z = y % 2
 print(z)
->>
-?????
+>> ?????
 ```
 
 ---
@@ -1131,9 +1166,10 @@ print("Soma:", soma)
 - **Invariante**: Propriedade que é **verdadeira** antes e depois de cada **iteração**.
 - **Exemplo**:
   ```python
+  n = int(input("Digite um número: "))
   soma = 0
   x = 1
-  while x <= 10:
+  while x <= n:
       soma = soma + x
       x = x + 1
   print(soma)
@@ -1323,6 +1359,17 @@ for i in range(3):
 
 Observe que o `bloco de código longo` fica menos deslocado.
 
+
+---
+
+### Bloco `else` em *Loops*
+
+`for` e `while` podem ter um bloco de código `else`, porém vamos adiar a explicação desse conceito para mais adiante para não confundir com o `else` de `if`.
+
+<br>
+
+> Me lembrem de falar sobre o `else` em *loops* mais adiante.
+
 ---
 
 ### Exercício de Fixação: Utilizando o `for` faça um programa que:
@@ -1409,7 +1456,7 @@ print("Não é 5")
 
 Este primeiro módulo foi uma **introdução** ao Python e à programação. Aprendemos sobre **variáveis**, **tipos de dados**, **operações aritméticas**, **saída de dados**, **entrada de dados**, **estruturas de seleção** e **estruturas de repetição**.
 
-Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso.
+Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso. No próximo módulo, vamos aprender sobre **funções**.
 
 
 
