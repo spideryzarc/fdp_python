@@ -227,5 +227,41 @@ print(numeros)
 >>> []
 ```
 
+<br>
+
+> Também é possível remover elementos de uma lista usando `del`, mas  vamos ver isso mais adiante.
+
+---
+
+### Concatenando listas
+
+- Para concatenar duas listas, usamos o operador `+`.
+```python
+numeros = [1, 2, 3]
+letras = ['a', 'b', 'c']
+resultado = numeros + letras
+print(resultado)
+>>> [1, 2, 3, 'a', 'b', 'c']
+```
+
+---
+
+### Multiplicando listas
+
+- Para multiplicar uma lista por um número `n`, usamos o operador `*`.
+```python
+numeros = [1, 2, 3]
+resultado = numeros * 3
+print(resultado)
+>>> [1, 2, 3, 1, 2, 3, 1, 2, 3]
+```
+
+```python
+zeros = [0] * 5
+print(zeros)
+>>> [0, 0, 0, 0, 0]
+```
+
+---
 
 

@@ -231,6 +231,7 @@ Crie um arquivo chamado `aula1.py` e adicione o seguinte código:
 
 ```python
 print("Hello, World!")
+>>> Hello, World!
 ```
 
 > **print()**: Função que exibe uma mensagem na tela. [doc](https://docs.python.org/3/library/functions.html#print)
@@ -244,10 +245,9 @@ Num *script* Python, você pode escrever várias instruções, uma após a outra
 print("Hello, World!")
 print("Python é legal!")
 print("Vamos aprender a programar!")
->>
-Hello, World!
-Python é legal!
-Vamos aprender a programar!
+>>> Hello, World!
+>>> Python é legal!
+>>> Vamos aprender a programar!
 ```
 
 As instruções são executadas **sequencialmente**, de cima para baixo.
@@ -255,7 +255,7 @@ As instruções são executadas **sequencialmente**, de cima para baixo.
 ---
 ## Regras Básicas
 
-- As instruções devem estar **alinhadas**.
+- As instruções devem estar **alinhadas** (indentadas).
 
   ```python
   print("Hello, World!")
@@ -267,6 +267,8 @@ As instruções são executadas **sequencialmente**, de cima para baixo.
   ```python
   print("Hello, World!") print("Esta instrução está errada!")
   ```
+
+> **Indetação** é um anglicismo para *alinhamento* derivado de *indentation*.
  
 ---
 
@@ -278,31 +280,57 @@ As instruções são executadas **sequencialmente**, de cima para baixo.
 * **Seleção**: Tomar decisões com base em condições.
 * **Repetição**: Executar um bloco de código várias vezes.
 * **Funções**: Agrupar instruções em um bloco reutilizável.
+<br>
 
-> Vamos aprender cada um desses conceitos ao longo do curso.
+> Vamos aprender cada um desses conceitos ao longo do curso de forma não linear, ou seja, aprenderemos um pouco de cada um e **depois aprofundaremos**.
 
 ---
 
-# Sintaxe vs Semântica
+# Léxico vs Sintaxe vs Semântica
 
-* **Sintaxe**: Conjunto de regras que definem a estrutura de um programa (gramática).
-* **Semântica**: Significado das instruções e como elas são executadas.
+* **Léxico**: Conjunto de palavras e símbolos válidos em uma linguagem (ortografia).
+* **Sintaxe**: Conjunto de regras que definem *sequências* válidas de palavras e símbolos (gramática).
+* **Semântica**: Significado das *sequências* de palavras e símbolos (sentido).
+  * Um programa com **erro léxico ou sintático** **não é executado**.
+  * Um programa com **erro de semântica** pode ser executado, mas **não faz o que se espera**.
 
-Um programa com **erro de sintaxe não é executado**. 
-Um programa com **erro de semântica** é executado, mas produz **resultados incorretos**.
 <br>
-> Embora material descreva algumas regras de sintaxe explicitamente, a maioria das regras acaba sendo aprendida de forma implícita, com a **prática**.
+
+> Embora material descreva algumas regras de sintaxe explicitamente, a maioria das regras acaba sendo aprendida de forma empírica, com a **prática**.
+
+---
+
+## Exemplos
+
+- Erro léxico: 
+  ```python
+  pr1nt("Hello, World!")
+  ```
+- Erro sintático:
+  ```python
+  print("Hello, World!"
+  ```
+- Erro semântico:
+  ```python
+  x = "10"
+  y = 5
+  z = x + y
+  >>> TypeError: can only concatenate str (not "int") to str
+  ```
+
+> Erros semânticos podem gerar um erro em *tempo de execução* detectado pelo interpretador, mas podem **passar despercebidos**.
 
 ---
 
 # Saída de Dados
 
-- **print()**: Exibe uma mensagem na tela. [doc](https://docs.python.org/3/library/functions.html#print)
+Saída de dados é a capacidade *transmitir* informações **de dentro** do programa **para fora**, geralmente para o usuário.
+
+- **print()**: Exibe uma mensagem na tela (*console*) . [doc](https://docs.python.org/3/library/functions.html#print)
 
 ```python
 print("Hello, World!")
->> 
-Hello, World!
+>>> Hello, World!
 ```
 
 
@@ -343,15 +371,16 @@ print("Hello, World!")
 
 As variáveis são abstrações que representam valores armazenados na memória de trabalho do computador (RAM).
 
+- No Python, basta **atribuir** um valor a um **identificador** para criar uma variável.
+
 ```python
 mensagem = "Hello, World!"
 x = 10
 y = 3.14
 print(mensagem, x, y)
->> 
-Hello, World! 10 3.14
+>>> Hello, World! 10 3.14
 ```
-> No Python, basta **atribuir** um valor a um **identificador** para criar uma variável.
+
 
 ---
 
@@ -359,23 +388,23 @@ Hello, World! 10 3.14
 
 - **Identificador**: Nome dado a uma variável, função, classe, módulo, etc.
 - **Regras**:
-  - Deve começar com uma letra ou `_`.
-  - Pode conter letras, números e `_`.
-  - Não pode conter espaços ou caracteres especiais.
-  - **Case-sensitive** (diferencia maiúsculas de minúsculas).
+  - Deve começar com uma **letra** ou `_`.
+  - Pode conter **letras**, **números** e `_`.
+  - **Não** pode conter **espaços** ou **caracteres especiais**.
+  - ***Case-sensitive*** (diferencia maiúsculas de minúsculas).
 <br>
-> Embora seja possível usar acentos e caracteres especiais, **não é recomendado**.	
+> Embora seja possível usar acentos, **não é recomendado**.	
 
 ---
 
-### Algumas Convenções
+### Algumas convenções para identificadores compostos
 
-- **snake_case**: `nome_da_variavel` - use para variáveis e funções.
-- **CamelCase**: `NomeDaVariavel` - use para classes. 
-- **UPPER_CASE**: `NOME_DA_VARIAVEL` - use para constantes.
+- **Snake case**: `nome_da_variavel` - use para variáveis e funções.
+- **Camel case**: `NomeDaClasse` - use para classes. 
+- **Upper case**: `NOME_DA_CONSTANTE` - use para constantes.
 
 ```python
-nome_completo = "Albert Einstein"
+nome_completo_do_professor = "Albert Einstein"
 PI = 3.14159
 ```
 
@@ -384,7 +413,7 @@ PI = 3.14159
 > **Constantes** são variáveis cujo valor não deve ser alterado. Python não possui constantes, mas é uma **convenção** usar letras maiúsculas para indicar que uma variável é constante.
 
 ---
-
+- Use sempre **nomes significativos** para suas variáveis.
 - Algumas **recomendações** para nomes de acordo com a **função** da variável:
   - `n`,`size`: Número de elementos ou quantidade de algo.
   - `i`,`j`,`k`: Índices de iteração ou contadores (inteiros).
@@ -457,6 +486,8 @@ Valores inteiros, positivos ou negativos.
   w = float("3.14")
   ```
 
+> Internamente, os números de ponto flutuante são representados por dois inteiros: a **mantissa** e o **expoente** ambos em binário. 
+
 ---
 
 #### Complexos
@@ -469,7 +500,13 @@ Valores inteiros, positivos ou negativos.
   y = 1 - 2j
   z = complex(2, -3)
   w = complex("5-6j")
+  # não são complexos
+  h = j
+  h = 3*j
   ```
+
+> Python usa `j` para representar a unidade imaginária, ao contrário da notação matemática `i`.
+ 
 
 ---
 
@@ -494,10 +531,14 @@ Valores inteiros, positivos ou negativos.
 
 ```python
 10 / 3
->> 3.3333333333333335
+>>> 3.3333333333333335
 10 // 3
->> 3
+>>> 3
 ```
+
+<br>
+
+> **Atenção**: Pode parecer irrelevante se você não está acostumado com programação, mas isso pode gerar **bugs** em programas mais complexos.
 
 ---
 
@@ -508,9 +549,9 @@ Valores inteiros, positivos ou negativos.
 
 ```python
 10 % 3
->> 1
+>>> 1
 -10 % 3
->> 2
+>>> 2
 ```
 
 > Quando o dividendo é negativo, o sinal do resto é o mesmo do divisor. 
@@ -523,12 +564,13 @@ Valores inteiros, positivos ou negativos.
 Responda sem executar o código.
 
 ```python
-x = 3
+x = 1
 y = x % 2
-z = y % 2
-print(z)
->> ?????
+print(y)
+>>> ?????
 ```
+
+- Qual é o valor de `y` após a execução do código acima?
 
 ---
 
@@ -539,14 +581,14 @@ print(z)
 
 ```python
 2 ** 3
->> 8
+>>> 8
 ```
 - Para raízes, use a exponenciação fracionária.
   $$ \sqrt{9} = 9^{1/2} = 3 $$
 
 ```python
 9 ** 0.5
->> 3.0
+>>> 3.0
 ```
 
 ---
@@ -572,27 +614,57 @@ $$ 5 \times \frac{\frac{3}{5+3}} {2^3} $$
 
 ```python
 5 * (3 / (5 + 3)) / 2 ** 3
->> 0.234375
+>>> 0.234375
 ```
 Na dúvida, use **parênteses**!
 ```python
 5 * ((3 / (5 + 3)) /(2 ** 3))
->> 0.234375
+>>> 0.234375
 ```
 
 ---
 
 ## Tipo Lógico (Booleano)
 
-- **bool**: Tipo de dado que representa valores lógicos.
-- Pode ser **True** ou **False**.
+- `bool`: Tipo de dado que representa valores lógicos.
+- Possui dois valores literais: `True` e `False`.
+- Exemplo de literais booleanos:
+  ```python
+  x = True
+  y = False
+  z = bool("")
+  w = bool(0)
+  ```
+---
+
+### Conversão para Booleano
+
+- Em Python, qualquer valor pode ser convertido para booleano.
+- Valores **falsos**: `False`, `0`, `0.0`, `""`, `[]`, `{}`, `()`, `None`.
+- Valores **verdadeiros**: **qualquer outro valor**.
 
 ```python
-x = True
-y = False
-z = bool("True")
-w = bool(0)
+x = bool(0)
+y = bool(10)
+z = bool("")
+w = bool("Hello")
+print(x, y, z, w)
+>>> False True False True
 ```
+
+---
+
+#### Teste Surpresa
+
+Responda sem executar o código.
+
+```python
+x = bool('True')
+print(x)
+>>> ?????
+```
+
+- Qual é o valor de `x` após a execução do código acima?
 
 ---
 
@@ -609,7 +681,7 @@ w = bool(0)
 x = True
 y = not x
 print(y)
->> False
+>>> False
 ```
 
 ---
@@ -629,7 +701,7 @@ x = True
 y = False
 z = x and y
 print(z)
->> False
+>>> False
 ```
 
 ---
@@ -648,7 +720,7 @@ x = True
 y = False
 z = x or y
 print(z)
->> True
+>>> True
 ```
 
 ---
@@ -669,7 +741,7 @@ x = 10
 y = 5
 z = x > y
 print(z)
->> True
+>>> True
 ```
 
 ---
@@ -684,9 +756,11 @@ y = 5
 z = x == y
 w = x != y
 print(z, w)
->>
+>>>
 ?????
 ```
+
+- Qual é o valor de `z` e `w` após a execução do código acima?
 
 ---
 
@@ -699,9 +773,10 @@ Uma boa prática é *ler* `==` como **igual a**, e `=` como **recebe**.
 
 Exemplo:
 ```python
-x = 10
+x = x + 1
 ```
-Lê-se: **x recebe 10**.
+Lê-se: **x recebe x mais 1**. 
+Observe que ler `x = x + 1` como **x é igual a x mais 1** não faz sentido.
 
 ---
 
@@ -713,26 +788,39 @@ Lê-se: **x recebe 10**.
 x = 10
 y = 0 < x < 20
 print(y)
->> True
+>>> True
+```
+
+O código acima é equivalente a:
+```python
+x = 10
+y = 0 < x and x < 20
+print(y)
+>>> True
 ```
 
 ---
 
 # Entrada de Dados
 
-- **input()**: Recebe uma entrada do usuário.
+Entrada de dados é a capacidade de **receber** informações **de fora** do programa, geralmente do usuário.
+
+- **input()**: Recebe uma entrada do usuário do *prompt* (*console*). [doc](https://docs.python.org/3/library/functions.html#input)
 - **Retorna** uma **string**.
 - **Exemplo**:
-  ```python
+
+```python
   nome = input("Digite seu nome: ")
   print("Olá,", nome)
-  ```
+```
+<br>
 
+> Observe que o programa **pausa** e aguarda a entrada do usuário.
 ---
 
 ## Conversão de Tipos
 
-Devemos **converter** a entrada para o tipo desejado, se necessário.
+Devemos **converter** a entrada para o tipo desejado, quando necessário.
 
 - **int()**: Converte para inteiro.
 - **float()**: Converte para ponto flutuante.
@@ -754,7 +842,7 @@ x = input("Digite um número: ")
 y = x * 2
 print(y)
 ```
-- A saída é o dobro do número digitado?
+- A saída é o **dobro** do número digitado?
 - Ou a saída é o número digitado duas vezes?
 - Por que isso acontece?
 
@@ -785,7 +873,24 @@ print(y)
   - Aspas triplas: `'''Hello, World!'''` ou `"""Hello, World!"""`
 - **Operações**: Concatenação `+`, Repetição `*`.
 
-> Veremos bem mais sobre *strings* em aulas futuras, por enquanto, vamos focar em **números**.
+
+---
+
+### Conversão para *String*
+
+- **str()**: Converte para string. [doc](https://docs.python.org/3/library/functions.html#func-str)
+
+```python
+x = 10
+y = str(x)
+print(y)
+>>> "10"
+```
+
+<br>
+
+
+> Veremos **bem mais** sobre *strings* em aulas futuras, por enquanto, vamos focar em **números**.
 
 ---
 
@@ -825,13 +930,15 @@ print("Hello, World!")
 # Seleção 
 
 - **Seleção** é a capacidade de **tomar decisões** com base em **condições**.
-- **Condição**: Expressão que retorna um valor lógico.
+- Também é conhecida como **estrutura de decisão** ou **desvio condicional**.
+- **Condição**: Expressão lógica que pode ser **verdadeira** ou **falsa**.
 - **Estrutura de Seleção**:
   ```python
   if condicao:
       # bloco de código
   ```
 
+> Outros tipos de variáveis podem ser usados em condições e são **convertidos** para *booleano* automaticamente. Vamos guardar isso para quando estivermos mais avançados.
 ---
 
 ## Estrutura `if`
@@ -946,7 +1053,7 @@ print("Fim")
 
 ## Estrutura `if-elif-else`
 
-- Devido a exigência de identação do Python, muitos se e senão aninhados podem tornar o código difícil de ler.
+- Devido a exigência de indentação do Python, muitos *se e senão* aninhados podem tornar o código difícil de ler.
 ```python	
 if condicao1:
     # bloco de código 1
@@ -1042,7 +1149,7 @@ else:
 
 ## Estrutura `while`
 
-- **Enquanto** a **condição** for verdadeira, o **bloco de código** é executado.
+- **Enquanto** uma dada **condição** for verdadeira, o **bloco de código** é executado.
 - Útil quando o número de repetições é **desconhecido**.
 - **Sintaxe**:
   ```python
@@ -1371,6 +1478,38 @@ Observe que o `bloco de código longo` fica menos deslocado.
 > Me lembrem de falar sobre o `else` em *loops* mais adiante.
 
 ---
+
+## Atribuição com acumuladores
+
+* Python possui operadores de atribuição com **acumuladores**.
+* São apenas uma **abreviação** para operações comuns.
+  ```python
+  x += 1 # x = x + 1
+  x *= 2 # x = x * 2
+  x -= 3 # x = x - 3
+  x /= 4 # x = x / 4
+  x //= 5 # x = x // 5
+  x %= 5 # x = x % 5
+  x **= 6 # x = x ** 6
+  ```
+
+> Python **não** possui operadores de incremento e decremento (`++` e `--`) bastante comuns em outras linguagens.
+   
+
+---
+
+### Exemplo
+
+```python
+soma = 0
+for x in range(1, 11):
+    soma += x
+print(soma)
+```
+
+---
+
+
 
 ### Exercício de Fixação: Utilizando o `for` faça um programa que:
 
