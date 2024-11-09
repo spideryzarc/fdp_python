@@ -1145,6 +1145,8 @@ else:
 - É uma das características **mais importantes** da programação, já que computadores são muito **bons em repetir** tarefas.
 
 
+![bg left:50% 100%](https://media.giphy.com/media/TabwFck9vEt44/giphy.gif?cid=ecf05e4786uq6o0xdqdllunbpfu7f3cjefhol0d0uwno2ods&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
 ---
 
 ## Estrutura `while`
@@ -1171,6 +1173,7 @@ print("Senha correta")
 ```
 
 <br>
+<br>
 
 > Chamamos a variável associada à condição de **variável de controle**.
 
@@ -1184,6 +1187,8 @@ while x <= 10:
     print(x)
     x = x + 1
 ```
+<br>
+<br>
 
 > Chamamos `x = x + 1` de **incremento**.
 
@@ -1193,7 +1198,7 @@ while x <= 10:
 
 - Se a **condição** nunca se tornar **falsa**, o **loop** é **infinito**.
 - Um programa com um **loop infinito** **nunca termina**.
-- **Ctrl+C** interrompe a execução de um programa em **loop infinito** no terminal.
+- `Ctrl+c` interrompe a execução de um programa em **loop infinito** no terminal.
 
 ```python
 x = int(input("Digite um número: "))
@@ -1201,12 +1206,13 @@ while x != 10:
     print(x)
     x = x + 1
 ```
+<br>
 
-> O que acontece se você executar esse código?
+> Esse programa pode entrar em **loop infinito**. Por quê?
 
 ---
 
-## Algoritmos Elementares em *Loop*
+## Algoritmos Elementares com *Loop*
 
 Para efeitos **didáticos**, vamos utilizar a **leitura de um número inteiro** para exemplificar algoritmos elementares. Quando o valor lido for 0, o *loop* **termina**.  
 
@@ -1214,8 +1220,8 @@ Para efeitos **didáticos**, vamos utilizar a **leitura de um número inteiro** 
 
 ```python
 x = int(input("Digite um número: "))
-maior = x #inicializa a variável com o primeiro valor
-while x != 0:
+maior = x # Inicializa a variável com o primeiro valor
+while x != 0: # Condição de parada
     if x > maior: maior = x #atualiza o maior valor se necessário
     x = int(input("Digite um número: "))
 print("Maior:", maior)
@@ -1236,11 +1242,14 @@ while x != 0:
 print("Quantidade de pares:", cont)
 ```
 
+<br>
+<br>
+
 > Modifique o código para contar a quantidade de **ímpares**.
 
 ---
 
-- **Soma ou Produto**: Calcular a soma ou o produto de uma sequência.
+- **Somatório ou Produto**: Calcular a soma ou o produto dos elementos de uma sequência.
 
 ```python
 x = int(input("Digite um número: "))
@@ -1250,8 +1259,12 @@ while x != 0:
     x = int(input("Digite um número: "))
 print("Soma:", soma)
 ```
+<br>
+<br>
 
 > Modifique o código para calcular o **produto**.
+
+>Modifique o código para calcular o **produto** apenas dos **ímpares** digitados.
 
 ---
 
@@ -1266,6 +1279,14 @@ print("Soma:", soma)
 
 ---
 
+* Um programa linear é fácil de entender,
+* um programa com *if's* fica um pouco mais complicado, mas ainda é fácil, pois é possível **visualizar** todas as possibilidades.
+* Um programa com *loops* é mais complicado, pois é necessário **acompanhar** o estado das variáveis ao longo das iterações.
+
+![bg right:50%](https://media.giphy.com/media/VgGcTrBJWRHc5Cut9v/giphy.gif?cid=ecf05e47za8qjglrokfydx9xwnefnalkbas4f6c2lyw4hf2v&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
+---
+
 ## *Loop Invariant*
 
 É um conceito **avançado**, mas que pode ajudar a entender o que um *loop* faz ou se ele está correto.
@@ -1275,14 +1296,22 @@ print("Soma:", soma)
   ```python
   n = int(input("Digite um número: "))
   soma = 0
-  x = 1
+  x = 0
   while x <= n:
-      soma = soma + x
       x = x + 1
+      soma = soma + x
   print(soma)
   ```
   >**Invariante**: no fim de cada iteração, `soma` é a soma dos `x` primeiros números naturais.
-   
+
+---
+
+* Antes da primeira iteração, `soma` é a soma dos `x` primeiros números naturais, pois `x = 0` e `soma = 0`.
+* Depois da primeira iteração, `soma` é a soma dos `x` primeiros números naturais, pois `x = 1` e `soma = 1`.
+* Depois da segunda iteração, `soma` é a soma dos `x` primeiros números naturais, pois `x = 2` e `soma = 3`.
+* E assim por diante.
+* Se o último valor de `x` for `n`, então `soma` é a soma dos `n` primeiros números naturais.
+* Em um estudo avançado, usamos **indução matemática** para provar que o *loop* está correto.
 
 ---
 
@@ -1314,7 +1343,7 @@ print("Soma:", soma)
 ```python
 for x in range(10):
     print(x)
->>
+>>>
 0
 1
 2
@@ -1322,15 +1351,17 @@ for x in range(10):
 9
 ```
 
+![bg right:50%](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJwOHNsZG9xbzZmYm9senRlMmlnczA1Nnc3bHNyc3l2MWVnczB6eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/yKxo7c9Q6pZoUzAfPu/giphy.gif)
+
 ---
 
 ## Função `range()`
 
-- **range()**: Gera uma sequência de números.
-- **Sintaxe:Semântica**:
+- **range()**: Gera uma sequência de números inteiros.
+- **Sintaxe e Semântica**:
   - `range(stop)`: Gera números de `0` até `stop - 1`.
   - `range(start, stop)`: Gera números de `start` até `stop - 1`.
-  - `range(start, stop, step)`: Gera números de `start` até `stop - 1` com incremento `step`.
+  - `range(start, stop, step)`: Gera números de `start` até `stop - 1` com incremento `step` entre eles.
 
 ---
 
@@ -1339,7 +1370,7 @@ for x in range(10):
 ```python
 for x in range(1, 10, 2):
     print(x)
->>
+>>>
 1
 3
 5
@@ -1348,21 +1379,44 @@ for x in range(1, 10, 2):
 ```
 ---
 
-## Função `range()` com Incremento Negativo
+## Função `range()` com Incremento **Negativo**
 
-- **Sintaxe:Semântica**:
+- **Sintaxe e Semântica**:
   - `range(start, stop, -step)`: Gera números de `start` até `stop + 1` com **decremento** `step`.
 
 ```python
 for x in range(10, 0, -2):
     print(x)
->>
+>>>
 10
 8
 6
 4
 2
 ```
+
+> Observem que o `stop` sempre fica **excluso**.
+
+---
+
+## `range()` vazio
+
+O `range()` pode ser **vazio** se o `start` for maior ou igual ao `stop`.
+
+```python
+for x in range(10, 0):
+    print(x)
+>>>     
+```
+
+ou se o `step` for **incompatível** com o `start` e o `stop`.
+
+```python
+for x in range(0, 10, -1):
+    print(x)
+>>>
+```
+
 
 ---
 
@@ -1378,6 +1432,7 @@ print() # imprime uma quebra de linha
 >>
 0 1 2 3 4 5 6 7 8 9
 ```
+<br>
 
 > Chamamos o argumento `end` de **parâmetro nomeado**. Veremos mais sobre isso em aulas futuras.
 
@@ -1398,7 +1453,6 @@ for i in range(3):
 for i in range(3):
     for j in range(i+1):
         print(i, j)
-    print()
 ```
 
 > Qual a diferença entre os dois códigos?
@@ -1416,8 +1470,7 @@ for x in range(10):
     if x == 5:
         break
     print(x, end=" ")
->> 
-0 1 2 3 4
+>>> 0 1 2 3 4
 ```
 
 ```python
@@ -1425,8 +1478,7 @@ for x in range(10):
     if x == 5:
         continue
     print(x, end=" ")
->>
-0 1 2 3 4 6 7 8 9
+>>> 0 1 2 3 4 6 7 8 9
 ```
 
 <!-- _footer: '' -->
@@ -1443,6 +1495,10 @@ for x in range(9, 100):
         print(x)
         break
 ```
+
+<br>
+
+> Uma vez que o número é encontrado, não há necessidade de continuar o *loop*.
 
 ---
 
@@ -1484,13 +1540,13 @@ Observe que o `bloco de código longo` fica menos deslocado.
 * Python possui operadores de atribuição com **acumuladores**.
 * São apenas uma **abreviação** para operações comuns.
   ```python
-  x += 1 # x = x + 1
-  x *= 2 # x = x * 2
-  x -= 3 # x = x - 3
-  x /= 4 # x = x / 4
-  x //= 5 # x = x // 5
-  x %= 5 # x = x % 5
-  x **= 6 # x = x ** 6
+  x += 1    # x = x + 1
+  x *= 2    # x = x * 2
+  x -= 3    # x = x - 3
+  x /= 4    # x = x / 4
+  x //= 5   # x = x // 5
+  x %= 5    # x = x % 5
+  x **= 6   # x = x ** 6
   ```
 
 > Python **não** possui operadores de incremento e decremento (`++` e `--`) bastante comuns em outras linguagens.
@@ -1540,7 +1596,7 @@ Digite um número: 5
 
 # Auto Avaliação
 
-Responda as perguntas:
+Responda as perguntas para si mesmo.
 
 1. Sou capaz de prever, sem executar, o resultado de um programa simples em Python, como o exemplo abaixo?
 
@@ -1595,7 +1651,7 @@ print("Não é 5")
 
 Este primeiro módulo foi uma **introdução** ao Python e à programação. Aprendemos sobre **variáveis**, **tipos de dados**, **operações aritméticas**, **saída de dados**, **entrada de dados**, **estruturas de seleção** e **estruturas de repetição**.
 
-Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso. No próximo módulo, vamos aprender sobre **funções**.
+Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso. No próximo módulo, vamos aprender sobre **coleções**.	
 
 
 
