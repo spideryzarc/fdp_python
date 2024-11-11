@@ -599,6 +599,299 @@ while i < len(numeros):
 
 ---
 
+### Exercícios de fixação
+
+Usando *Comprehension* ou *Slicing*:
+
+1. Crie uma lista `numeros` com os valores `2, 4, 8, 16, 32, 64, 128, 256, 512, 1024`.
+2. Inverta a lista.
+3. Imprima os valores de índice par.
+4. Substitua os valores dos últimos 3 índices por `0`.
+
+---
+
+### Algoritmos básicos com listas
+
+- **Máximo** e **mínimo** de uma lista.
+  - modo careta:
+    ```python
+    maximo = numeros[0]
+    minimo = numeros[0]
+    for i in numeros:
+        if i > maximo:
+            maximo = i
+        if i < minimo:
+            minimo = i
+    ```
+  - modo descolado:
+    ```python
+    maximo = max(numeros) 
+    minimo = min(numeros)
+    ```
+---
+
+- **Soma** e **produto** dos elementos de uma lista.
+  - modo careta:
+    ```python
+    soma = 0
+    produto = 1
+    for i in numeros:
+        soma += i
+        produto *= i
+    ```
+  - modo descolado:
+    ```python
+    import math
+    soma = sum(numeros)
+    produto = math.prod(numeros)
+    ```
+
+---
+
+- **Média** dos elementos de uma lista.
+  - modo careta:
+    ```python
+    soma = 0
+    for i in numeros:
+        soma += i
+    media = soma / len(numeros)
+    ```
+  - modo descolado:
+    ```python
+    media = sum(numeros) / len(numeros)
+    ```
+  - modo aristocrático:
+    ```python
+    from statistics import mean
+    media = mean(numeros)
+    ```
+---
+
+- **Contagem** de elementos em uma lista. "Quantos `3` tem na lista?"
+  - modo careta:
+    ```python
+    contagem = 0
+    for i in numeros:
+        if i == 3:
+            contagem += 1
+    ```
+  - modo descolado:
+    ```python
+    contagem = numeros.count(3)
+    ```
+
+> É importante **conhecer** e **praticar** os modos careta, pois eles **reforçam** os conceitos básicos de programação e algoritmos. Contudo, é **mais eficiente** usar os modos descolado e aristocrático, pois eles são **mais rápidos** e **concisos**.
+---
+
+## Tuplas
+
+* Uma **tupla** é uma coleção **imutável** de valores.
+* Uma tupla é representada por **parênteses** `()` e os valores são separados por **vírgula**.
+
+```python
+coordenadas = (10, 20)
+```
+
+---
+
+### Características gerais de uma tupla
+
+- Uma tupla pode conter **qualquer tipo de valor** (heterogênea).
+- São semelhantes às listas, mas **imutáveis**.
+  ```python
+  coordenadas = (10, 20)
+  coordenadas[0] = 5
+  >>> TypeError: 'tuple' object does not support item assignment
+  ```
+- Tuplas são **mais rápidas** e **seguras** que listas. Pois, não podem ser modificadas acidentalmente.
+
+---
+### Observações sobre imutabilidade
+
+- A **atribuição** abaixo **não** modifica a tupla original, mas cria uma **nova** tupla.
+  ```python
+  coordenadas = (10, 20)
+  coordenadas = (5, 10)
+  ```
+- A **atribuição** abaixo **não** modifica a tupla original, mas um elemento de uma **lista** dentro da tupla. Ou seja, a tupla continua com seus **mesmos dois elementos**.
+  ```python
+  coordenadas = ([10, 20], [30, 40])
+  coordenadas[0][0] = 5
+  print(coordenadas)
+  >>> ([5, 20], [30, 40])
+  ```
+
+---
+
+### Acessando elementos de uma tupla
+
+- Para acessar um elemento de uma tupla, usamos o **índice** do elemento.
+- A sintaxe é a mesma das listas.
+- Tuplas também suportam **índices negativos**.
+- Tuplas também suportam **slicing**.
+- Tuplas também suportam **iteração**.
+- Tuplas também suportam **funções** como `max`, `min`, `sum`, etc.
+- Tuplas também suportam **métodos** como `count` e `index`.
+- Tuplas também suportam **concatenação** e **multiplicação**.
+
+> Já aprendemos tudo isso com as listas, então não vamos repetir.
+
+---
+
+### Compreensão de tuplas
+
+Tuplas não suportam *compreensão* diretamente, mas podemos usar a função `tuple` para criar uma tupla a partir de uma *compreensão*.
+
+```python
+t = tuple(i**2 for i in range(10))
+print(t)
+>>> (0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
+```
+
+- **Atenção**: Podemos ser levados a pensar que `t = (i**2 for i in range(10))` cria uma tupla, mas na verdade cria um **gerador**.
+  ```python
+  t = (i**2 for i in range(10))
+  print(t)
+  >>> <generator object <genexpr> at 0x7f7f7f7f7f70>
+  ```
+
+> Geradores são um tema avançado e serão abordados mais adiante.
+
+
+---
+### Convertendo listas em tuplas e vice-versa
+
+- Para converter uma lista em tupla, usamos a função `tuple`.
+```python
+numeros = [1, 2, 3, 4, 5]
+t = tuple(numeros)
+print(t)
+>>> (1, 2, 3, 4, 5)
+```
+
+- Para converter uma tupla em lista, usamos a função `list`.
+```python
+coordenadas = (10, 20)
+l = list(coordenadas)
+print(l)
+>>> [10, 20]
+```
+
+---
+
+### Tuplas de um elemento
+
+- Para criar uma tupla de um único elemento, é necessário **adicionar uma vírgula** após o elemento.
+```python
+t = (10,)
+print(t)
+>>> (10,)
+```
+- Caso contrário, o Python **não reconhece** a vírgula como uma tupla.
+```python
+t = (10)
+print(t)
+>>> 10
+```
+
+---
+
+### Desempacotamento de tuplas
+
+Um dos 'truques' mais legais do Python é o **desempacotamento** de tuplas.
+
+```python
+coordenadas = (10, 20)
+x, y = coordenadas
+print(x)
+>>> 10
+print(y)
+>>> 20
+```
+
+- O desempacotamento de tuplas é uma forma **elegante** de atribuir valores a múltiplas variáveis de uma só vez.
+- O número de variáveis deve ser **igual** ao número de elementos da tupla.
+
+---
+
+#### Desempacotamento de tuplas com menos variáveis:
+
+```python
+coordenadas = (10, 20, 30)
+x, y, _ = coordenadas
+print(x)
+>>> 10
+print(y)
+>>> 20
+```
+
+- O **sublinhado** `_` é uma convenção para indicar que o valor não será usado, é uma **variável descartável**.
+
+---
+
+#### Usando desempacotamento para trocar valores:
+
+Temos duas variáveis `a` e `b` e queremos trocar seus valores entre si (*swap*).
+```python
+  a = 10
+  b = 20
+```
+- Modo careta:
+  ```python
+  aux = a
+  a = b
+  b = aux
+  ```
+- Modo descolado:
+  ```python
+  a, b = b, a
+  ```
+> Criamos uma tupla `(b, a)` e desempacotamos seus valores em `a` e `b`.
+
+---
+
+#### Usando desempacotamento em laços:
+
+```python
+pontos = [(1, 2), (3, 4), (5, 6)]
+```
+
+- Modo careta:
+  ```python
+  for ponto in pontos:
+    x = ponto[0]
+    y = ponto[1]
+    print(x)
+    print(y)
+  ```
+- Modo descolado:
+  ```python
+  for x, y in pontos:
+    print(x)
+    print(y)    
+  ```
+
+> O desempacotamento é feito automaticamente para cada tupla da lista.
+
+---
+
+### Exercícios de fixação
+
+Usando tuplas:
+
+1. Leia duas coordenadas no $R^2$ e calcule a distância entre elas.
+2. Leia um inteiro $n$, em seguida, leia $n$ coordenadas no $R^2$ e imprima o centroide dessas coordenadas.
+3. Leia um inteiro $n$, em seguida, leia $n$ valores inteiros e imprima a distância Euclidiana entre cada par de coordenadas.
+
+
+---
+
+## Conjuntos
+
+
+
+
+
 
 
 
