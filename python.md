@@ -953,6 +953,8 @@ if x > 5:
 print("Fim")
 ```
 
+![bg right:40% 90% drop-shadow](images/if.drawio.svg)
+
 ---
 
 ## Bloco de Código
@@ -1035,6 +1037,9 @@ if condicao:
 else:
     # bloco de código 2
 ```
+
+
+![bg right:40% 90% drop-shadow](images/if_else.drawio.svg)
 
 ---
 
