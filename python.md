@@ -1646,7 +1646,7 @@ Digite um número: 5
 
 # Auto Avaliação
 
-Responda as perguntas para si mesmo.
+Responda as perguntas **para si mesmo**.
 
 1. Sou capaz de prever, sem executar, o resultado de um programa simples em Python, como o exemplo abaixo?
 
@@ -1661,8 +1661,8 @@ for i in range(x):
 > Você seria capaz de descrever o que o programa faz com suas palavras, sem executá-lo?
 ---
 
-2. Compreendo bem o conceito de variável, memória e tipo de dado em Python?
-3. Sei diferenciar entre erro de sintaxe e erro de semântica?
+2. Compreendo bem o conceito de **variável, memória e tipo de dado** em Python?
+3. Sei diferenciar entre erro de **sintaxe** e erro de **semântica**?
 4. Consigo identificar e corrigir erros de em um programa Python, como o exemplo abaixo?
 
 ```python
@@ -1671,7 +1671,7 @@ If x = 5:
     print("x é igual a 5")
 print("Não é 5")
 ```
-5. Em relação a estruturas de Seleção:
+5. Em relação a **estruturas de Seleção**:
    - [ ] não sei do que se trata.
    - [ ] sei o que é, mas não sei ler/interpretar.
    - [ ] sei ler/interpretar, mas não sei escrever/criar.
@@ -1679,7 +1679,7 @@ print("Não é 5")
 
 ---
 
-6. Em relação a estruturas de Repetição:
+6. Em relação a estruturas de **Repetição**:
    - [ ] não sei do que se trata.
    - [ ] sei o que é, mas não sei ler/interpretar.
    - [ ] sei ler/interpretar, mas não sei escrever/criar.
