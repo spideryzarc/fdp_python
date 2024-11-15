@@ -1082,6 +1082,26 @@ else:
 
 ---
 
+### Fluxo de Execução
+
+- **Apenas um** bloco de código é executado.
+
+```python
+if condicao1:
+    # bloco de código 1
+elif condicao2:
+    # bloco de código 2
+elif condicao3:
+    # bloco de código 3
+else:
+    # bloco de código 4
+```
+
+![bg right:40% 90% drop-shadow](images/elif.drawio.svg)
+
+
+---
+
 - Para resolver isso, o Python possui a estrutura `elif`.
 - `elif` é uma abreviação de **else if**.
 
@@ -1163,6 +1183,8 @@ else:
   while condicao:
       # bloco de código
   ```
+
+![bg right:40% 90% drop-shadow](images/while.drawio.svg)
 
 ---
 
@@ -1333,27 +1355,30 @@ print("Soma:", soma)
 
 ## Estrutura `for`
 
-- **Para cada** elemento de uma sequência, o **bloco de código** é executado.
-- Útil quando o número de repetições é **conhecido**.
+- Um bloco de código é executado **para cada elemento** de uma sequência.
+- A variável recebe cada elemento da sequência e o bloco de código é executado com a váriavel assumindo aquele valor.
 - **Sintaxe**:
   ```python
   for variavel in sequencia:
       # bloco de código
   ```
+- Terminado o `for`, a variável mantém o **último valor** da sequência.
+
+![bg right:40% 90% drop-shadow](images/for.drawio.svg)
 
 ---
 
 ## Exemplo de `for`
 
 ```python
-for x in range(10):
+for x in range(100):
     print(x)
 >>>
 0
 1
 2
 ...
-9
+99
 ```
 
 ![bg right:50%](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJwOHNsZG9xbzZmYm9senRlMmlnczA1Nnc3bHNyc3l2MWVnczB6eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/yKxo7c9Q6pZoUzAfPu/giphy.gif)
@@ -1362,11 +1387,17 @@ for x in range(10):
 
 ## Função `range()`
 
+A função `range()` é uma **ferramenta** muito útil para criar sequências numéricas.
+
 - **range()**: Gera uma sequência de números inteiros.
 - **Sintaxe e Semântica**:
   - `range(stop)`: Gera números de `0` até `stop - 1`.
   - `range(start, stop)`: Gera números de `start` até `stop - 1`.
   - `range(start, stop, step)`: Gera números de `start` até `stop - 1` com incremento `step` entre eles.
+
+<br>
+
+> **Atenção**: O `stop` é sempre **excluso**.
 
 ---
 
@@ -1466,9 +1497,9 @@ for i in range(3):
 
 ## Escapando de um *Loop*
 
-- **break**: Interrompe o *loop*.
-- **continue**: Pula para a próxima iteração.
-- Pode ser aplicado em *loops* `for` e `while`.
+- **break**: Interrompe o *loop* imediatamente.
+- **continue**: Pula para a próxima iteração, se houver.
+- Podem ser aplicados em *loops* `for` e `while`.
 
 ```python
 for x in range(10):
@@ -1501,9 +1532,7 @@ for x in range(9, 100):
         break
 ```
 
-<br>
-
-> Uma vez que o número é encontrado, não há necessidade de continuar o *loop*.
+Uma vez que o número é encontrado, não há necessidade de continuar o *loop*.
 
 ---
 
@@ -1517,7 +1546,7 @@ for i in range(3):
         if i != j:
             # bloco de código longo
 ```
-Alternativa:
+Alternativa com `continue`:
 ```python
 for i in range(3):
     for j in range(3):
@@ -1527,6 +1556,9 @@ for i in range(3):
 
 Observe que o `bloco de código longo` fica menos deslocado.
 
+> É bem **raro** usar `continue` quando estamos aprendendo, mas é bom saber que ele existe.
+
+<!-- _footer: '' -->
 
 ---
 
@@ -1562,10 +1594,19 @@ Observe que o `bloco de código longo` fica menos deslocado.
 ### Exemplo
 
 ```python
+#somatório dos 10 primeiros números naturais
 soma = 0
 for x in range(1, 11):
-    soma += x
+    soma += x  # É o mesmo que soma = soma + x
 print(soma)
+```
+
+```python
+#fatorial de 5
+fatorial = 1
+for x in range(1, 6):
+    fatorial *= x # É o mesmo que fatorial = fatorial * x
+print(fatorial)
 ```
 
 ---
@@ -1595,6 +1636,10 @@ Digite um número: 5
 ```
 
 8. Leia um número e calcule o fatorial desse número.
+
+**Desafio 1**: Leia um número `n` e exiba os `n` primeiros números da sequência de Fibonacci, **usando apenas o que já foi apresentado até agora**.
+
+**Desafio 2**: Leia dois inteiros `a` e `b` e calcule o máximo divisor comum (MDC) entre eles, usando o **algoritmo de Euclides**.
 
 
 ---
