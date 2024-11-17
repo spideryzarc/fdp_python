@@ -386,14 +386,14 @@ print(mensagem, x, y)
 
 ## Identificadores
 
-- **Identificador**: Nome dado a uma variável, função, classe, módulo, etc.
+- **Identificador**: Nome dado a uma **variável**, função, classe, módulo, etc.
 - **Regras**:
   - Deve começar com uma **letra** ou `_`.
   - Pode conter **letras**, **números** e `_`.
-  - **Não** pode conter **espaços** ou **caracteres especiais**.
+  - **Não** pode conter **espaços** ou **caracteres especiais** (`!@#$%^&*()[]{};:'",.<>/\|`).
   - ***Case-sensitive*** (diferencia maiúsculas de minúsculas).
-<br>
-> Embora seja possível usar acentos, **não é recomendado**.	
+- Embora você possa usar **qualquer** nome, é uma **boa prática** usar nomes **descritivos**.
+- Embora seja possível usar acentos, **não é recomendado**.	
 
 ---
 
@@ -410,7 +410,7 @@ PI = 3.14159
 
 > Não abordaremos **classes** neste curso.
 
-> **Constantes** são variáveis cujo valor não deve ser alterado. Python não possui constantes, mas é uma **convenção** usar letras maiúsculas para indicar que uma variável é constante.
+> **Constantes** são variáveis cujo valor não deve ser alterado. Python não possui constantes, mas é uma **convenção** usar letras maiúsculas para indicar que uma variável deveria ser constante.
 
 ---
 - Use sempre **nomes significativos** para suas variáveis.

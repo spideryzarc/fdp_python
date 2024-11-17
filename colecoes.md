@@ -24,7 +24,7 @@ style: |
 Neste módulo, vamos estudar as **coleções** em Python. As coleções são estruturas de dados que permitem armazenar **múltiplos valores** em uma única variável.
 
    
-![bg right:40%](empty.svg)
+![bg right:60%](images/colecoes.jpeg)
 
 ---
 
@@ -43,7 +43,7 @@ Neste módulo, vamos estudar as **coleções** em Python. As coleções são est
 
 Obviamente, criar uma variável para cada valor não é prático. Para armazenar uma quantidade grande ou indefinida de valores, usamos uma **coleção**.
 
-* Em Python, existem **quatro tipos** de coleções:
+* Em Python, existem **quatro tipos** de coleções básicas:
   * **Listas** (`list`)
   * **Tuplas** (`tuple`)
   * **Conjuntos** (`set`)
@@ -52,7 +52,6 @@ Obviamente, criar uma variável para cada valor não é prático. Para armazenar
 ---
 # Listas
 
-* Para armazenar uma quantidade indefinida de valores, usamos uma **lista**.
 * Uma lista é uma coleção de valores, onde cada valor é identificado por um **índice** correspondente à sua **posição** na lista.
 * Uma lista é representada por colchetes `[]` e os valores são separados por **vírgula**.
 * Por exemplo, a lista `numeros` abaixo contém 5 valores:
@@ -67,9 +66,23 @@ numeros = [1, 2, 3, 4, 5]
 - Uma lista pode conter **qualquer tipo de valor**.
 - Uma mesma lista pode conter **valores de tipos diferentes** (heterogênea).
 - Uma lista **não é um conjunto**, ou seja, 
-  - **os valores podem se repetir**.
-  - **a ordem dos valores é importante**.
-  - **os valores são acessados por índices**.
+  - os valores podem se **repetir**.
+  - a **ordem** dos valores é importante.
+  - os valores são associados a **índices**.
+
+---
+
+## Lista vazia
+
+- Uma lista vazia é representada por `[]`.
+- Uma lista vazia é **diferente** de uma variável **nula**.
+- Se usada em um contexto booleano, uma lista vazia é considerada **falsa**.
+- É comum usar uma lista vazia para **inicializar** uma lista que será **preenchida** posteriormente.
+```python
+lista = []
+print(lista)
+>>> []
+```
 
 ---
 
@@ -90,7 +103,7 @@ print(numeros[0])
 
 ## Modificando elementos de uma lista
 
-- Para modificar um elemento de uma lista, usamos o índice do elemento.
+- Para **modificar** um elemento de uma lista, usamos o **índice** do elemento.
 - Por exemplo, para modificar o segundo elemento da lista `numeros`, fazemos:
 
 ```python
@@ -125,7 +138,7 @@ print(numeros[-1])
 
 * O índice `-1` acessa o último elemento da lista.
 * O índice `-k` acessa o k-ésimo elemento a partir do final da lista.
-* O maior índice negativo é `-n`, onde `n` é o tamanho da lista.
+* O menor índice negativo é `-n`, onde `n` é o tamanho da lista.
   ```python
   numeros = [1, 2, 3, 4, 5]
   print(numeros[-6])
@@ -153,7 +166,7 @@ print(B)
 
 ---
 
-* Quando trabalhamos com variáveis de tipos primitivos, como `int`, `float`, `str`, etc., a atribuição de uma variável a outra **copia** o valor da variável original para a nova variável.
+* Quando trabalhamos com variáveis de **tipos primitivos**, como `int`, `float`, `str`, etc., a atribuição de uma variável a outra **copia** o valor da variável original para a nova variável.
 
 * Porém, quando trabalhamos com **listas**, a atribuição de uma lista a outra **copia a referência** da lista original para a nova variável.
 
@@ -161,6 +174,41 @@ print(B)
 
 ---
 
+```python
+# tipos primitivos
+a = 10
+b = 2
+
+a = b
+
+print(a)
+>>> 2
+print(b)
+>>> 2
+```
+Com tipos primitivos, a atribuição `a = b` **copia** o valor de `b` para `a`.
+
+![bg left:60% 95% drop-shadow](images/copia.drawio.svg)
+
+---
+
+```python
+# listas
+A = [1, 2, 3]
+B = [4, 5, 6]
+
+A = B
+
+```
+
+Com listas, a atribuição `A = B` faz com que `A` e `B` **apontem** para a **mesma lista**.
+
+O espaço ocupado por `B` será **liberado** pelo *garbage collector*.
+
+![bg right:55% 95% drop-shadow](images/referencia.drawio.svg)
+
+
+---
 ## Copiando listas
 
 Se desejamos **copiar** o conteúdo de uma lista para outra, sem que as listas sejam **referências** da mesma lista, podemos usar a função `copy` ou o operador `[:]`.
@@ -181,7 +229,7 @@ print(B)
 ---
 ## Comprimento de uma lista
 
-- Para saber o **tamanho** de uma lista, usamos a função `len`.
+- Para saber o número de elementos de uma lista, usamos a função `len`. 
 ```python
 numeros = [1, 2, 3, 4, 5]
 print(len(numeros))
@@ -428,7 +476,7 @@ for i in range(len(numeros)):
 
 ---
 
-- Também podemos usar o laço `while` para **iterar** sobre os elementos de uma lista, mas é bem menos prático.
+- Também podemos usar o laço `while` para **iterar** sobre os elementos de uma lista, mas é bem **menos prático**.
 ```python
 numeros = [1, 2, 3, 4, 5]
 i = 0
@@ -438,7 +486,20 @@ while i < len(numeros):
 ```
 
 ---
+## Resumo de operações com listas
 
+- **Adicionar** elementos: `append`, `insert`, `extend`
+- **Concatenar** listas: `+`, `+=`
+- **Remover** elementos: `remove`, `pop`, `del`, `clear`
+- **Multiplicar** listas: `*`, `*=`
+- **Ordenar** listas: `sort`, `sorted`
+- **Inverter** listas: `reverse`
+- **Buscar** elementos: `in`, `index`
+- **Iterar** sobre listas: `for`, `range`, `while`
+- **Copiar** listas: `copy`, `[:]`
+- **Comprimento** de listas: `len`
+
+---
 
 ## Exercícios de fixação
 
@@ -467,7 +528,11 @@ while i < len(numeros):
 - É uma forma **concisa** de criar listas em Python.
 - A sintaxe é:
   ```python
-  [expressao for item in lista]
+  [expressao for item in sequencia]
+  ```
+  Ou
+  ```python
+  [expressao for item in sequencia if condicao]
   ```
 
 ---
@@ -682,6 +747,24 @@ Usando *Comprehension* ou *Slicing*:
 
 > É importante **conhecer** e **praticar** os modos careta, pois eles **reforçam** os conceitos básicos de programação e algoritmos. Contudo, é **mais eficiente** usar os modos descolado e aristocrático, pois eles são **mais rápidos** e **concisos**.
 ---
+### Observações sobre listas
+
+* `max`, `min` e `sum` são exemplos de ***built-in functions***, ou seja, funções **nativas** do Python.
+* **Python é lento** e há uma **grande diferença de performance** entre um algoritmo escrito **passo-a-passo** em Python e um ***built-in function***.
+* Não faz sentido programar em **Python** como se fosse **C** ou **Java**.
+* **Didaticamente**, é importante **entender** como essas funções funcionam, mas **na prática** é melhor usá-las.
+* Outros exemplo de ***built-in functions*** são `len`, `sorted`, `reversed`, `enumerate`, `zip`, `filter`, `map`, `all`, `any`, `next`etc.
+
+---
+
+#### <!--fit --> Dizem que no Python, <br>**"menos é mais"**. Ou seja,<br> menos código<br>é mais **eficiente**, <br>é mais **elegante**.
+
+<!-- _class: invert -->
+<!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/dark_wood2.jpg') -->
+
+![bg right:20%](empty.svg)
+
+---
 
 ## Tuplas
 
@@ -726,7 +809,7 @@ coordenadas = (10, 20)
 ### Acessando elementos de uma tupla
 
 - Para acessar um elemento de uma tupla, usamos o **índice** do elemento.
-- A sintaxe é a mesma das listas.
+- A sintaxe é a **mesma das listas**.
 - Tuplas também suportam **índices negativos**.
 - Tuplas também suportam **slicing**.
 - Tuplas também suportam **iteração**.
@@ -740,7 +823,7 @@ coordenadas = (10, 20)
 
 ### Compreensão de tuplas
 
-Tuplas não suportam *compreensão* diretamente, mas podemos usar a função `tuple` para criar uma tupla a partir de uma *compreensão*.
+Tuplas **não** suportam *compreensão* diretamente, mas podemos usar a função `tuple` para criar uma tupla a partir de uma *compreensão*.
 
 ```python
 t = tuple(i**2 for i in range(10))
@@ -755,7 +838,7 @@ print(t)
   >>> <generator object <genexpr> at 0x7f7f7f7f7f70>
   ```
 
-> Geradores são um tema avançado e serão abordados mais adiante.
+> **Geradores** são um tema avançado e serão abordados mais adiante.
 
 
 ---
@@ -781,13 +864,13 @@ print(l)
 
 ### Tuplas de um elemento
 
-- Para criar uma tupla de um único elemento, é necessário **adicionar uma vírgula** após o elemento.
+- Para criar uma tupla de um único elemento, é necessário **adicionar uma vírgula** após o elemento ou usar a função `tuple`.
 ```python
-t = (10,)
+t = (10,) # ou t = tuple([10])
 print(t)
 >>> (10,)
 ```
-- Caso contrário, o Python **não reconhece** a vírgula como uma tupla.
+- Caso contrário, o Python **não reconhece** como uma tupla.
 ```python
 t = (10)
 print(t)
@@ -798,7 +881,7 @@ print(t)
 
 ### Desempacotamento de tuplas
 
-Um dos 'truques' mais legais do Python é o **desempacotamento** de tuplas.
+Um dos *truques* mais legais do Python é o **desempacotamento** de tuplas.
 
 ```python
 coordenadas = (10, 20)
@@ -888,16 +971,400 @@ Usando tuplas:
 
 ## Conjuntos
 
+* Um **conjunto** é uma coleção **não ordenada** de valores **únicos**.
+* Um conjunto é representado por **chaves** `{}` e os valores são separados por **vírgula**.
+* Por exemplo, o conjunto `pares` abaixo contém 3 valores únicos:
+```python
+pares = {2, 4, 6}
+```
+- Com poucas exceções, são **semelhantes** aos conjuntos da matemática.
+---
+
+### Características gerais de um conjunto
+
+- Um conjunto **não** guarda valores **repetidos**.
+- Um conjunto **não** garante a **ordem** dos valores.
+- Um conjunto **não** suporta **índices** ou **slicing**.
+- Nem  todos os tipos de valores podem ser armazenados em um conjunto.
+  - Todos os tipos primitivos podem ser armazenados em um conjunto.
+  - Listas, dicionários e outros conjuntos **não** podem ser armazenados em um conjunto.
+
+---
+
+### Convertendo listas em conjuntos e vice-versa
+
+- Para converter uma lista em um conjunto, usamos a função `set`.
+```python
+numeros = [1, 2, 3, 4, 5]
+s = set(numeros)
+print(s)
+>>> {1, 2, 3, 4, 5}
+```
+
+- Para converter um conjunto em uma lista, usamos a função `list`.
+```python
+pares = {2, 4, 6}
+l = list(pares)
+print(l)
+>>> [2, 4, 6]
+```
+
+---
+
+### Criando conjuntos vazios
+
+- Uma **pegadinha** do Python é que **não** podemos criar um conjunto vazio com `{}`.
+- Pois, `{}` é interpretado como um **dicionário vazio**.
+
+```python
+vazio = set()
+print(vazio)
+>>> set() 
+```
+- Abaixo, criamos um **dicionário vazio**.
+```python
+vazio = {} # Isso é um dicionário vazio, não um conjunto vazio.
+print(vazio)
+>>> {}
+```
+
+---
+### Operações com conjuntos
+
+- Adicionar elementos,
+- Remover elementos,
+- Verificar se um elemento está no conjunto,
+- Iterar sobre os elementos do conjunto,
+- Realizar operações de conjuntos (união, interseção, diferença, etc).
+- Verificar se um conjunto é subconjunto ou superconjunto de outro conjunto.
+
+---
+
+### Adicionando elementos
+
+- Para adicionar um elemento a um conjunto, usamos o método `add`.
+```python
+pares = {2, 4, 6}
+pares.add(8)
+print(pares)
+>>> {2, 4, 6, 8}
+```
+- Para adicionar **vários elementos** a um conjunto, usamos o método `update`. 
+```python
+pares = {2, 4, 6}
+pares.update([6, 10, 12])
+print(pares)
+>>> {2, 4, 8, 10, 12}
+```
+<br>
+
+> Semelhante ao método `extend` das listas.
+ 
+---
+
+### Removendo elementos
+
+- Para remover **um** elemento de um conjunto, usamos o método `remove`.
+```python
+pares = {2, 4, 6, 8}
+pares.remove(6)
+print(pares)
+>>> {2, 4, 8}
+```
+- Ou usamos o método `discard`.
+```python
+pares = {2, 4, 6, 8}
+pares.discard(6)
+print(pares)
+>>> {2, 4, 8}
+```
+- A diferença entre `remove` e `discard` é que `remove` gera um erro se o elemento não está no conjunto.
+---
+
+- Remover **todos** os elementos de um conjunto, usamos o método `clear`.
+```python
+pares = {2, 4, 6, 8}
+pares.clear()
+print(pares)
+>>> set()
+```
+
+- Remover **vários elementos** de um conjunto, usamos o método `difference_update`.
+```python
+pares = {2, 4, 6, 8}
+pares.difference_update({4, 8})
+print(pares)
+>>> {2, 6}
+```
+
+---
+
+### Verificando elementos
+
+- Para verificar se um elemento **pertence** ($\in$) a um conjunto, usamos o operador `in`.
+
+```python
+pares = {2, 4, 6, 8}
+if 6 in pares:
+    print('6 está no conjunto')
+else:
+    print('6 não está no conjunto')
+```
+
+---
+
+### Iterando sobre conjuntos
+
+- Para **iterar** sobre os elementos de um conjunto, usamos um **laço** `for`.
+```python
+pares = {2, 4, 6, 8}
+for numero in pares:
+    print(numero)
+```
+<br>
+
+> Não podemos garantir a ordem dos elementos.
+
+---
+
+### Compreensão de conjuntos
+
+- Assim como as listas, os conjuntos suportam *compreensão*.
+- A sintaxe é:
+  ```python
+  A = {expressao for item in sequencia}
+  ```
+  ou
+  ```python
+  A = {expressao for item in sequencia if condicao}
+  ```
+
+---
+
+#### Exemplo
+
+- Modo careta:
+  ```python
+  quadrados_impar = set()
+  for i in range(10):
+      if i**2 % 2 != 0:
+          quadrados_impar.add(i**2)
+  ```
+- Modo descolado:
+  ```python
+  quadrados_impar = {i**2 for i in range(10) if i**2 % 2 != 0}
+  ```
 
 
+---
 
+#### Operações de conjuntos
 
+- Python suporta **operações de conjuntos** como **união**, **interseção**, **diferença**, **diferença simétrica**, etc.
+- Podem ser feitas usando **métodos** ou **operadores**.
+  - **Métodos** são mais **verbosos** e **explícitos**.
+  - **Operadores** são mais **concisos** e **elegantes**.
 
+---
+Seja:
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+```
+##### União de conjuntos
 
+```python
+C = A | B # ou C = A.union(B)
+print(C)
+>>> {1, 2, 3, 4, 5}
+```
 
+##### Interseção de conjuntos
 
+```python
+C = A & B # ou C = A.intersection(B)
+print(C)
+>>> {3}
+```
 
+---
 
+##### Diferença de conjuntos
 
+```python
+C = A - B # ou C = A.difference(B)
+print(C)
+>>> {1, 2}
+```
+
+##### Diferença simétrica de conjuntos
+Os elementos que estão em **A** ou em **B**, mas não em ambos.
+```python
+C = A ^ B # ou C = A.symmetric_difference(B)
+print(C)
+>>> {1, 2, 4, 5}
+```
+
+---
+Seja:
+```python
+A = {1, 2, 3}
+B = {1, 2}
+```
+
+##### Subconjuntos
+
+```python
+print(B <= A) # ou print(B.issubset(A)) 
+>>> True
+```
+
+##### Superconjuntos
+
+```python
+print(A >= B) # ou print(A.issuperset(B))
+>>> True
+```
+
+---
+
+##### Subconjuntos próprios
+
+```python
+print(B < A) # ou print(B.issubset(A) and B != A)
+>>> True
+```
+
+##### Superconjuntos próprios
+
+```python 
+print(A > B) # ou print(A.issuperset(B) and A != B)
+>>> True
+```
+
+---
+
+#### Igualdade de conjuntos
+
+```python
+A = {1, 2, 3}
+B = {3, 2, 1}
+print(A == B)
+>>> True
+```
+
+---
+
+### Atribuição de conjuntos
+
+- Funciona de forma **semelhante** às listas e tuplas.
+- Atribuição de conjuntos é **por referência**, ou seja, **não** cria uma cópia do conjunto.
+```python
+A = {1, 2, 3}
+B = A 
+B.add(4)
+print(A)
+>>> {1, 2, 3, 4}
+```
+<br>
+
+> Dizemos que **B** é um ***alias*** de **A**.
+
+---
+
+### Copiando conjuntos
+
+Usando o método `copy`, criamos um **novo** conjunto com os mesmos elementos de um conjunto existente.
+
+```python
+A = {1, 2, 3}
+B = A.copy() # ou B = set(A)
+B.add(4)
+print(A)
+>>> {1, 2, 3}
+print(B)
+>>> {1, 2, 3, 4}
+```
+
+<br>
+
+> Também podemos fazer: `B = set(A)`.
+ 
+---
+
+### Exercícios de fixação
+
+Usando conjuntos:
+
+1. Leia duas listas de 10 inteiros e imprima a união, interseção e diferença simétrica entre elas.
+2. Leia uma lista de 10 inteiros e imprima os valores únicos (sem repetição) da lista.
+3. Leia uma lista de 10 inteiros e imprima os valores que aparecem mais de uma vez.
+
+---
+
+## Dicionários
+
+* Um **dicionário** é uma coleção **mutável** de pares **chave-valor**.
+* Um dicionário é representado por **chaves** `{}` e os pares são separados por **vírgula**.
+* Cada par é formado por uma **chave** e um **valor**, separados por **dois pontos** `:`.
+* Por exemplo, o dicionário `notas` abaixo contém 3 pares chave-valor:
+```python
+notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+```
+
+---
+
+### Características gerais de um dicionário
+
+- Um dicionário **não** garante a **ordem** dos pares chave-valor.
+- Os **valores** podem ser **qualquer tipo** de objeto.
+- As **chaves** seguem as mesmas regras dos elementos de um conjunto, ou seja,
+  - **Não** podem ser **mutáveis** (listas, dicionários, conjuntos).
+  - **Podem** ser **imutáveis** (inteiros, floats, strings, tuplas, etc).
+  - **Não** podem ser **repetidas**.
+
+---
+
+### Acessando elementos de um dicionário
+
+- Para acessar um **valor** de um dicionário, usamos a **chave** correspondente entre **colchetes** `[]`.
+```python
+notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+print(notas['Alice'])
+>>> 9.5
+```
+- Se a chave não existe, o Python gera um erro.
+```python
+print(notas['David'])
+>>> KeyError: 'David'
+```
+
+---
+
+### Adicionando elementos
+
+- Para adicionar um **novo par** chave-valor a um dicionário, usamos a **chave** entre **colchetes** `[]` e o **valor** correspondente.
+```python
+notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+notas['David'] = 6.0
+print(notas)
+>>> {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5, 'David': 6.0}
+```
+- Se a chave já existe, o valor é **substituído**.
+
+---
+
+### Removendo elementos
+
+- Para remover um **par** chave-valor de um dicionário, usamos o comando `del`.
+```python
+notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+del notas['Bob']
+print(notas)
+>>> {'Alice': 9.5, 'Carol': 7.5}
+```
+- Se a chave não existe, o Python gera um erro.
+
+---
 
 
