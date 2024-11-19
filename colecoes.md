@@ -1341,9 +1341,19 @@ print(notas['David'])
 
 ---
 
+- Uma alternativa é usar o método `get`, que **retorna** um valor padrão se a chave não existe.
+  ```python
+  print(notas.get('David', 0))
+  >>> 0
+  ```
+  - Se a chave existe, o valor correspondente é retornado.
+  - Se a chave não existe, o valor **padrão** é retornado.
+
+---
+
 ### Adicionando elementos
 
-- Para adicionar um **novo par** chave-valor a um dicionário, usamos a **chave** entre **colchetes** `[]` e o **valor** correspondente.
+- Para adicionar um **novo par** chave-valor a um dicionário, basta atribuir um valor a uma **nova chave**.
 ```python
 notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
 notas['David'] = 6.0
@@ -1356,15 +1366,155 @@ print(notas)
 
 ### Removendo elementos
 
-- Para remover um **par** chave-valor de um dicionário, usamos o comando `del`.
-```python
-notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
-del notas['Bob']
-print(notas)
->>> {'Alice': 9.5, 'Carol': 7.5}
-```
+- Para remover um **par** chave-valor de um dicionário, usamos o comando `del`. 
+  ```python
+  notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+  del notas['Bob']
+  print(notas)
+  >>> {'Alice': 9.5, 'Carol': 7.5}
+  ```
+
+- Também podemos usar o método `pop`, que **retorna** o valor removido.
+
+  ```python
+  notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+  valor = notas.pop('Bob')
+  print(valor)
+  >>> 8.0
+  ```
 - Se a chave não existe, o Python gera um erro.
 
 ---
+
+- Para remover sem gerar erro, usamos o método `pop` com um **valor padrão**.
+  ```python
+  notas = {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+  valor = notas.pop('David', 0)
+  print(valor)
+  >>> 0
+  ```
+- Se a chave **não existe**, o valor **padrão** é retornado.
+
+---
+
+## Compreensão de dicionários
+
+- Assim como as listas e conjuntos, os dicionários suportam *compreensão*.
+- A sintaxe é:
+  ```python
+  D = {chave: valor for item in sequencia}
+  ```
+  ou
+  ```python
+  D = {chave: valor for item in sequencia if condicao}
+  ```
+
+---
+
+### Exemplo de compreensão de dicionários
+
+- Modo careta:
+  ```python
+  quadrados = {}
+  for i in range(1, 6):
+      quadrados[i] = i**2
+  ```
+- Modo descolado:
+  ```python
+  quadrados = {i: i**2 for i in range(1, 6)}
+  ```
+---
+
+## Convertendo listas em dicionários
+
+- Para converter uma lista de pares chave-valor em um dicionário, usamos a função `dict`.
+```python
+pares = [('Alice', 9.5), ('Bob', 8.0), ('Carol', 7.5)]
+notas = dict(pares)
+print(notas)
+>>> {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+```
+
+- Se temos duas listas, uma com as chaves e outra com os valores, podemos usar a função `zip`.
+```python
+nomes = ['Alice', 'Bob', 'Carol']
+notas = [9.5, 8.0, 7.5]
+d = dict(zip(nomes, notas))
+print(d)
+>>> {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
+```
+
+---
+
+### Iterando sobre dicionários
+
+- Podemos iterar sobre as **chaves**, os **valores** ou os **pares chave-valor** de um dicionário.
+  - Para iterar sobre as **chaves**, usamos o método `keys`.
+  ```python
+  for chave in notas.keys():
+      print(chave)
+  ```
+  - Para iterar sobre os **valores**, usamos o método `values`.
+  ```python
+  for valor in notas.values():
+      print(valor)
+  ```
+  - Para iterar sobre os **pares chave-valor**, usamos o método `items`.
+  ```python
+  for chave, valor in notas.items():
+      print(chave, valor)
+  ```
+---
+
+### Exercícios de fixação
+
+Usando dicionários:
+
+1. Leia uma lista de 10 inteiros e imprima se houve ou não repetição de valores, e se houve, quais são os valores repetidos e quantas vezes eles aparecem.
+2. Leia o nome de 3 alunos e, em seguinda, pergunte a idade de cada um (pelo nome), a altura e o peso. Armazene esses dados em um dicionário.
+3. Com os dados do exercício anterior, calcule a média de idade, altura e peso dos alunos.
+4. Com os dados do exercício anterior, crie e exiba um dicionário com o IMC de cada aluno.
+
+---
+
+## Resumo
+
+
+- **Listas**: coleção **ordenada** e **mutável** de valores.
+  - `append`, `insert`, `extend`, `+`, `*`, `remove`, `pop`, `del`, `clear`, `sort`, `sorted`, `reverse`, `in`, `index`, `copy`, `len`, `list`.
+- **Tuplas**: coleção **imutável** de valores.
+- **Conjuntos**: coleção **não ordenada** de valores **únicos**.
+  - `add`, `update`, `remove`, `discard`, `clear`, `difference_update`, `in`, `for`, `|`, `&`, `-`, `^`, `<=`, `>=`, `<`, `>`, `==`, `copy`, `set`. 
+- **Dicionários**: coleção **mutável** de pares **chave-valor**.
+  - `get`, `add`, `update`, `remove`, `pop`, `keys`, `values`, `items`, `dict`, `zip`. 
+- ***Comprehension***: listas, conjuntos e dicionários.
+- ***Slicing***: listas e tuplas. 
+
+---
+
+# Um comentário final
+
+- Quando aprendemos a programar em outras linguagens, como **C** ou **Java**, aprendemos a trabalhar **primeiro** com **vetores** (*arrays*). 
+- A pesar de mais **eficientes**, vetores são estruturas de dados mais **simples** e **limitadas**. 
+- Ao optar pela linguagens de **alto nível**, como **Python**, temos acesso a **estruturas de dados mais complexas** e **poderosas** logo de início.
+- O funcionamento interno dessas estruturas é **complexo**, e é abordado em disciplinas de **estrutura de dados** e **algoritmos**.
+- Apesar disso, é importante **conhecer** e **usar** essas estruturas de dados, ou **não faz sentido** usar Python.
+
+
+---
+
+# Conclusão
+
+Python oferece uma forma **simples** e **elegante** de trabalhar com coleções de dados, que em outras linguagens seriam mais complexas e verbosas. 
+
+É necessário conhecer e usar corretamente essas estruturas de dados para **tornar o código mais eficiente** e **elegante**. 
+
+Embora possamos usar listas para cálculos vetoriais e matriciais, é mais eficiente usar *arrays* do módulo `numpy`, que serão abordados em aulas futuras.
+
+
+
+
+
+
 
 
