@@ -262,6 +262,8 @@ O **escopo** de uma variável é a região do programa onde a variável é visí
 - **Escopo Local**: variáveis definidas dentro de uma função são visíveis apenas dentro da função.
 - **Escopo Global**: variáveis definidas fora de qualquer função são visíveis em todo o programa.
 
+Imagine que, para usar uma função, você precisasse saber **o nome de todas as variáveis** que ela usa internamente. O conceito de **escopo** permite que você use funções sem **se preocupar** com as variáveis internas.
+
 ---
 
 ```python
