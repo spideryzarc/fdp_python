@@ -268,14 +268,199 @@ Imagine que, para usar uma função, você precisasse saber **o nome de todas as
 
 ```python
 def funcao():
-    x = 10
+    x = 10   # variável local
+    print(x)
+# fluxo principal
+funcao()
+print(x)
+>>> NameError: name 'x' is not defined
+```
+- A variável `x` é definida dentro da função `funcao`, portanto, é uma **variável local**.
+- A variável `x` **não é visível fora da função**.
+- Variáveis locais são **destruídas** quando a função termina.
+- Variáveis globais permanecem **vivas** durante toda a execução do programa.
+ 
+ ---
+
+ ### Ofuscamento de Variáveis
+
+Variáveis locais **ocultam** variáveis globais com o mesmo nome.
+
+```python
+x = 10        # variável global
+def funcao():
+    x = 20    # variável local (é uma nova variável)
     print(x)
 # fluxo principal
 funcao()
 print(x)
 ```
-- A variável `x` é definida dentro da função `funcao`, portanto, é uma variável local.
-- A variável `x` não é visível fora da função, causando um erro ao tentar imprimi-la.
-- Variáveis locais são **destruídas** quando a função termina.
-- Variáveis globais são **destruídas** quando o programa termina.
- 
+
+- A variável `x` dentro da função `funcao` **oculta** a variável `x` global.
+- A variável `x` global não é afetada pela variável `x` local.
+- Se você deseja **modificar** uma variável global dentro de uma função, use a palavra-chave `global`.
+
+---
+
+### Modificando Variáveis Globais com `global`
+
+A palavra-chave `global` permite que você modifique uma variável global dentro de uma função.
+
+```python
+x = 10        # variável global
+def funcao():
+    global x  # avisa que 'x' é global
+    x = 20    # modifica 'x' global
+    print(x)
+# fluxo principal
+funcao()
+print(x)
+```
+
+> Devemos **evitar** alterar variáveis **globais** dentro de funções, pois isso pode tornar o código difícil de **entender** e depurar.
+
+---
+
+## Tipos de Parâmetros
+
+Python possui quatro tipos de parâmetros:
+- **Obrigatórios**: devem ser passados na chamada da função.
+- **Padrão**: têm um valor padrão e são opcionais na chamada da função.
+- **Variáveis**: recebem um número variável de argumentos.
+- **Nomeados**: são passados como pares `chave=valor`.
+
+---
+
+### Parâmetros Obrigatórios
+
+```python
+def div(a, b):
+    return a // b
+# fluxo principal
+print(div(10, 2)) # valores são passados na ordem
+>>> 5
+print(div(2, 10)) # valores são passados na ordem
+>>> 0
+print(div(b=2, a=10)) # nomeando os parâmetros, a ordem não importa
+>>> 5
+```
+- Todos devem receber um valor na chamada da função.
+- A tribuição é feita pela **ordem** dos parâmetros, ou
+- pode-se usar a **chave** do parâmetro na chamada.
+
+---
+
+### Parâmetros Padrão
+
+```python
+def div(a=10, b=2):
+    return a // b
+# fluxo principal
+print(div()) # valores padrão são usados
+>>> 5
+print(div(2)) # valor de 'a' é passado, 'b' usa o padrão
+>>> 1
+print(div(2, 10)) # valores são passados na ordem
+>>> 0
+print(div(b=10)) # nomeando o parâmetro 'b', 'a' usa o padrão
+>>> 1
+print(div(b=10, a=2)) # nomeando os parâmetros, a ordem não importa
+>>> 0
+```
+
+- Os parâmetros padrão são **opcionais** na chamada da função.
+- Se não forem passados, os valores padrão são usados.
+- Devem colocados **após** os parâmetros **obrigatórios** na definição da função.
+
+---
+
+### Parâmetros Variáveis
+
+```python
+def soma(*numeros):
+    s = 0
+    for n in numeros:
+        s += n
+    return s
+# fluxo principal
+print(soma(1, 2, 3, 4, 5))
+>>> 15
+print(soma(10, 20, 30))
+>>> 60
+```
+
+- O parâmetro `*numeros` recebe um número variável de argumentos.
+- Os argumentos são **empacotados** em uma tupla.
+- A função pode ser chamada com **qualquer número** de argumentos.
+- Deve ser listado após os parâmetros **obrigatórios** e **padrão** na definição da função.
+
+---
+
+### Parâmetros Nomeados
+
+```python
+def imprime_dados(**dados):
+    for chave, valor in dados.items():
+        print(f'{chave}: {valor}')
+# fluxo principal
+imprime_dados(nome='Maria', idade=30, cidade='São Paulo')
+```
+
+- O parâmetro `**dados` recebe um número **variável** de argumentos **nomeados**.
+- Os argumentos são **empacotados** em um dicionário.
+- A função pode ser chamada com **qualquer número** de argumentos nomeados.
+- Deve ser listado por **último** na definição da função.
+
+---
+
+### Exemplo com Todos os Tipos de Parâmetros
+
+```python
+def teste(a, b=10, *c, **d):
+    print('a:', a)
+    print('b:', b)
+    print('c:', c)
+    print('d:', d)
+# fluxo principal
+teste(1, 2, 3, 4, 5, nome='Maria', idade=30)
+>>> a: 1
+>>> b: 2
+>>> c: (3, 4, 5)
+>>> d: {'nome': 'Maria', 'idade': 30}
+```
+
+> Provavelmente, você não usará todos os tipos de parâmetros em uma única função. Mas é importante saber que eles existem e como usá-los.
+
+---
+
+## Funções Recursivas
+
+Uma função é **recursiva** quando ela chama a si mesma. A recursão é um conceito poderoso, mas deve ser usada com **cuidado**.
+
+```python
+def fatorial(n):
+    if n == 0: # âncora
+        return 1
+    return n * fatorial(n-1) # recursão
+# fluxo principal
+print(fatorial(5))
+
+```
+
+- A função `fatorial` é definida em termos de si mesma.
+- A condição de parada (âncora)  é `n == 0`, que retorna 1.
+- Toda recursão deve ter uma **condição de parada**, caso contrário, a função chamará a si mesma indefinidamente até **estourar** a pilha de execução. 
+
+--- 
+
+### Pilha de Execução
+
+* Toda vez que uma função é chamada, o Python **empilha** um novo quadro de execução.
+* Esse quadro contém as variáveis locais da função, os parâmetros e o ponto de retorno.
+* Por exemplo, `fatorial(5)` chama `fatorial(4)`, que chama `fatorial(3)`, e assim por diante.
+* Por tanto, as chamadas recursivas ocupam espaço na memória, e se a recursão for muito profunda, pode **estourar** a pilha de execução.
+
+![bg right:40%](empty.svg)
+
+
+

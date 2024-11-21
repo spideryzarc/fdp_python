@@ -1449,9 +1449,9 @@ print(d)
 ### Iterando sobre dicionários
 
 - Podemos iterar sobre as **chaves**, os **valores** ou os **pares chave-valor** de um dicionário.
-  - Para iterar sobre as **chaves**, usamos o método `keys`.
+  - Para iterar sobre as **chaves**, usamos o método `keys` ou simplesmente o dicionário.
   ```python
-  for chave in notas.keys():
+  for chave in notas:
       print(chave)
   ```
   - Para iterar sobre os **valores**, usamos o método `values`.
@@ -1471,7 +1471,7 @@ print(d)
 Usando dicionários:
 
 1. Leia uma lista de 10 inteiros e imprima se houve ou não repetição de valores, e se houve, quais são os valores repetidos e quantas vezes eles aparecem.
-2. Leia o nome de 3 alunos e, em seguinda, pergunte a idade de cada um (pelo nome), a altura e o peso. Armazene esses dados em um dicionário.
+2. Leia o nome de 3 alunos e, em seguida, pergunte a idade de cada um (pelo nome), a altura e o peso. Armazene esses dados em um dicionário.
 3. Com os dados do exercício anterior, calcule a média de idade, altura e peso dos alunos.
 4. Com os dados do exercício anterior, crie e exiba um dicionário com o IMC de cada aluno.
 
@@ -1509,7 +1509,7 @@ Python oferece uma forma **simples** e **elegante** de trabalhar com coleções 
 
 É necessário conhecer e usar corretamente essas estruturas de dados para **tornar o código mais eficiente** e **elegante**. 
 
-Embora possamos usar listas para cálculos vetoriais e matriciais, é mais eficiente usar *arrays* do módulo `numpy`, que serão abordados em aulas futuras.
+Embora possamos usar **listas** para cálculos **vetoriais** e **matriciais**, é mais eficiente usar *arrays* do módulo `numpy`, que serão abordados em aulas futuras.
 
 
 
