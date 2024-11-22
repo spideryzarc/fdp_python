@@ -433,6 +433,61 @@ teste(1, 2, 3, 4, 5, nome='Maria', idade=30)
 
 ---
 
+## Desempacotamento de Parâmetros Por Posição
+
+Seja:
+```python
+def modulo(x, y):
+    return (x**2 + y**2)**0.5
+# fluxo principal
+coord = (3, 5)
+```
+- Chamando a função no modo *careta*:
+```python
+x = modulo(coord[0], coord[1])
+```
+
+- Modo *descolado*
+```python
+x = modulo(*coord)
+```
+O operador `*` desempacota a tupla `coord` e passa seus elementos como argumentos para a função `modulo` na ordem.
+
+<!-- _footer: '' -->
+---
+
+## Desempacotamento de Parâmetros Por Nome
+Seja:
+```python
+def imprime_dados(nome, idade, cidade):
+    print(f'Nome: {nome}')
+    print(f'Idade: {idade}')
+    print(f'Cidade: {cidade}')
+# fluxo principal
+dados = {'nome': 'Maria', 'idade': 30, 'cidade': 'São Paulo'}
+```
+
+- Chamando a função no modo *careta*:
+```python
+imprime_dados(dados['nome'], dados['idade'], dados['cidade'])
+```
+
+- Modo *descolado*
+```python
+imprime_dados(**dados)
+```
+
+---
+
+## Desempacotamento
+
+- O operador `**` desempacota um **dicionário** e passa seus pares `chave=valor` como argumentos nomeados para a função.
+- O operador `*` desempacota uma **sequência** e passa seus elementos como argumentos posicionais para a função.
+- O desempacotamento é uma forma **elegante** de passar argumentos para funções, **quando** os argumentos estão **armazenados em uma sequência ou dicionário**.
+
+
+---
+
 ## Funções Recursivas
 
 Uma função é **recursiva** quando ela chama a si mesma. A recursão é um conceito poderoso, mas deve ser usada com **cuidado**.
@@ -462,5 +517,61 @@ print(fatorial(5))
 
 ![bg right:40%](empty.svg)
 
+---
 
+### Exemplo de Recursão
 
+```python
+def fibonacci(n):
+    if n <= 1: # âncora
+        return n
+    return fibonacci(n-1) + fibonacci(n-2) # recursão
+# fluxo principal
+print(fibonacci(5))
+```
+
+- A função `fibonacci` calcula o n-ésimo número da sequência de Fibonacci.
+- A condição de parada (âncora) é `n <= 1`, que retorna `n`.
+- A função é definida em termos de si mesma, chamando `fibonacci(n-1)` e `fibonacci(n-2)`.
+- A recursão é uma forma elegante de resolver problemas que podem ser **divididos** em subproblemas **menores**.
+- Porém, a recursão pode ser **ineficiente** para problemas muito grandes.
+
+---
+- Qual é a forma mais eficiente de calcular o n-ésimo número da sequência de Fibonacci?
+  1. Usar recursão.
+    ```python
+    def fibonacci(n):
+        if n <= 1: return n
+        return fibonacci(n-1) + fibonacci(n-2)
+    ```
+   
+  2. Usar um laço.   
+    ```python
+    def fibonacci(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+    ```
+  3. Usar a fórmula de Binet.
+    ```python
+    def fibonacci(n):
+        phi = 1.618033988749
+        return round((phi**n - (-phi)**-n) / 5**0.5)
+    ```
+<!-- _footer: '' -->
+
+---
+
+## Exercícios
+
+1. Escreva uma função que recebe um número e retorna o seu quadrado.
+2. Escreva uma função que recebe dois números e retorna o maior deles.
+3. Usando a função anterior, escreva uma função que recebe quatro números e retorna o maior deles.
+4. Escreva uma função que retorna a raiz de um número, como no exemplo:
+    ```python
+    print(raiz(9)) # 3.0 raiz quadrada
+    print(raiz(8, 3)) # 2.0 raiz cúbica
+    ```
+5. Escreva uma função que recebe um ou mais números e retorna a média aritmética.
+ 

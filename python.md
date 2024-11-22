@@ -1562,6 +1562,19 @@ Observe que o `bloco de código longo` fica menos deslocado.
 
 ---
 
+### `for` sem variável
+As vezes, não precisamos da variável do `for`.
+
+```python
+for _ in range(10):
+    print("Hello, World!") # imprime 10 vezes
+```
+
+O `_` é uma **convenção** para indicar que a variável não é usada.
+
+
+---
+
 ### Bloco `else` em *Loops*
 
 `for` e `while` podem ter um bloco de código `else`, porém vamos adiar a explicação desse conceito para mais adiante para não confundir com o `else` de `if`.
