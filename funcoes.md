@@ -20,11 +20,13 @@ style: |
 
 # Funções em Python
 
-Quando nos deparamos com um problema complexo, é comum quebrá-lo em partes menores. Cada parte é resolvida separadamente e, ao final, as soluções são combinadas para resolver o problema original.
+Quando nos deparamos com um problema complexo, é comum quebrá-lo em partes menores. 
+Tratamos cada parte separadamente, resolvendo-a de forma isolada.
 
-Chamamos essas partes menores de **funções**, sub-rotinas ou procedimentos.
 
-![bg right:40%](empty.svg)
+Chamamos essas partes menores de **funções**, **sub-rotinas** ou **procedimentos**.
+
+![bg right:40%](images/blocks.jpg)
 
 ---
 
@@ -56,15 +58,15 @@ Chamamos essas partes menores de **funções**, sub-rotinas ou procedimentos.
 - Se a função retorna um valor, este **'substitui'** a chamada da função.
 
 
-![bg right:30%](empty.svg)
+![bg right:30% 98% drop-shadow](images/funcao.drawio.svg)
 
 ---
 
 ## Uso mais comum de funções
 
-* **Reutilização de código**: evita repetição de código.
-* **Organização**: facilita a leitura e manutenção do código.
-* **Abstração**: esconde detalhes de implementação.
+* **Reutilização de código**: evita **repetição** de código.
+* **Organização**: facilita a **leitura** e manutenção do código.
+* **Abstração**: **esconde detalhes** de implementação.
 
 ---
 
@@ -86,6 +88,8 @@ print('Situação sem ponto extra: ', status(nota))
 print('Situação com ponto extra: ', status(nota+ponto_extra))
 ```
 Observer que o programador teria que **repetir** o código de decisão para cada caso, sem a função `status`.
+
+<!-- _footer: '' -->
 
 ---
 
