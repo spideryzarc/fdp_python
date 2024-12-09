@@ -26,7 +26,7 @@ Tratamos cada parte separadamente, resolvendo-a de forma isolada.
 
 Chamamos essas partes menores de **funções**, **sub-rotinas** ou **procedimentos**.
 
-![bg right:40%](images/blocks.jpg)
+![bg left:40%](images/blocks.jpg)
 
 ---
 
