@@ -51,10 +51,10 @@ Chamamos essas partes menores de **funções**, **sub-rotinas** ou **procediment
 
 ## Semântica de Funções
 
-- A definição de uma função não executa imediatamente, o código dentro da função é executado somente quando a função é chamada.
-- O programa segue o fluxo de execução normal até encontrar uma chamada de função.
-- A execução do programa é transferida para a função chamada.
-- Após a execução da função, o controle é retornado ao ponto de chamada.
+- A **definição** de uma função **não executa** imediatamente, o código dentro da função é executado somente quando a função é **chamada**.
+- O programa segue o **fluxo** de execução **principal** até encontrar uma **chamada** de função.
+- A execução do programa é transferida para a função.
+- Após a execução da função, o fluxo de execução **retorna** ao ponto de chamada.
 - Se a função retorna um valor, este **'substitui'** a chamada da função.
 
 
@@ -133,29 +133,31 @@ print('Fracao simplificada:', numerador//mdc, '/', denominador//mdc)
 
 #### <!-- fit --> Quem vê as árvores não vê a floresta
 
-Na programação, o conceito de abstração é essencial para lidar com a complexidade. Abstrair significa ocultar os detalhes de implementação, destacando apenas os aspectos mais relevantes. Essa abordagem permite ao programador focar no problema principal, em vez de se perder nos intricados detalhes técnicos, promovendo soluções mais claras e eficientes.
+Na programação, o conceito de **abstração** é essencial para lidar com a complexidade. Abstrair significa **ocultar os detalhes de implementação**. 
+
+Primeiro, você precisa **entender** como algo funciona. Depois, você pode **usá-lo** sem se preocupar com os detalhes.
 
 ---
 
 ## Definindo Funções
 
-Já usamos funções desde o início do curso, como `print`, `input`, `int`, `float`, `str`, `len`, `range`, etc. É hora de aprender a criar nossas próprias funções.
+Já usamos funções desde o início do curso, como `print`, `input`, `int`, `float`, `str`, `len`, `range`, etc. É hora de aprender a **criar nossas próprias funções**.
 
 ```python
 def seja_educado():
     print('Como você está?')
     print('Tenha um bom dia!')
+
 # fluxo principal
 seja_educado()
 seja_educado()
 ```
-- A função `seja_educado` é bastante simples, não recebe parâmetros e não retorna valores. Ela apenas imprime duas mensagens educadas.
-- A função é chamada duas vezes no **fluxo principal**. Por isso, as mensagens são impressas duas vezes.
-- Ela sempre faz a mesma coisa.
+- A função `seja_educado` é bastante simples, nada mais é do que uma **sequência de instruções** a qual chamamos de 'seja_educado()'.
+- Uma vez definida, a função pode ser chamada **quantas vezes** quisermos onde quisermos.
 
 ---
 
-### Parâmetros
+### Parâmetros/Argumentos
 
 Podemos passar informações para uma função através de parâmetros. Os parâmetros são variáveis que recebem valores quando a função é chamada.
 
@@ -175,7 +177,7 @@ seja_educado('João')
 
 ### Retorno
 
-Uma função pode retornar um valor de saída. O valor de retorno é especificado com a palavra-chave `return`. Ao encontrar um `return`, a função é encerrada e o valor "**substitui**" a chamada da função.
+Uma função pode retornar um **valor de saída**. O valor de retorno é especificado com a palavra-chave `return`. Ao encontrar um `return`, a função é encerrada e o valor "**substitui**" a chamada da função.
 
 ```python
 def fat(n):
@@ -192,11 +194,11 @@ print('5! + 3! + 4! =', resultado)
 
 ---
 
-- `return` encerra a função e retorna um valor.
-- `return` pode ser usado em qualquer lugar da função.
-- `return` pode aparecer mais de uma vez em uma função.
-- `return` pode ser usado para encerrar a função sem retornar um valor.
-- Se você retornar uma tupla, é como se você estivesse **retornando vários valores**, o que é uma vantagem do Python em relação a outras linguagens.
+- `return` **encerra a função** e retorna um valor.
+- `return` pode ser usado em **qualquer lugar** da função.
+- `return` pode aparecer **mais de uma** vez em uma função.
+- `return` pode ser usado para encerrar a função **sem retornar um valor**.
+- Se você **retornar uma tupla**, é como se você estivesse **retornando vários valores**, o que é uma **vantagem** do Python em relação a outras linguagens.
 
 ---
 
@@ -224,11 +226,12 @@ print('Maior:', maior)
 ```python
 def eh_primo(n):
     if n < 2:
-        return False
+        return False # se n < 2, não é primo e a função é encerrada aqui
     for i in range(2, n):
         if n % i == 0:
-            return False
-    return True
+            return False # se n é divisível por i, não é primo e a função é encerrada aqui
+    return True # se n não é divisível por nenhum i, é primo
+
 # fluxo principal
 numero = int(input('Digite um número: '))
 if eh_primo(numero):
@@ -237,7 +240,7 @@ else:
     print('Não é primo')
 ```
 
-Observe que não há necessidade de vários `else` pois `return` encerra a função.
+> Observe que **não há necessidade** de vários `else` pois `return` **encerra a função**.
 
 ---
 
@@ -249,6 +252,7 @@ def seja_educado(nome):
         return
     print(f'Como você está, {nome}?')
     print('Tenha um bom dia!')
+
 # fluxo principal
 seja_educado('Maria')
 seja_educado('Albert')
@@ -256,6 +260,23 @@ seja_educado('João')
 ```
 - A função `seja_educado` não imprime nada se o nome for 'Albert'.
 - O `return` sem valor encerra a função imediatamente, mesmo retornando nada.
+
+---
+
+### Ignorando o Retorno
+
+Você pode **ignorar** o valor de retorno de uma função, se não precisar dele. 
+
+```python
+def soma(a, b):
+    c = a + b
+    print('A soma é', c)
+    return c
+
+# fluxo principal
+soma(10, 20) # o valor de retorno é ignorado
+```
+
 
 ---
 
@@ -325,17 +346,32 @@ print(x)
 
 ---
 
+### Escopo de Funções
+
+Toda vez que uma função é executada, é somo se fosse um *mini-programa* que tem seu próprio escopo, ou seja, suas próprias variáveis locais.
+
+- O que ocorre dentro da função **não afeta** o que ocorre fora dela.
+- O que ocorre fora da função **não afeta** o que ocorre dentro dela.
+- Você pode decidir usar variáveis globais dentro de uma função, mas é **melhor** evitar.
+  - As informações de entrada devem ser passadas como **parâmetros**.
+  - As informações de saída devem ser retornadas como **valores de retorno**.
+
+
+---
+
 ## Tipos de Parâmetros
 
 Python possui quatro tipos de parâmetros:
 - **Obrigatórios**: devem ser passados na chamada da função.
-- **Padrão**: têm um valor padrão e são opcionais na chamada da função.
+- **Opcionais**: têm um valor padrão e são opcionais na chamada da função.
 - **Variáveis**: recebem um número variável de argumentos.
-- **Nomeados**: são passados como pares `chave=valor`.
+- **Chave-Valor**: são passados como pares `chave=valor`.
 
 ---
 
 ### Parâmetros Obrigatórios
+
+São os tipos mais comuns de parâmetros. Eles devem ser passados na chamada da função.
 
 ```python
 def div(a, b):
@@ -354,7 +390,9 @@ print(div(b=2, a=10)) # nomeando os parâmetros, a ordem não importa
 
 ---
 
-### Parâmetros Padrão
+### Parâmetros Opcionais
+
+Basta colocar um valor padrão na definição do parâmetro para torná-lo opcional.
 
 ```python
 def div(a=10, b=2):
@@ -371,14 +409,14 @@ print(div(b=10)) # nomeando o parâmetro 'b', 'a' usa o padrão
 print(div(b=10, a=2)) # nomeando os parâmetros, a ordem não importa
 >>> 0
 ```
-
-- Os parâmetros padrão são **opcionais** na chamada da função.
-- Se não forem passados, os valores padrão são usados.
+- Se n**ão forem passados**, os valores **padrão são usados**.
 - Devem colocados **após** os parâmetros **obrigatórios** na definição da função.
 
 ---
 
 ### Parâmetros Variáveis
+
+Basta colocar um asterisco `*` antes do nome do parâmetro para torná-lo variável.
 
 ```python
 def soma(*numeros):
@@ -394,7 +432,7 @@ print(soma(10, 20, 30))
 ```
 
 - O parâmetro `*numeros` recebe um número variável de argumentos.
-- Os argumentos são **empacotados** em uma tupla.
+- Os argumentos são **empacotados** em uma **tupla**.
 - A função pode ser chamada com **qualquer número** de argumentos.
 - Deve ser listado após os parâmetros **obrigatórios** e **padrão** na definição da função.
 
@@ -413,11 +451,13 @@ imprime_dados(nome='Maria', idade=30, cidade='São Paulo')
 - O parâmetro `**dados` recebe um número **variável** de argumentos **nomeados**.
 - Os argumentos são **empacotados** em um dicionário.
 - A função pode ser chamada com **qualquer número** de argumentos nomeados.
-- Deve ser listado por **último** na definição da função.
+- Deve ser listado depois dos parâmetros **obrigatórios** e **opcionais** na definição da função.
 
 ---
 
 ### Exemplo com Todos os Tipos de Parâmetros
+
+Apenas para ilustrar, é possível usar todos os tipos de parâmetros em uma única função. **Não é comum**, mas é possível.
 
 ```python
 def teste(a, b=10, *c, **d):
@@ -433,11 +473,10 @@ teste(1, 2, 3, 4, 5, nome='Maria', idade=30)
 >>> d: {'nome': 'Maria', 'idade': 30}
 ```
 
-> Provavelmente, você não usará todos os tipos de parâmetros em uma única função. Mas é importante saber que eles existem e como usá-los.
 
 ---
 
-## Desempacotamento de Parâmetros Por Posição
+## Desempacotando Argumentos na Chamada de Funções
 
 Seja:
 ```python
@@ -494,7 +533,7 @@ imprime_dados(**dados)
 
 ## Funções Recursivas
 
-Uma função é **recursiva** quando ela chama a si mesma. A recursão é um conceito poderoso, mas deve ser usada com **cuidado**.
+Uma função é **recursiva** quando ela **chama a si mesma**. A recursão é um conceito poderoso, mas deve ser usada com **cuidado**.
 
 ```python
 def fatorial(n):
