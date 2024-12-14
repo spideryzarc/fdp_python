@@ -18,12 +18,16 @@ style: |
 # Guarda-me ó Deus, porque em ti confio. 
 ---
 
-# *Strings* em Python
+# *Strings* 
 
-*Strings* são sequências de caracteres. Em Python, são objetos do tipo `str` e possuem a propriedade de serem **imutáveis**.
+<!-- _class: invert -->
+<!-- _backgroundColor: #000000 -->
+<!-- _backgroundImage: url('images/strings.png') -->
 
+Sequências de 
+caracteres.
 
-![bg right:40% 80%](empty.svg)
+![bg right:50%](empty.svg)
 
 ---
 
@@ -194,6 +198,28 @@ print(s[-1])
 ```
 
 ---
+# *Strings* são imutáveis
+
+*Strings* são **imutáveis**, ou seja, não podem ser modificadas. 
+
+```python
+s = 'Python'
+s[0] = 'p'
+>>> TypeError: 'str' object does not support item assignment
+```
+
+Para modificar uma *string*, devemos criar uma nova *string*.
+
+```python
+s = 'Python'
+s = 'p' + s[1:]
+print(s)
+>>> python
+```
+
+> O fato de ser imutável é uma característica importante para a **segurança** e **integridade** dos dados. Aquele **cuidados** que devemos ter com **atribuição** de listas, não se aplica a *strings*.
+
+---
 
 # Tipo caracteres
 
@@ -265,9 +291,148 @@ print(s.upper().replace('P', 'J'))
 >>> JYTHON
 ```
 
-Chamamos isso de **encadeamento de métodos**.
+Chamamos isso de **encadeamento de métodos** ou *chaining*.
 
 ---
+
+## Operações com *strings*
+
+- **Concatenação**: `+`
+```python
+s1 = 'Olá'
+s2 = 'mundo!'
+s = s1 + ' ' + s2
+print(s)
+>>> Olá mundo!
+```
+- **Repetição**: `*`
+```python
+s = 'Python '
+s = s*3
+print(s)
+>>> Python Python Python 
+```
+
+---
+
+- **Tamanho**: `len()`
+```python
+s = 'Python'
+print(len(s))
+>>> 6
+```
+- **Verificação de conteúdo**: `in`
+```python
+s = 'Python'
+print('tho' in s)
+>>> True
+```
+
+---
+
+- **Comparação**: `==`, `!=`, `>`, `<`, `>=`, `<=`
+```python
+s1 = 'Python'
+s2 = 'Java'
+print(s1 == s2)
+>>> False
+print(s1 < s2)
+>>> True
+```
+
+> A comparação de *strings* é feita **caractere a caractere**, de acordo com a ordem lexicográfica.
+
+---
+
+# Iterando sobre *strings*
+
+Podemos iterar sobre os caracteres de uma *string* usando um laço `for`:
+
+```python
+s = 'Python'
+for c in s:
+    print(c)
+```
+
+---
+
+# Outros métodos
+
+- `s.split()`: divide a *string* em uma lista de substrings. 
+```python
+s = 'Python é uma linguagem de programação'
+print(s.split())
+>>> ['Python', 'é', 'uma', 'linguagem', 'de', 'programação']
+```
+Se passarmos um argumento, ele será usado como separador:
+```python
+s = 'Python,Java,C,C++'
+print(s.split(','))
+>>> ['Python', 'Java', 'C', 'C++']
+```
+
+---
+
+- `s.strip()`: remove espaços em branco no início e no final da *string*.
+```python
+s = '   Python   '
+print(s.strip())
+>>> Python
+```
+- `s.lstrip()`: remove espaços em branco à esquerda.
+- `s.rstrip()`: remove espaços em branco à direita.
+
+---
+
+- `s.startswith()`: verifica se a *string* começa com um determinado prefixo.
+```python
+s = 'Python'
+print(s.startswith('Py'))
+>>> True
+```
+
+- `s.endswith()`: verifica se a *string* termina com um determinado sufixo.
+```python
+s = 'Python'
+print(s.endswith('on'))
+>>> True
+```
+
+---
+
+- 's.find()': retorna a posição da primeira ocorrência de um caractere ou *string*.
+```python
+s = 'Python é uma linguagem de programação'
+print(s.find('uma'))
+>>> 10
+```
+
+- `s.rfind()`: retorna a posição da última ocorrência de um caractere ou *string*.
+
+- `s.index()`: semelhante a `find()`, mas lança uma exceção se não encontrar o caractere ou *string*.
+
+- `s.count()`: conta o número de ocorrências de um caractere ou *string*.
+```python
+s = 'Python é uma linguagem de programação'
+print(s.count('a'))
+>>> 6
+```
+
+---
+
+- `s.isalpha()`: verifica se a *string* contém apenas letras.
+- `s.isdigit()`: verifica se a *string* contém apenas dígitos.
+- `s.isalnum()`: verifica se a *string* contém apenas letras e dígitos.
+
+
+Para mais métodos, consulte a [documentação oficial](https://docs.python.org/3/library/stdtypes.html#string-methods).
+
+
+---
+
+
+
+
 
 
 
