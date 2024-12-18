@@ -276,28 +276,29 @@ print(s.find('t')) # retorna a primeira ocorrência de 't'
 
 ---
 
-Pode causar estranheza, mas os métodos pode ser chamados diretamente de um literal de *string*:
+Pode causar **estranheza**, mas os métodos pode ser chamados diretamente de um **literal** de *string*:
 
 ```python
-print('Python'.upper())
+s = 'Python'.upper()
+print(s)
 >>> PYTHON
 ```
 
-Os métodos que retornam novas *strings* podem ser usados para chamar outros métodos:
+Os métodos que **retornam** *strings* podem ser usados para chamar outros métodos em **encadeamento** / *chaining*:
 
 ```python
-s = 'Python'
-print(s.upper().replace('P', 'J'))
->>> JYTHON
+s = 'Eu sou um Hacker'.lower().replace('e', '3')\
+  .replace('a', '4').replace('o', '0'). replace('s', '5')\
+  .replace('k', '!<')
+print(s)
+>>> 3u 50u um h4c!<3r
 ```
-
-Chamamos isso de **encadeamento de métodos** ou *chaining*.
 
 ---
 
 ## Operações com *strings*
 
-- **Concatenação**: `+`
+- **Concatenação**: ( *string* + *string* )
 ```python
 s1 = 'Olá'
 s2 = 'mundo!'
@@ -305,7 +306,7 @@ s = s1 + ' ' + s2
 print(s)
 >>> Olá mundo!
 ```
-- **Repetição**: `*`
+- **Repetição**: ( *string* * natural )
 ```python
 s = 'Python '
 s = s*3
@@ -318,14 +319,18 @@ print(s)
 - **Tamanho**: `len()`
 ```python
 s = 'Python'
-print(len(s))
+x = len(s) # retorna o tamanho da string
+print(x)
 >>> 6
 ```
 - **Verificação de conteúdo**: `in`
 ```python
 s = 'Python'
-print('tho' in s)
->>> True
+if 'th' in s: # verifica se 'th' é substring de s
+    print('Contém')
+else:
+    print('Não contém')
+
 ```
 
 ---
@@ -340,19 +345,22 @@ print(s1 < s2)
 >>> True
 ```
 
-> A comparação de *strings* é feita **caractere a caractere**, de acordo com a ordem lexicográfica.
+> A comparação de *strings* é feita **caractere a caractere**, de acordo com a ordem lexicográfica, a mesma usada para ordenar palavras em um dicionário.
 
 ---
 
 # Iterando sobre *strings*
 
-Podemos iterar sobre os caracteres de uma *string* usando um laço `for`:
+Podemos **iterar** sobre os **caracteres** de uma *string* usando um laço `for`:
 
 ```python
 s = 'Python'
 for c in s:
+    # bloco de código
     print(c)
 ```
+
+O bloco de código será executado para cada caractere da *string* `s`.
 
 ---
 
@@ -429,6 +437,27 @@ Para mais métodos, consulte a [documentação oficial](https://docs.python.org/
 
 
 ---
+
+# Juntando *strings*
+
+O método abaixo é muito pouco eficiente, pois cria muitas *strings* temporárias. 
+
+```python
+lista = ['Python', 'Java', 'C', 'C++']
+s = ''
+for item in lista:
+    s += item + ', ' # cria uma nova string a cada iteração
+s = s[:-2] # remove a última vírgula
+print(s)
+```
+
+A forma **mais eficiente** é usando o método `join()`:
+
+```python
+lista = ['Python', 'Java', 'C', 'C++']
+s = ', '.join(lista)
+print(s)
+```
 
 
 
