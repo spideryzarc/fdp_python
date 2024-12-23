@@ -459,6 +459,41 @@ s = ', '.join(lista)
 print(s)
 ```
 
+---
+
+# Juntando não *strings*
+
+O método `join()` não funciona com tipos diferentes de *strings*.
+
+```python
+lista = ['Python', 3, 'Java', 2.5]
+s = ', '.join(lista)
+>>> TypeError: sequence item 1: expected str instance, int found
+```
+
+Porém, podemos usar a *build-in function* `map()` para converter os elementos da lista para *strings*. [doc](https://docs.python.org/3/library/functions.html#map)
+
+```python
+lista = ['Python', 3, 'Java', 2.5]
+s = ', '.join(map(str, lista))
+print(s)
+```
+
+---
+
+# Execícios de fixação
+
+1. Crie uma *string* com o nome de uma pessoa e imprima a primeira e a última letra.
+2. Leia uma *string* do usuário e imprima a quantidade de vogais.
+3. Leia uma *string* do usuário e imprima a quantidade de palavras.
+4. Leia uma *string* do usuário e imprima a quantidade de letras maiúsculas.
+5. Leia uma *string* como 'R$ 3,50' e extraia o valor numérico.
+6. Leia uma *string* como '10/05/2021' e extraia o dia, mês e ano.
+7. Leia uma *string* como 'R$ 3,50 - R$ 2,00 - R$ 1,50' e extraia os valores numéricos em uma lista e calcule a soma, média, maior e menor valor.
+8. Leia uma frase do usuário e imprima a quantidade de palavras e a quantidade de letras de cada palavra.
+9. Leia uma frase do usuário e imprima as palavras em ordem alfabética.
+
+
 
 
 
