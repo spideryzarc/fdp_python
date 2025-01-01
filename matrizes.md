@@ -348,6 +348,26 @@ C = A * B
 
 ---
 
+### Inversa de uma matriz
+
+```python
+A_inv = np.linalg.inv(A)
+``` 
+
+### Determinante de uma matriz
+
+```python
+det_A = np.linalg.det(A)
+```
+
+### Autovalores e autovetores
+
+```python
+autovalores, autovetores = np.linalg.eig(A)
+```
+
+---
+
 ## Funções comuns 
 
 ```python
@@ -363,7 +383,12 @@ indice_minimo = matriz.argmin() # Índice do menor elemento
 
 ## Exercícios
 
-1. 
+1. Escreva uma função que receba uma matriz e retorne a soma de todos os seus elementos.
+2. Escreva uma função que receba uma matriz e retorne a média de todos os seus elementos.
+3. Escreva uma função que receba uma matriz e retorne o maior elemento da matriz.
+4. Escreva uma função que receba duas matrizes de mesma dimensão e retorne a diferença entre elas ($A - B$).
+5. Escreva uma função que receba uma matriz e retorne verdadeiro se a matriz é simétrica e falso caso contrário ($A = A^T$).
+6. Escreva uma função que receba uma matriz e retorne verdadeiro se a matriz é a identidade e falso caso contrário.
 
 
 
