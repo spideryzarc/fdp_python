@@ -19,31 +19,56 @@ style: |
 
 ---
 
-# Manipulação de Arquivos
+# Arquivos
+
+Arquivos são usados para armazenar dados em um dispositivo de armazenamento **permanente**.
+
+
+![bg right:40%](empty.svg)
 
 ---
 
+Já vimos como armazenar dados em variáveis, listas, dicionários, etc. Mas, esses dados são **voláteis**, ou seja, são perdidos quando o programa termina.
 
-> Arquivos são usados para armazenar dados em um dispositivo de armazenamento permanente.
+Quando precisamos armazenar dados para uso posterior, precisamos usar arquivos.
+
+Geralmente, os arquivos são armazenados no disco rígido (HD), mas também podem ser armazenados em outros dispositivos de armazenamento, como SSDs, pendrives, cartões de memória, discos virtuais (nuvem), etc.
+
+---
+
+# Tipos de Arquivos
 
 - Os arquivos podem ser de texto ou binários.
-  - **Texto:** podem ser editados com qualquer editor de texto.
-  - **Binários:** precisam ser manipulados com um programa específico.
+  - **Texto:** podem ser editados com **qualquer editor de texto**.
+    - Ex.: arquivos .txt, .c, .py, .html, .xml, .json, etc.
+  - **Binários:** precisam ser manipulados com um **programa específico**.
+    - Ex.: arquivos .jpg, .png, .mp3, .mp4, .exe, .dll, .zip, .pdf, etc.
 
 ---
 
-## Criando arquivos de texto
+## Arquivos de Texto
 
-> Arquivos de texto são usados para armazenar dados legíveis por humanos. Ex.: arquivos .txt  , .c, .py, .html, .xml, .json, etc
+### Criando um Arquivo de Texto
 
-- **Criação de Arquivos:** A função `open()` é usada para criar um objeto para acessar um arquivo.
+A função `open()` é usada para criar um objeto para acessar um arquivo.
+
 ```python
-f = open("arquivo.txt", "w")
-f.close()
+f = open("arquivo.txt", "w") # Cria um arquivo para escrita
+# (...) código para manipular o arquivo
+f.close() # Fecha o arquivo
 ```
+
+<br>
+
+- Se o arquivo não existir, ele será criado no diretório atual.
+- Se o arquivo existir, ele será sobrescrito.
+- `close()` é usado para fechar o arquivo, **garantindo** que os dados sejam gravados corretamente.
+ 
 ---
 
-- **Modos de Abertura:** A função `open()` aceita um segundo argumento que especifica o modo de abertura do arquivo.
+### Modos de Abertura
+
+A função `open()` aceita um segundo argumento que especifica o modo de abertura do arquivo.
   - `r`: Abre um arquivo para leitura. O arquivo deve existir (padrão).
   - `w`: Abre um arquivo para escrita. Se o arquivo não existir, ele será criado. Se o arquivo existir, ele será sobrescrito.
   - `a`: Abre um arquivo para anexar. Se o arquivo não existir, ele será criado. Se o arquivo existir, os dados serão anexados ao final do arquivo.
@@ -53,43 +78,69 @@ f.close()
   - `b`: Abre um arquivo em modo binário.
  
  
+ <!-- _footer: "" -->
+
 
 ---
-- **Close:** A função `close()` é usada para fechar um arquivo.
 
-> É importante fechar um arquivo após a leitura ou escrita para liberar recursos do sistema operacional e garantir que os dados sejam gravados corretamente.
+### Fechando um Arquivo
 
-- **Verificação de Fechamento:** A função `closed` é usada para verificar se um arquivo está fechado.
+A função `close()` é usada para fechar um arquivo.
+
+- Libera recursos do sistema operacional.
+- Garante que os dados sejam gravados corretamente.
+
 ```python
 f = open("arquivo.txt", "w")
 print(f.closed)
 f.close()
-print(f.closed)
 ```
 
+- È possível checar se um arquivo está fechado com o atributo `closed`.
+```python
+if not f.closed:
+    f.close()    
+```
 
 ---
-- **Escrita em Arquivos:** A função `write()` é usada para escrever em um arquivo.
+
+### Escrita em Arquivos
+
+A função `write()` é usada para escrever uma *string* em um arquivo.
 ```python
 f = open("arquivo.txt", "w")
 f.write("Olá, Mundo!")
 f.close()
 ```
+
+<br>
+
+```
+Olá, Mundo!
+```
+
 > Para escrever em um arquivo, é necessário abrir o arquivo em um modo que permita a escrita (por exemplo, `w` ou `a`).
 
 ---
 
-- **Adição de Conteúdo:** A função `write()` é usada para adicionar conteúdo a um arquivo.
+Se o arquivo for aberto em modo anexar (`a`), o conteúdo é adicionado ao final do arquivo a cada execução do programa.
+
 ```python
 f = open("arquivo.txt", "a")
 f.write("Olá, Mundo!")
 f.close()
 ```
-> O conteúdo é adicionado ao final do arquivo.
+<br>
+
+``` 
+Olá, Mundo!Olá, Mundo!Olá, Mundo!Olá, Mundo!
+```
 
 ---
 
-- **flush():** A função `flush()` é usada para antecipar a gravação de dados em um arquivo.
+### Antecipando a Gravação de Dados
+
+A função `flush()` é usada para antecipar a gravação de dados em um arquivo.
 ```python
 f = open("arquivo.txt", "w")
 # (...) suposto processo demorado sujeito a falhas
@@ -98,67 +149,21 @@ for i in range(1000):
     f.flush() # Grava os dados imediatamente
 f.close()
 ``` 
-> Deve ser usado em situações em que é importante garantir que os dados sejam gravados imediatamente, mesmo que o arquivo não seja fechado.
+> Deve ser usado em situações em que é importante garantir que os dados sejam gravados imediatamente sem esperar o fechamento do arquivo.
 
 ---
 
-## Leitura de Arquivos de Texto
+### Usando `with`
 
-- A função `read()` é usada para ler um arquivo.
+O bloco `with` é usado para **garantir** que o arquivo seja fechado corretamente, gerando um código mais **limpo** e **seguro**.
 ```python
-f = open("arquivo.txt")
-conteudo = f.read()
-f.close()
-print(conteudo)
-```
-
-> read() lê todo o conteúdo do arquivo e o armazena em uma string. No entanto, se o arquivo for muito grande, isso pode consumir muita memória. Para evitar isso, é possível ler o arquivo linha por linha ou em pedaços menores.
-
---- 
-
-- Parâmetro `size`: O parâmetro `size` é usado para especificar o número máximo de bytes a serem lidos.
-```python
-f = open("arquivo.txt")
-while True:
-    conteudo = f.read(10) # Lê 10 bytes por vez
-    if not conteudo:
-        break
-    print(conteudo)
-f.close()
-print(conteudo)
-```
-
-> O método `read()` retorna uma *string* vazia quando o final do arquivo é atingido.
-
----
-
-- **Leitura por Linhas:** A função `readline()` é usada para ler uma linha de cada vez.
-```python
-f = open("arquivo.txt")
-linha = f.readline()
-while linha:
-    print(linha)
-    linha = f.readline()
-f.close()
-```
-- **Leitura de Linhas:** A função `readlines()` é usada para ler todas as linhas de uma vez e armazená-las em uma lista.
-```python
-f = open("arquivo.txt")
-linhas =    
-for linha in linhas:
-    print(linha)    
-f.close()
-```
----
-
-- **Uso do `with`:** O bloco `with` é usado para garantir que o arquivo seja fechado corretamente.
-```python
-with open("arquivo.txt") as f:
-    conteudo = f.read()
+with open("arquivo.txt") as f: 
+    conteudo = f.read() 
     print(conteudo)
 ```
 
-> O bloco `with` garante que o arquivo seja fechado automaticamente após a execução do bloco, mesmo se ocorrer uma exceção.
+- Daremos preferência ao uso do bloco `with` para abrir arquivos, pois ele garante que o arquivo seja fechado corretamente, mesmo se ocorrer um erro durante a execução do código.
+
 ---
 
 > Também é possível usar `finnaly` para garantir que o arquivo seja fechado, mas o bloco `with` é mais elegante.
@@ -174,36 +179,99 @@ finally:
 
 ---
 
+## Leitura de Arquivos de Texto
+
+A função `read()` é usada para ler o conteúdo de um arquivo.
+
+```python
+with open("arquivo.txt") as f:
+    conteudo = f.read() # Lê todo o conteúdo do arquivo
+print(conteudo)     # processa o conteúdo
+```
+
+- read() lê todo o conteúdo do arquivo e o armazena em uma string. 
+- No entanto, se o arquivo for muito grande, isso pode consumir muita memória. 
+- Para evitar isso, é possível ler o arquivo linha por linha ou em pedaços menores.
+
+--- 
+
+- Parâmetro `size`: O parâmetro `size` é usado para especificar o número máximo de bytes a serem lidos.
+```python
+with open("arquivo.txt") as f:
+    conteudo = f.read(10) # Lê os primeiros 10 bytes do arquivo
+    while conteudo: # Enquanto conteúdo não for vazio
+        print(conteudo) # processa o conteúdo
+        conteudo = f.read(10) # Lê os próximos 10 bytes        
+```
+
+- O método `read()` retorna uma *string* vazia quando o final do arquivo é atingido.
+- *string* vazia é avaliada como `False` em um contexto booleano.
+
+---
+
+### Lendo Arquivos Linha por Linha
+
+No lugar de `read`, que lê todo o arquivo de uma vez, é possível usar `readline` ou `readlines` para ler o arquivo **linha por linha**.
+
+```python
+with open("arquivo.txt") as f:
+    linha = f.readline() # Lê a primeira linha do arquivo
+    while linha: # Enquanto linha não for vazia
+        print(linha) # processa a linha
+        linha = f.readline() # Lê a próxima linha
+```
+- `readlines()` lê **todas as linhas** de uma vez e as armazena em uma **lista**.
+```python
+with open("arquivo.txt") as f:
+    linhas = f.readlines() # Lê todas as linhas do arquivo
+for linha in linhas: # Itera sobre as linhas
+    print(linha) # processa a linha
+```
+
+---
+
+### Iterando sobre um Arquivo
+
+É possível iterar diretamente sobre um arquivo, o que é mais **elegante** e **eficiente**.
+
+```python
+with open("arquivo.txt") as f:
+    for linha in f: # Itera sobre as linhas do arquivo
+        print(linha) # processa a linha
+```
+
+---
+
 ## Acesso Randomizado
 
-> Embora seja raro, é possível acessar um arquivo de forma randomizada, saltando para uma posição específica.
+Embora seja **raro**, é possível acessar um arquivo de forma aleatória (**não sequencial**), *saltando* para uma posição específica. 
 
-- **Movimentação do Cursor:** O método `seek()` é usado para mover o cursor para uma posição específica.
+- O método `seek()` é usado para mover o **cursor** para uma posição específica.
 ```python
 with open("arquivo.txt", "r") as f:
-    f.seek(5)
+    f.seek(5) # Move o cursor para a posição 5 (6º caractere)
     print(f.read())
 ```
-- **Posição do Cursor:** O método `tell()` é usado para obter a posição atual do cursor.
+- O método `tell()` é usado para **obter** a **posição** atual do cursor.
 ```python
 with open("arquivo.txt", "r") as f:
-    l = f.readline()
-    print(f.tell())
+    l = f.readline() # Lê a primeira linha
+    print(f.tell())  # Imprime a posição atual do cursor
 ```
 
 ---
 
 ### Arquivos de Texto com Dados Estruturados
 
-> Arquivos de texto são comumente usados para armazenar dados estruturados. Esses dados são usados para testar algoritmos e programas.
-- Exemplos:
+Arquivos de texto são **comumente** usados para armazenar **dados estruturados**. 
+A estrutura dos arquivos de texto varia de acordo com a fonte dos dados.
+**Ex.:**
   - O site [The Matrix Market](https://math.nist.gov/MatrixMarket/) é um repositório de dados de matrizes esparsas.
 
   - O site [The DIMACS Graph Format](http://www.diag.uniroma1.it/challenge9/format.shtml) é um repositório de dados de problemas de otimização.
 
   - O site [TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/) é um repositório de dados de problemas de otimização.
 
-> A estrutura dos arquivos de texto varia de acordo com a fonte dos dados.
 
 ---
 
@@ -248,10 +316,10 @@ NODE_COORD_SECTION
 ---
 ### Arquivos de Texto Separados por Vírgula (CSV)
 
-> Arquivos CSV (comma-separated values) são usados para armazenar dados tabulares.
+Arquivos CSV (comma-separated values) são usados para armazenar dados **tabulares**.
 - Cada linha do arquivo é uma linha da tabela.
-- Cada valor é separado por vírgula.
-- O primeiro linha pode ser um cabeçalho.
+- Cada valor é separado por **vírgula**.
+- O primeiro linha pode ser um **cabeçalho**.
   
 ---
 
@@ -264,40 +332,44 @@ Rui,Designer,6000
 Ana,"Art,Visual",7500
 ```
 
-> Obs.: Se uma string contiver uma vírgula, ela será colocada entre aspas duplas.
+> Obs.: Se uma *string* contiver uma vírgula, ela será colocada entre aspas duplas.
 
-> Embora seja possível ler arquivos CSV manualmente, é mais prático usar uma biblioteca para fazer isso.
 
 ---
-A biblioteca `csv` é usada para ler e escrever arquivos CSV.
 
-- A função `reader()` é usada para ler um arquivo CSV.
+### Lendo Arquivos CSV
+
+Embora seja possível ler arquivos CSV manualmente, é mais prático usar a biblioteca `csv`.
+
 ```python
-import csv
-with open("arquivo.csv", "r") as arquivo:
-    leitor = csv.reader(arquivo)
-    for linha in leitor:
-        print(linha)
+import csv 
+with open("arquivo.csv", "r") as arquivo: # abre o arquivo para leitura
+    leitor = csv.reader(arquivo) # Cria um leitor de CSV
+    for linha in leitor: # itera sobre as linhas do arquivo
+        print(linha)     # processa a linha
 ```
 
-- A função `writer()` é usada para escrever um arquivo CSV.
+Para criar um arquivo CSV, é possível usar a função `writer()`.
 ```python
 import csv
-with open("arquivo.csv", "w") as arquivo:
-    escritor = csv.writer(arquivo)
-    escritor.writerow(["Nome", "Idade"])
-    escritor.writerow(["Albert", 30])
+with open("arquivo.csv", "w") as arquivo: # abre o arquivo para escrita
+    escritor = csv.writer(arquivo) # Cria um escritor de CSV
+    escritor.writerow(["Nome", "Idade"])  # Escreve o cabeçalho
+    escritor.writerow(["Albert", 30])     # Escreve uma linha
+    # (...) escreve mais linhas
 ```
+
+<!-- _footer: "" -->
 ---
 
 ### Arquivos com Campos de Largura Fixa
 
-Uma forma comum de armazenar dados é usar campos de largura fixa.
+Uma outra forma comum de se armazenar dados tabulares é usando campos de largura fixa. [Ver mais](https://www.softinterface.com/Convert-XLS/Features/Fixed-Width-Text-File-Definition.htm)
 
 - *Fixed Width Text File*
 - Cada linha do arquivo é uma linha da tabela.
-- Cada campo tem uma quantidade fixa de caracteres.
-- O primeiro linha pode ser um cabeçalho.
+- Cada coluna tem um **número fixo de caracteres**.
+- O primeiro linha pode ser um **cabeçalho**.
 
 
 Exemplo de arquivo com campos de largura fixa:
@@ -307,11 +379,15 @@ John Smith          WA        418-Y11-4111
 Mary Hartford       CA        319-Z19-4341
 Evan Nolan          IL        219-532-c301
 ```     
-[Ver mais](https://www.softinterface.com/Convert-XLS/Features/Fixed-Width-Text-File-Definition.htm)
+
+
+<!-- _footer: "" -->
 
 ---
 
-- É possível usar slicing para ler arquivos com campos de largura fixa.
+#### Lendo Arquivos com Campos de Largura Fixa
+
+- É possível usar *slicing* para ler arquivos com campos de largura fixa.
 - A função `strip()` é usada para remover espaços em branco.
 ```python
 with open("arquivo.txt", "r") as f:
