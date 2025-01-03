@@ -704,7 +704,7 @@ Não abordaremos aqui, mas é possível:
 ## Exercícios
 
 
-1. Sem usar biblioteca específica para tsplib, escreva uma função que leia um arquivo da TSP LIB e imprima o número de cidades, as coordenadas de cada cidade e retorne a matriz de distâncias euclidianas entre as cidades.
+1. Sem usar biblioteca específica para **tsplib**, escreva uma função que leia um arquivo da TSP LIB e imprima o número de cidades, as coordenadas de cada cidade e retorne a matriz de distâncias euclidianas entre as cidades.
 2. Usando o resultado do exercício anterior, escreva uma função que salve a matriz de distâncias em um arquivo CSV.
 3. Escreva uma função que leia um arquivo CSV da questão anterior e cria um arquivo **binário** com os dados. Comente sobre a diferença de tamanho entre os arquivos.
-4. Sem usar biblioteca específica para bovespa, escreva uma função que leia um arquivo de histórico da Bovespa e imprima o nome do ação mais negociada no dia do seu aniversário (ou data mais próxima).
+4. Sem usar biblioteca específica para **Bovespa**, escreva uma função que leia um arquivo de histórico da Bovespa e imprima o nome do ação mais negociada no dia do seu aniversário (ou data mais próxima).
