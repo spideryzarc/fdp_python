@@ -24,15 +24,19 @@ style: |
 Arquivos são usados para armazenar dados em um dispositivo de armazenamento **permanente**.
 
 
-![bg right:40%](empty.svg)
+![bg right:60%](images/arquivos.jpg)
 
 ---
 
-Já vimos como armazenar dados em variáveis, listas, dicionários, etc. Mas, esses dados são **voláteis**, ou seja, são perdidos quando o programa termina.
+- Já vimos como armazenar dados em variáveis, listas, dicionários, etc. Mas, esses dados são **voláteis**, ou seja, são perdidos quando o programa termina.
 
-Quando precisamos armazenar dados para uso posterior, precisamos usar arquivos.
+- Quando precisamos armazenar dados para uso posterior, precisamos usar **arquivos**.
 
-Geralmente, os arquivos são armazenados no disco rígido (HD), mas também podem ser armazenados em outros dispositivos de armazenamento, como SSDs, pendrives, cartões de memória, discos virtuais (nuvem), etc.
+- A tecnologia mais comum para armazenamento de dados é o **disco rígido** (HD), mas também podemos usar **SSD**, **CD**, **DVD**, **Pen Drive**, **Cartão de Memória**, **HD Externo**, **Nuvem**, etc.
+
+> **Nuvem** é um termo genérico para **serviços de armazenamento** de dados **online**.
+
+![bg right:30% 95% drop-shadow](images/storage_devices.png)
 
 ---
 
@@ -41,7 +45,7 @@ Geralmente, os arquivos são armazenados no disco rígido (HD), mas também pode
 - Os arquivos podem ser de texto ou binários.
   - **Texto:** podem ser editados com **qualquer editor de texto**.
     - Ex.: arquivos .txt, .c, .py, .html, .xml, .json, etc.
-  - **Binários:** precisam ser manipulados com um **programa específico**.
+  - **Binários:** precisam ser manipulados com um **programa específico** ou com uma **biblioteca específica**.
     - Ex.: arquivos .jpg, .png, .mp3, .mp4, .exe, .dll, .zip, .pdf, etc.
 
 ---
@@ -74,8 +78,8 @@ A função `open()` aceita um segundo argumento que especifica o modo de abertur
   - `a`: Abre um arquivo para anexar. Se o arquivo não existir, ele será criado. Se o arquivo existir, os dados serão anexados ao final do arquivo.
   - `x`: Cria um novo arquivo. Se o arquivo já existir, a operação falhará.
  > Os modos de abertura podem ser combinados com os seguintes caracteres:
-  - `t`: Abre um arquivo em modo texto (padrão).
-  - `b`: Abre um arquivo em modo binário.
+  - `t`: Abre um arquivo em modo texto (padrão). Ex.: `open("arquivo.txt", "rt")`
+  - `b`: Abre um arquivo em modo binário. Ex.: `open("arquivo.bin", "rb")`
  
  
  <!-- _footer: "" -->
@@ -85,10 +89,10 @@ A função `open()` aceita um segundo argumento que especifica o modo de abertur
 
 ### Fechando um Arquivo
 
-A função `close()` é usada para fechar um arquivo.
+A função `close()` é usada para fechar um arquivo uma vez que ele não é mais necessário.
 
-- Libera recursos do sistema operacional.
-- Garante que os dados sejam gravados corretamente.
+- **Libera recursos** do sistema operacional.
+- **Garante** que os dados sejam **gravados** corretamente.
 
 ```python
 f = open("arquivo.txt", "w")
@@ -107,23 +111,25 @@ if not f.closed:
 ### Escrita em Arquivos
 
 A função `write()` é usada para escrever uma *string* em um arquivo.
+Para escrever em um arquivo, é necessário abrir o arquivo em um modo que permita a escrita (por exemplo, `w` ou `a`).
+
 ```python
-f = open("arquivo.txt", "w")
-f.write("Olá, Mundo!")
-f.close()
+f = open("arquivo.txt", "w") # Cria um arquivo para escrita
+f.write("Olá, Mundo!") # Escreve uma string no arquivo
+f.close() # Fecha o arquivo
 ```
 
 <br>
 
-```
+> `arquivo.txt` 
+```plaintext
 Olá, Mundo!
 ```
 
-> Para escrever em um arquivo, é necessário abrir o arquivo em um modo que permita a escrita (por exemplo, `w` ou `a`).
-
+> No modo criação (`w`), o arquivo é sobrescrito a cada execução do programa.
 ---
 
-Se o arquivo for aberto em modo anexar (`a`), o conteúdo é adicionado ao final do arquivo a cada execução do programa.
+Se o arquivo for aberto em modo **anexar** (`a`), o conteúdo é adicionado ao final do arquivo a cada execução do programa.
 
 ```python
 f = open("arquivo.txt", "a")
@@ -132,9 +138,14 @@ f.close()
 ```
 <br>
 
-``` 
+
+> `arquivo.txt` 
+```plaintext
 Olá, Mundo!Olá, Mundo!Olá, Mundo!Olá, Mundo!
 ```
+<br>
+
+> Obs.: Ao contrário do `print()`, `write()` **não** adiciona uma **quebra de linha** automaticamente. Use `\n` para adicionar uma quebra de linha.
 
 ---
 
@@ -162,11 +173,11 @@ with open("arquivo.txt") as f:
     print(conteudo)
 ```
 
-- Daremos preferência ao uso do bloco `with` para abrir arquivos, pois ele garante que o arquivo seja fechado corretamente, mesmo se ocorrer um erro durante a execução do código.
+- Daremos **preferência** ao uso do bloco `with` para abrir arquivos, pois ele garante que o arquivo seja fechado corretamente, mesmo se ocorrer um erro durante a execução do código.
 
 ---
 
-> Também é possível usar `finnaly` para garantir que o arquivo seja fechado, mas o bloco `with` é mais elegante.
+Também é possível usar `finnaly` para garantir que o arquivo seja fechado, mas o bloco `with` é mais elegante.
 
 ```python
 f = open("arquivo.txt")
@@ -176,6 +187,9 @@ try:
 finally:
     f.close()
 ```
+<br>
+
+> Neste curso, não abordaremos **tratamento de exceções**, mas é importante saber que o bloco `try` é usado para **tratar** exceções. [saiba mais](https://docs.python.org/3/tutorial/errors.html)
 
 ---
 
@@ -211,34 +225,24 @@ with open("arquivo.txt") as f:
 
 ### Lendo Arquivos Linha por Linha
 
-No lugar de `read`, que lê todo o arquivo de uma vez, é possível usar `readline` ou `readlines` para ler o arquivo **linha por linha**.
-
-```python
-with open("arquivo.txt") as f:
-    linha = f.readline() # Lê a primeira linha do arquivo
-    while linha: # Enquanto linha não for vazia
-        print(linha) # processa a linha
-        linha = f.readline() # Lê a próxima linha
-```
-- `readlines()` lê **todas as linhas** de uma vez e as armazena em uma **lista**.
-```python
-with open("arquivo.txt") as f:
-    linhas = f.readlines() # Lê todas as linhas do arquivo
-for linha in linhas: # Itera sobre as linhas
-    print(linha) # processa a linha
-```
-
----
-
-### Iterando sobre um Arquivo
-
-É possível iterar diretamente sobre um arquivo, o que é mais **elegante** e **eficiente**.
+No lugar de `read`, que lê todo o arquivo de uma vez, é possível usar `readline` ou `readlines` para tratar o arquivo **linha por linha**.
 
 ```python
 with open("arquivo.txt") as f:
     for linha in f: # Itera sobre as linhas do arquivo
         print(linha) # processa a linha
+
 ```
+
+- `readlines()` lê **todas as linhas** de uma vez e as armazena em uma **lista**.
+```python
+with open("arquivo.txt") as f:
+    linhas = f.readlines() # Carraga todas as linhas do arquivo
+for linha in linhas: # Itera sobre as linhas
+    print(linha) # processa a linha
+```
+
+
 
 ---
 
@@ -349,6 +353,12 @@ with open("arquivo.csv", "r") as arquivo: # abre o arquivo para leitura
         print(linha)     # processa a linha
 ```
 
+Iterando sobre o leitor, obtemos cada linha na forma de uma lista de valores.
+
+---
+
+### Escrevendo Arquivos CSV
+
 Para criar um arquivo CSV, é possível usar a função `writer()`.
 ```python
 import csv
@@ -359,7 +369,10 @@ with open("arquivo.csv", "w") as arquivo: # abre o arquivo para escrita
     # (...) escreve mais linhas
 ```
 
-<!-- _footer: "" -->
+- A função `writerow()` é usada para escrever uma linha no arquivo. Recebe uma **lista** de valores como argumento.
+- Para escrever várias linhas ao mesmo tempo, use `writerows()`.
+- Usando a biblioteca `csv`, não é necessário se preocupar com a formatação dos valores.
+
 ---
 
 ### Arquivos com Campos de Largura Fixa
@@ -404,9 +417,17 @@ with open("arquivo.txt", "r") as f:
 
 - Para escrever arquivos com campos de largura fixa, é possível usar a função `format()`.
 ```python
+nome = "Rui"
+idade = 30
+salario = 3000
 with open("arquivo.txt", "w") as arquivo:
-    arquivo.write("{:<10}{:02}{:06}\n".format("RUI", 30,3000))
+    arquivo.write(f"{nome[:20]:20}{idade:04}{salario:08}\n")
 ```
+
+- O formato `{:20}` é usado para especificar um campo de largura fixa de 20 caracteres.
+- `nome[:20]` é usado para garantir que o campo tenha no máximo 20 caracteres.
+- `{:04}` `{:08}` é usado para especificar um campo de largura fixa de 4/8 caracteres com **zeros à esquerda**.
+
 
 ---
 
@@ -427,13 +448,14 @@ with open("arquivo.txt", "w") as arquivo:
 
 ### Arquivos JSON
 
-Arquivos JSON (JavaScript Object Notation) são usados para armazenar dados estruturados.
+Arquivos JSON (*JavaScript Object Notation*) são usados para armazenar dados estruturados.
 
-- Surgiu como uma solução para a comunicação entre servidores web e navegadores.
-- É fácil de ler e escrever.
-- É suportado nativamente pelo Python.
+- Surgiu como uma solução para a comunicação entre servidores ***web*** e navegadores.
+- É **fácil** de ler e escrever.
+- É suportado **nativamente** pelo Python.
+- A biblioteca `json` é usada para ler e escrever arquivos JSON.
+- Praticamente qualquer coleção de dados Python pode ser convertida em JSON e vice-versa.
 
-> A biblioteca `json` é usada para ler e escrever arquivos JSON.
 ---
 
 - A função `dump()` é usada para escrever um arquivo JSON.
@@ -474,19 +496,22 @@ Exemplo de arquivo JSON:
 ---
 
 ## Arquivos Binários
-> Arquivos binários são usados para armazenar dados não legíveis por humanos.
+
+Arquivos binários são usados para armazenar dados não legíveis por humanos.
 
 - Vantagens:
-  - Ocupam menos espaço.
-  - Leia e escreva mais rapidamente.
-  - Ocultam informações sensíveis.
+  - Ocupam **menos espaço**.
+  - Leia e escreva mais **rapidamente**.
+  - **Ocultam** informações sensíveis.
 - Desvantagens:
   - Não legíveis por humanos.
-  - Difíceis de manipular sem um programa específico.
+  - Difíceis de manipular sem um programa **específico**.
 - Exemplos:
   - jpg, png, mp3, mp4, exe, dll, zip, pdf, etc.
 
 ---
+
+### Escrevendo Arquivos Binários
 
 - Escrevendo uma lista de números inteiros em um arquivo binário, um número por vez.
 ```python
@@ -525,11 +550,12 @@ dados["Rui"]= {"idade": 30, "salario": 6000}
 with open("arquivo.bin", "wb") as f:
     for nome, info in dados.items():
         #string com comprimento fixo
-        f.write(f'{nome[:20]:20}'.encode("utf-8"))
+        f.write(f"{nome[:20]:20}".encode("utf-8"))
         f.write(info["idade"].to_bytes(4, "little"))
         f.write(info["salario"].to_bytes(4, "little"))
 ```
 - A função `encode()` é usada para converter uma string em bytes.
+- `utf-8` é um dos muitos **encodings** disponíveis. [Ver mais](https://docs.python.org/3/library/codecs.html#standard-encodings)
 
 ---
 - Lendo dados tabulares de um arquivo binário.
@@ -545,11 +571,13 @@ with open("arquivo.bin", "rb") as f:
         dados[nome] = {"idade": idade, "salario": salario}
 print(dados)
 ```
-> Obs.: A fonte de dados deve especificar o número de bytes de cada campo.
+> Obs.: A fonte de dados deve especificar o número de bytes de cada campo. Se esta informação não estiver disponível em alguma documentação, fica muito difícil ler o arquivo.
 
 ---
 
-A biblioteca `pickle` é usada para serializar e desserializar objetos Python, ou seja, converter objetos Python em bytes e vice-versa.
+### Usando a Biblioteca `pickle`
+
+Uma forma mais fácil de escrever e ler arquivos binários é usando a biblioteca `pickle`, que pode salvar ou carregar qualquer objeto Python. [doc](https://docs.python.org/3/library/pickle.html)
 
 - A função `dump()` é usada para escrever um arquivo binário.
 ```python
@@ -561,6 +589,9 @@ dados["Rui"]= {"idade": 30, "salario": 6000}
 with open("arquivo.bin", "wb") as f:
     pickle.dump(dados, f)
 ```
+
+---
+
 - A função `load()` é usada para ler um arquivo binário.
 ```python
 import pickle
@@ -569,7 +600,9 @@ with open("arquivo.bin", "rb") as f:
     print(dados)
 ```
 
-
+- Há uma série de **problemas** com a biblioteca `pickle`, como **segurança** e **compatibilidade** entre versões do Python.
+- Para **armazenar** dados **sensíveis** ou **compatibilidade** entre versões, é melhor usar `json` ou `csv`.
+- Outras bibliotecas como [dill](https://pypi.org/project/dill/) podem ser usadas como alternativas ao `pickle`.
 
 ---
 
