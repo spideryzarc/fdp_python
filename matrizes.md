@@ -371,12 +371,18 @@ autovalores, autovetores = np.linalg.eig(A)
 ## Funções comuns 
 
 ```python
+n, m = matriz.shape # Retorna uma tupla com o número de linhas e colunas
 soma = matriz.sum() # Soma de todos os elementos
 media = matriz.mean() # Média de todos os elementos
 maximo = matriz.max() # Maior elemento
 minimo = matriz.min() # Menor elemento
-indice_maximo = matriz.argmax() # Índice do maior elemento
-indice_minimo = matriz.argmin() # Índice do menor elemento
+indice_maximo = matriz.argmax() # Índice 'achatado' do maior elemento
+indice_minimo = matriz.argmin() # Índice 'achatado' do menor elemento
+```
+
+- Para 'desachatamento', use `np.unravel_index`.
+```python
+i, j = np.unravel_index(indice_maximo, matriz.shape)
 ```
 
 ---
