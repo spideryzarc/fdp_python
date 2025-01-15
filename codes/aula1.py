@@ -1,21 +1,18 @@
-#leitura dos valores
-a = float(input('a: '))
-b = float(input('b: '))
-c = float(input('c: '))
+import numpy as np
 
-#calcular o delta
-delta = b**2-4*a*c
-#calcular raizes
-if delta < 0:
-    print('não há raizes reais')
-elif delta==0:
-    x = -b/(2*a)
-    print('única raiz:', x)
-else:
-    x1 = (-b + delta**0.5)/(2*a)
-    x2 = (-b - delta**0.5)/(2*a)
-    print('raizes:',x1,x2)
-    
-    
+def f(a):
+    return 5+ 3*np.sin(a)
+
+a = np.linspace(0, 2*np.pi, 100)
+print(a)
+
+r = f(a)
+# convertendo para cartesiano
+x = r*np.cos(a)
+y = r*np.sin(a)
+
+import matplotlib.pyplot as plt
+plt.plot(x, y)
+plt.show()
 
 
