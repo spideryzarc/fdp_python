@@ -175,6 +175,85 @@ int main(){
 ```
 
 ---
+# Entrada e saída de dados
+
+- *C* possui funções específicas para entrada e saída de dados.
+- A função `printf` é usada para imprimir dados na tela.
+- A função `scanf` é usada para ler dados do teclado.
+
+---
+
+## Função `printf`
+
+Em Python:
+
+```python
+print("Hello, World!")
+```
+
+Em C:
+
+```c
+printf("Hello, World!");
+```
+
+---
+### Imprimindo variáveis:
+
+
+```python
+# Python:
+x = 10
+print(f"O valor de x é {x}")
+```
+
+
+```c
+// C:
+int x = 10;
+printf("O valor de x é %d", x);
+```
+
+- `%d`: substitui o valor de `x` na *string* usando o formato inteiro.
+- As variáveis são passadas como argumentos após a *string*.
+- Se o formato usado não corresponder ao tipo da variável, o resultado será imprevisível.
+
+---
+
+### Conversão de tipos
+
+| Tipo     | Formato |
+| -------- | ------- |
+| `int`    | `%d`    |
+| `float`  | `%f`    |
+| `double` | `%lf`   |
+| `char`   | `%c`    |
+| `string` | `%s`    |
+
+---
+
+## Função `scanf`
+
+
+```python
+# Python:
+x = int(input("Digite um número: "))
+```
+
+
+```c
+// C:
+int x;
+printf("Digite um número: ");
+scanf("%d", &x);
+```
+
+- `scanf` **não** imprime uma mensagem na tela. É necessário usar `printf` para isso.
+- `&x` é o endereço de memória da variável `x`. 
+- `%d` é o formato inteiro. 
+- Se for passado um tipo diferente do esperado, o resultado será imprevisível.
+
+---
 
 # Variáveis
 
@@ -197,14 +276,14 @@ int main(){
 
 # Tipos de variáveis
 
-| Tipo | Tamanho | *range* | literal | conversão |
-|------|---------|---------|---------|-----------|
-| `char` | 1 byte | -128 a 127 | `'a'` | `%c` |
-| `short` | 2 bytes | -32.768 a 32.767 | `10` | `%hd` |
-| `int` | 4 bytes | -2.147.483.648 a 2.147.483.647 | `10` | `%d` |
-| `long` | 8 bytes | -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 | `10` | `%ld` |
-| `float` | 4 bytes | 1.2E-38 a 3.4E+38 | `10.5` | `%f` |
-| `double` | 8 bytes | 2.3E-308 a 1.7E+308 | `10.5` | `%lf` |
+| Tipo     | Tamanho | *range*                                                | literal | conversão |
+| -------- | ------- | ------------------------------------------------------ | ------- | --------- |
+| `char`   | 1 byte  | -128 a 127                                             | `'a'`   | `%c`      |
+| `short`  | 2 bytes | -32.768 a 32.767                                       | `10`    | `%hd`     |
+| `int`    | 4 bytes | -2.147.483.648 a 2.147.483.647                         | `10`    | `%d`      |
+| `long`   | 8 bytes | -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 | `10`    | `%ld`     |
+| `float`  | 4 bytes | 1.2E-38 a 3.4E+38                                      | `10.5`  | `%f`      |
+| `double` | 8 bytes | 2.3E-308 a 1.7E+308                                    | `10.5`  | `%lf`     |
 
 ---
 
@@ -266,41 +345,52 @@ float z = x / y; // z = 3.333333
 
 ```c
 int a = 10;
-a++; // a = 11
-a--; // a = 10
-```
-
-- Os operadores de incremento e decremento podem ser usados antes ou depois da variável.
-
-```c
-int a = 10;
-int b = ++a; // a = 11, b = 11
-int c = a--; // a = 10, c = 11
+a++; // a = a + 1 
+a--; // a = a - 1
 ```
 
 ---
 
-# Operadores de atribuição
+## Prefixo vs Sufixo
 
-- *C* suporta os operadores de atribuição `=`, `+=`, `-=`, `*=`, `/=`, `%=`.
-- Os operadores de atribuição combinam uma operação com a atribuição.
-- Por exemplo, `a += b` é equivalente a `a = a + b`.
+- O incremento e decremento podem ser do tipo **prefixo** (`++a`) ou **sufixo** (`a++`)
+- No caso do **prefixo**, a variável é incrementada antes de ser usada.
+- No caso do **sufixo**, a variável é incrementada depois de ser usada.
 
 ```c
+// Aqui não há diferença, pois o valor de 'a' não é usado na expressão
 int a = 10;
-a += 5; // a = 15
-a -= 5; // a = 10
-a *= 5; // a = 50
-a /= 5; // a = 10
-a %= 5; // a = 0
+a++; // a = a + 1
+++a; // a = a + 1
+```
+
+```c
+int a = 10,b, c;
+b = a++; // b = a; a = a + 1; primeiro c recebe o valor de a e depois a é incrementado
+c = ++a; // a = a + 1; c = a; primeiro b é incrementado e depois d recebe o valor de b
 ```
 
 ---
 
-# Operadores de comparação
+# Atribuição com **acumulação**
+
+Mesmo que em Python, *C* suporta operadores de atribuição com acumulação `+=`, `-=`, `*=`, `/=`, `%=`.
+
+```c
+int a = 10;
+a += 5; // a = a + 5
+a -= 5; // a = a - 5
+a *= 5; // a = a * 5
+a /= 5; // a = a / 5
+a %= 5; // a = a % 5 
+```
+
+---
+
+# Operadores de **Comparação**
 
 - *C* suporta os operadores de comparação `==`, `!=`, `>`, `<`, `>=`, `<=`.
-- Os operadores de comparação retornam um valor booleano (`true` ou `false`).
+- Os operadores de comparação retornam um valor inteiro (`0` para falso e `1` para verdadeiro).
 
 ```c
 int a = 10, b = 20;
@@ -312,8 +402,39 @@ if (a >= b) printf("a é maior ou igual a b");
 if (a <= b) printf("a é menor ou igual a b");    
 ```
 
-> *C* não supporta o tipo `bool`. Valores booleanos são representados por `0` (falso) e `1` (verdadeiro).
-> *C* não possui operadores de comparação encadeados, como `10 < x < 20`.
+---
+
+# Tipos booleanos
+
+- *C* não possui um tipo de dados booleano nativo.
+- Valores booleanos são representados por `0` (falso) e qualquer outro valor (verdadeiro).
+
+```c
+int x = 10;
+if (x) printf("x é verdadeiro");
+if (!x) printf("x é falso");
+```
+
+<br>
+
+> *C* possui uma biblioteca padrão chamada `stdbool.h` que define os valores `true` e `false`. Não abordaremos esta biblioteca neste curso.
+
+
+
+---
+
+## Operadores de comparação **encadeados**
+
+- Operadores de comparação **encadeados**, como `10 < x < 20`, **não funcionam** em *C*.
+- Em *C*, a expressão `10 < x < 20` é interpretada como `(10 < x) < 20`.
+- O resultado de `10 < x` é um valor booleano (`0` ou `1`), que é comparado com `20`.
+- Para comparar se `x` está entre `10` e `20`, use `10 < x && x < 20`.
+
+```c
+int x = 15;
+// if (10 < x < 20) printf("não funciona como esperado");
+if (10 < x && x < 20) printf("x está entre 10 e 20");
+```
 
 ---
 
@@ -321,6 +442,7 @@ if (a <= b) printf("a é menor ou igual a b");
 
 - *C* suporta os operadores lógicos `&&` (AND), `||` (OR) e `!` (NOT).
 - Os operadores lógicos são usados para combinar expressões booleanas.
+- Funciona de forma semelhante ao Python.
 
 ```c
 int a = 10, b = 20;
@@ -328,6 +450,10 @@ if (a > 0 && b > 0) printf("a e b são positivos");
 if (a > 0 || b > 0) printf("a ou b é positivo");
 if (!(a > 0)) printf("a é negativo");
 ```
+
+<br>
+
+> *C* possui operadores bit-a-bit `&`, `|`, `^`, `~` que não serão abordados neste curso.
 
 ---
 
@@ -341,16 +467,15 @@ if (a > 0)
 ```
 
 **Observações**:
-- A condição é obrigatória e deve estar entre parênteses.
-- O bloco de código é executado se a condição for verdadeira.
+- A condição é **obrigatória** e deve estar entre **parênteses**.
 - Se o bloco de código tiver apenas uma linha, as chaves `{}` são opcionais.
-- Indentação é opcional, mas recomendada para melhorar a legibilidade do código.
+- **Indentação** é **opcional**, mas **recomendada** para melhorar a legibilidade do código.
 - Indentação não modifica o comportamento do programa.
-- Não colocar `;` após o `if(a > 0)`.
+- **Atenção:** Não colocar `;` após o if `if(a > 0)`.
 
 ---
 
-Mais de um comando dentro de um bloco de código:
+### Mais de um comando dentro de um bloco de código:
 
 ```c
 int a = 10;
@@ -372,6 +497,9 @@ if (a > 0)
 ---
 
 # Estruturas de seleção (if-else)
+
+
+Mesma semântica do Python, só muda a sintaxe.
 
 ```c
 int a = 10;
@@ -398,9 +526,26 @@ else
     printf("a é zero");
 ```
 
+<br>
+
+> Como a indentação é livre no *C*, não há necessidade de um `elif` para deixar o código mais legível.
+
 ---
 
-# Estruturas de repetição (while)
+# Estruturas de repetição
+
+- *C* suporta três estruturas de repetição: 
+    - `while`, 
+    - `do-while` 
+    - e `for`.
+ 
+
+
+---
+
+# `while`
+
+Mesma semântica do Python, só muda a sintaxe.
 
 ```c
 int i = 0;
@@ -410,11 +555,17 @@ while (i < 10){
 }
 ```
 
+- Parênteses são **obrigatórios** em torno da condição.
+- Chaves `{}` são **opcionais** se o bloco de código tiver **apenas uma linha**.
+- **Atenção:** Não colocar `;` após o `while` `while(i < 10)`.
+
+![bg right:25% 95%](images/while.drawio.svg)
+
 ---
 
-# Estruturas de repetição (do-while)
+# `do-while`
 
-Esta estrutura não está presente em Python. O bloco de código é executado pelo menos uma vez, mesmo que a condição seja falsa.
+Esta estrutura **não está presente em Python**. O bloco de código é executado pelo menos uma vez, mesmo que a condição seja falsa.
 
 ```c
 int i = 0;
@@ -424,104 +575,74 @@ do{
 }while (i < 10);
 ```
 
+- **Atenção:** é obrigatório o uso do `;` após o `while` `while(i < 10);`.
+
+![bg right:30% 95%](images/dowhile.drawio.svg)
+
 ---
 
 # Estruturas de repetição (for)
 
-Esta estrutura é bem diferente da estrutura `for` em Python. 
+Esta estrutura é **bem diferente** da estrutura `for` em Python. 
 
 ```c
 for (int i = 0; i < 10; i++){
     printf("%d\n", i);
 }
 ```
-
-- **`int i = 0`**: declaração e inicialização da variável de controle
-- **`i < 10`**: condição de parada, o bloco de código é executado enquanto a condição for verdadeira
-- **`i++`**: incremento da variável de controle
-- **Não** há range ou lista de valores como em Python.
-
----
-
-# Entrada e saída de dados
-
-- *C* possui funções específicas para entrada e saída de dados.
-- A função `printf` é usada para imprimir dados na tela.
-- A função `scanf` é usada para ler dados do teclado.
+- `for`apresenta **três partes** separadas por `;`.
+  - **`int i = 0`**: **declaração e inicialização** da *variável de controle*
+  - **`i < 10`**: **condição**, o bloco de código é executado enquanto a condição for verdadeira
+  - **`i++`**: **incremento** da *variável de controle*
+- **Não** há *range* ou lista de valores como em Python.
 
 ---
 
-## Função `printf`
+## Exemplos
 
-Em Python:
-
-```python
-print("Hello, World!")
+```Python
+for i in range(10): # 0 a 9 em Python
+    print(i)
 ```
-
-Em C:
 
 ```c
-printf("Hello, World!");
+for (int i = 0; i < 10; i++) // 0 a 9 em C
+    printf("%d\n", i);
 ```
 
 ---
-Imprimindo variáveis:
 
-Em Python:
-
-```python
-x = 10
-print(f"O valor de x é {x}")
+```Python
+for i in range(1, 10, 2): # 1 a 9 de 2 em 2 em Python
+    print(i)
 ```
-
-Em C:
 
 ```c
-int x = 10;
-printf("O valor de x é %d", x);
+for (int i = 1; i < 10; i += 2) // 1 a 9 de 2 em 2 em C
+    printf("%d\n", i);
 ```
-
-- `%d`: substitui o valor de `x` na *string* usando o formato inteiro.
-- As variáveis são passadas como argumentos após a *string*.
-- Se o formato usado não corresponder ao tipo da variável, o resultado será imprevisível.
 
 ---
 
-### Conversão de tipos
-
-| Tipo | Formato |
-|------|---------|
-| `int` | `%d` |
-| `float` | `%f` |
-| `double` | `%lf` |
-| `char` | `%c` |
-| `string` | `%s` |
-
----
-
-## Função `scanf`
-
-Em Python:
-
-```python
-x = int(input("Digite um número: "))
+```Python
+for i in range(10, 0, -1): # 10 a 1 de -1 em -1 em Python
+    print(i)
 ```
-
-Em C:
 
 ```c
-int x;
-printf("Digite um número: ");
-scanf("%d", &x);
+for (int i = 10; i > 0; i--) // 10 a 1 de -1 em -1 em C
+    printf("%d\n", i);
 ```
 
-- `scanf` **não** imprime uma mensagem na tela. É necessário usar `printf` para isso.
-- `&x` é o endereço de memória da variável `x`. 
-- `%d` é o formato inteiro. 
-- Se for passado um tipo diferente do esperado, o resultado será imprevisível.
+
+- `for`do *C* é mais flexível que o `for` do Python.
+- O `for` do *C* não itera sobre uma lista de valores.
+- o `for`do Python é mais simples e intuitivo (elegante).
+
 
 ---
+
+
 
 # Exercícios
 Escreva um programa em *C* que:
@@ -532,3 +653,191 @@ Escreva um programa em *C* que:
 4. Lê um número inteiro do teclado e imprime se ele é par ou ímpar.
 5. Lê um inteiro e imprime de 1 até o número lido.
 
+
+---
+
+# Funções
+
+Assim como já aprendemos em Python, funções são blocos de código que realizam uma tarefa específica. Em *C*, funções são declaradas da seguinte forma:
+
+```c
+int soma(int a, int b){
+    return a + b;
+}
+```
+
+- **`int`**: tipo de dado retornado pela função.
+- **`soma`**: nome da função.
+- **`(int a, int b)`**: parâmetros da função.
+- **`return`**: valor retornado pela função.
+- Chave `{}` delimita o bloco de código da função são **obrigatórias**.
+
+---
+
+## Chamando funções
+
+```c
+#include <stdio.h>
+
+int soma(int a, int b){
+    return a + b;
+}
+
+int main(){ // Função principal
+    int x = 10, y = 20;
+    int s = soma(x, y);
+    printf("A soma de %d e %d é %d", x, y, s);
+    return 0;
+}
+
+```
+
+As funções devem ser declaradas **antes** de serem chamadas.
+
+---
+
+## Comparação com Python
+
+### Tipos de retorno e parâmetros
+
+```Python
+def soma(a, b):
+    return a + b
+```
+
+```c
+int soma(int a, int b){
+    return a + b;
+}
+```
+Em Python não há necessidade de declarar o tipo de retorno da função e dos parâmetros. Em *C*, é obrigatório.
+
+---
+
+### Funções sem retorno
+
+```Python
+def hello():
+    print("Hello, World!")
+```
+
+```c
+void hello(){
+    printf("Hello, World!");
+}
+```
+
+Em *C*, funções sem retorno são declaradas com `void`.
+
+---
+
+### Funções sem parâmetros
+
+```Python
+def hello():
+    print("Hello, World!")
+```
+
+```c
+void hello(){
+    printf("Hello, World!");
+}
+```
+
+Não há diferença na declaração de funções sem parâmetros.
+
+---
+
+### Funções com múltiplos retornos
+
+```Python
+def soma_sub(a, b):
+    return a + b, a - b # retorna uma tupla
+# chamando a função
+s, sub = soma_sub(10, 5)
+```
+
+```c
+void soma_sub(int a, int b, int *s, int *sub){
+    *s = a + b;
+    *sub = a - b;
+}
+// chamando a função
+int s, sub;
+soma_sub(10, 5, &s, &sub);
+```
+
+Não há tuplas em *C*. Para retornar múltiplos valores, use **ponteiros**. A função **não retorna** valores, mas **modifica variáveis** passadas por referência.
+
+---
+
+### Tipos de argumentos
+
+#### Opcionais
+
+```Python
+def soma(a, b=0):
+    return a + b
+```
+
+```c
+int soma(int a, int b){
+    return a + b;
+}
+int soma(int a){
+    return soma(a, 0);
+}
+```
+
+Em *C*, **não há argumentos opcionais**. Para criar funções com argumentos opcionais, é necessário criar funções com o mesmo nome e diferentes parâmetros.
+
+---
+
+#### Nomeados
+
+```Python
+def soma(a, b):
+    return a + b
+# chamando a função
+soma(b=10, a=5)
+```
+
+Em *C*, **não há argumentos nomeados**. Os argumentos devem ser passados na ordem correta.
+
+---
+
+#### Variáveis
+
+```Python
+def soma(*args):
+    return sum(args)
+# chamando a função
+soma(1, 2, 3, 4, 5)
+```
+
+```c
+#include <stdarg.h>
+int soma(int n, ...){
+    va_list args; va_start(args, n);
+    int sum = 0;
+    for (int i = 0; i < n; i++) sum += va_arg(args, int);
+    va_end(args);
+    return sum;
+}
+// chamando a função
+soma(5, 1, 2, 3, 4, 5);
+```
+
+Em *C*, funções com número variável de argumentos são declaradas com `...`. A biblioteca `stdarg.h` é usada para manipular esses argumentos.
+
+<!-- _footer: "" -->
+
+---
+
+# Exercícios
+
+1. Escreva uma função em *C* que recebe dois números inteiros e retorna a soma desses números.
+2. Escreva uma função em *C* que recebe um número inteiro e retorna o quadrado desse número.
+3. Escreva uma função em *C* que recebe um número inteiro e retorna `1` se o número for par e `0` se o número for ímpar.
+4. Escreva uma função em *C* que recebe um número inteiro e imprime todos os números de `1` até o número lido.
+5. Escreva uma função em *C* que recebe um número inteiro e imprime todos os números pares de `1` até o número lido.
