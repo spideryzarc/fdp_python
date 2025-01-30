@@ -21,28 +21,26 @@ style: |
 
 # Introdução à Linguagem C
 
-Neste módulo, vamos aprender os conceitos básicos da linguagem de programação C, sob a perspectiva de um programador iniciante Python.
+Neste módulo, vamos aprender os conceitos **básicos** da linguagem de programação *C*, sob a perspectiva de um programador iniciante Python.
 
 
-![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg)
+![bg right 39% 80%](https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg)
 
 ---
 
 ## O que é C?
 
-- Linguagem de programação de propósito geral e estruturada
-- Desenvolvida por Dennis Ritchie em 1972
-- Base para diversas outras linguagens
-- Muito utilizada em sistemas operacionais e aplicações de baixo nível
-- Linguagem de médio nível (permite manipulação de hardware)
-- Compilada
-- Sintaxe simples e elegante
+- Linguagem de programação de **propósito geral** e **estruturada**
+- Desenvolvida por **Dennis Ritchie** em **1972**
+- Base para diversas outras linguagens (*c-like*): C++, C#, Objective-C, Java, JavaScript, PHP, Python, Ruby, Swift, etc.
+- Muito utilizada em **sistemas operacionais** (Unix, Linux, Windows), ***drivers*** de dispositivos, jogos, **sistemas embarcados**, etc.
+- Linguagem de médio nível (permite manipulação de *hardware*)
 
 ---
 
 # Compilação
 
-Ao contrário de linguagens interpretadas, como Python, C é uma linguagem compilada. Isso significa que o código fonte é traduzido para código de máquina antes de ser executado.
+Ao contrário de linguagens **interpretadas**, como Python, C é uma linguagem **compilada**. Isso significa que o código fonte é traduzido para código de máquina antes de ser executado.
 
 - **Código fonte**: código escrito pelo programador em um arquivo de texto (extensão `.c`)
 - **Código objeto**: código de máquina gerado pelo compilador (extensão `.exe` no Windows)
