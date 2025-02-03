@@ -839,3 +839,160 @@ Em *C*, funções com número variável de argumentos são declaradas com `...`.
 3. Escreva uma função em *C* que recebe um número inteiro e retorna `1` se o número for par e `0` se o número for ímpar.
 4. Escreva uma função em *C* que recebe um número inteiro e imprime todos os números de `1` até o número lido.
 5. Escreva uma função em *C* que recebe um número inteiro e imprime todos os números pares de `1` até o número lido.
+
+
+---
+
+# Vetores (*Arrays*)
+
+- Vetores são coleções de variáveis do **mesmo tipo**.
+- São indexados por números inteiros **começando em zero**.
+
+Em *C*, vetores são declarados da seguinte forma:
+```c
+int v[5]; // Declara um vetor de 5 inteiros
+```
+E são acessados da mesma forma que em Python:
+```c
+v[0] = 10;
+v[4] = 20;
+```
+
+---
+
+## Vetores vs Listas (Python)
+
+- Em *C*, vetores têm **tamanho fixo** e **tipo fixo** e **homogêneo**.
+- Em Python, listas podem ter **tamanho variável** e **tipo variável** e **heterogêneo**.
+- Em *C*, vetores são **mais eficientes** e **mais rápidos** que listas em Python.
+- Todos aqueles métodos para manipular listas em Python **não existem** em *C*. Não exitem: `append`, `pop`, `insert`, `remove`, `sort`, `reverse`, `index`, `count`, `extend`, `copy`, `clear`, `in` ... 
+- **Não há** operadores para **somar** vetores, **multiplicar** vetores por escalares, etc.
+- **Não há** ***slicing*** em vetores em *C*.
+- **Não há** ***list comprehension*** em *C*.
+- **Não há** **índices negativos** em vetores em *C*.
+- *C* não verifica **limites** de vetores.
+
+<!-- _footer: "" -->
+
+---
+
+## Inicialização de vetores
+
+- Vetores podem ser **inicializados na declaração**.
+- A inicialização é feita entre chaves `{}` e os elementos são separados por vírgulas.
+- O tamanho do vetor é inferido pelo número de elementos na inicialização.
+
+```c
+int v[] = {1, 2, 3, 4, 5}; // Vetor de 5 inteiros
+```
+
+<br>
+
+> Esta atribuição **não funciona** em qualquer lugar do código, **apenas na declaração**.
+
+---
+
+## Acessando elementos
+
+- Os elementos de um vetor são acessados pelo **índice** entre colchetes `[]`.
+- O índice **começa em zero**.
+- O índice **deve ser um número inteiro**.
+- Tentar acessar um índice **fora do intervalo** do vetor resulta em **comportamento indefinido**.
+
+```c
+int v[] = {1, 2, 3, 4, 5};
+int x = v[0]; // x = 1
+int y = v[4]; // y = 5
+int z = v[10]; // Comportamento indefinido
+```
+
+> Acessar um índice fora do intervalo do vetor pode **corromper a memória** e **causar falhas de segmentação**.
+
+---
+
+## Iterando sobre vetores
+
+- Para **iterar** sobre um vetor, use um **laço de repetição**.
+- O **tamanho** do vetor é **necessário** para **limitar** o laço.
+- `for`é a estrutura mais conveniente para isso.
+
+```c
+int v[5] = {1, 2, 3, 4, 5};
+for (int i = 0; i < 5; i++){
+    // processa v[i]
+    // ...
+}
+```
+
+---
+
+# Matrizes (*Arrays* multidimensionais)
+
+- Matrizes são vetores de vetores.
+- Em *C*, matrizes são declaradas da seguinte forma:
+
+```c
+int m[3][3]; // Declara uma matriz 3x3
+```
+
+- A matriz é acessada da mesma forma que um vetor, mas com **dois índices**.
+
+```c
+m[0][0] = 1;
+m[2][2] = 9;
+// m[0,0] =  10; não é uma sintaxe válida em C. 
+```
+
+---
+
+## Inicialização de matrizes
+
+- Matrizes podem ser **inicializadas na declaração**.
+- A inicialização é feita entre chaves `{}` e os elementos são separados por vírgulas.
+- O tamanho da matriz é inferido pelo número de elementos na inicialização.
+
+```c
+int m[3][3] = {{1, 2, 3},
+               {4, 5, 6}, 
+               {7, 8, 9}};
+```
+
+
+> Esta atribuição **não funciona** em qualquer lugar do código, **apenas na declaração**.
+
+---
+
+## Iterando sobre matrizes
+
+- Para **iterar** sobre uma matriz, use **dois laços de repetição**.
+- O **tamanho** da matriz é **necessário** para **limitar** os laços.
+- `for`é a estrutura mais conveniente para isso.
+
+```c
+int m[3][2] = {{1, 2},
+               {3, 4},
+               {5, 6}};
+
+for (int i = 0; i < 3; i++){ // Itera sobre as linhas
+    for (int j = 0; j < 2; j++){ // Itera sobre as colunas de cada linha
+        // processa m[i][j]
+        // ...
+    }
+}
+```
+
+---
+
+# Exercícios
+
+Escreva um programa em *C* que: 
+1. declara um vetor de 10 inteiros e inicializa com os números de `1` a `10`. Imprima o vetor na tela.
+2. que declara uma matriz 3x3 e inicializa com os números de `1` a `9`. Imprima a matriz na tela.
+3. que ler um vetor de 5 inteiros do usuário e imprime a soma dos elementos.
+4. que lê uma matriz 3x3 do usuário e imprime a soma dos elementos.
+5. que lê uma matriz 3x3 do usuário e imprime a soma dos elementos de cada coluna.
+6. que lê uma matriz 3x3 do usuário e imprime a soma dos elementos da diagonal principal.
+
+<!-- _footer: "" -->
+
+---
