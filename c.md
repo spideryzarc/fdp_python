@@ -996,3 +996,466 @@ Escreva um programa em *C* que:
 <!-- _footer: "" -->
 
 ---
+
+# `char` : Caracteres
+
+- Ao contrário do Python, *C* não possui um tipo de dado `char` para caracteres. 
+- Caracteres são tratados como **números inteiros**.
+- Os valores literais de caracteres são **delimitados por aspas simples** `'A'` apenas
+```c
+char c = 'A'; // Atribui o caractere 'A' à variável c
+```
+- O tipo `char` é usado para armazenar caracteres **ASCII** [ver tabela ASCII](https://pt.wikipedia.org/wiki/ASCII).
+- Ocupa **1 byte** de memória
+- Server como substituto para tipo lógicos `bool` em *C*.
+
+---
+
+## Imprimindo caracteres
+
+- Caracteres podem ser impressos com a função `printf`, usando o formato `%c`.
+
+```c
+char c = 'A';
+printf("%c", c);
+```
+
+- Se usarmos `%d`, o valor numérico do caractere será impresso.
+
+```c
+char c = 'A';
+printf("%d", c); // Imprime 65 (valor ASCII de 'A')
+```
+
+- Também é possível imprimir caracteres com a função `putchar`.
+
+```c
+char c = 'A';
+putchar(c);
+```
+
+---
+
+## Lendo caracteres
+
+- Caracteres podem ser lidos com a função `scanf`, usando o formato `%c`.
+
+```c
+char c;
+scanf("%c", &c);
+```
+
+- A função `getchar` também pode ser usada para ler caracteres.
+
+```c
+char c;
+c = getchar();
+```
+
+- A função `getchar` lê um caractere do **buffer de entrada** (teclado) e retorna um inteiro.
+
+---
+
+## Curiosidade
+
+- Em *C*, caracteres são armazenados como **números inteiros**.
+- Então você pode fazer operações matemáticas com caracteres.
+- Como na tabela ASCII, as letras estão em sequência, podemos fazer operações como:
+
+```c
+char a = 'A';
+a = a + 1; 
+printf("%c", a); // Imprime 'B'
+```
+
+---
+
+# *Strings*
+
+Não há, nativamente, um tipo de dado `string` em *C*. *Strings* são tratadas como **vetores de caracteres**.
+
+```c
+char s[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+```
+
+- *Strings* são **terminadas** por um **caractere nulo** `'\0'`.
+-  Literais de *strings* são **delimitados por aspas duplas** `""` apenas
+-  Ao contrário de Python, as *strings* em *C* são **mutáveis**.
+- *C* não é uma linguagem *amigável* para manipulação de *strings*.
+
+
+---
+
+## Inicialização de *strings*
+
+- *Strings* podem ser **inicializadas na declaração**.
+- A inicialização é feita entre aspas duplas `""`.
+- O caractere nulo `'\0'` é **implícito** no final da *string*.
+
+```c
+char s[] = "Hello";
+```
+- `s` é um vetor de 6 caracteres (5 letras + 1 caractere nulo).
+
+---
+
+## Inicialização de *strings* como *buffer*
+
+- Geralmente, *strings* são tratadas como **buffers** de caracteres. 
+- Um vetor de tamanho razoável é alocado para armazenar a *string*.
+- O texto não precisa preencher todo o vetor.
+- `\0` é usado para **marcar o final** da parte válida da *string*.	
+
+```c
+char s[100] = "Hello";
+```
+
+---
+
+## Imprimindo *strings*
+
+- *Strings* podem ser impressas com a função `printf`, usando o formato `%s`.
+
+```c
+char s[] = "Hello";
+printf("%s", s);
+```
+
+- Também é possível imprimir *strings* com a função `puts`.
+
+```c
+char s[] = "Hello";
+puts(s);
+```
+
+---
+
+## Lendo *strings*
+
+- *Strings* são lidas com a função `scanf`, usando o formato `%s`.
+- Não devemos usar `&` para ler *strings*, pois vetores já são **endereços de memória**.
+
+```c
+char s[100];
+scanf("%s", s);
+```
+
+- A função `gets` também pode ser usada para ler *strings*.
+
+```c
+char s[100];
+gets(s);
+```
+
+- A forma mais segura de ler *strings* é com a função `fgets`.
+
+```c
+char s[100];
+fgets(s, 100, stdin); // Lê até 99 caracteres do teclado
+```
+
+<!-- _footer: "" -->
+
+---
+
+## Manipulando *strings*
+
+Ao contrário das linguagens de alto nível, *C* não possui funções embutidas para manipulação de *strings*.
+- *Strings* em *C* são manipuladas com funções da biblioteca padrão `string.h`.
+- As funções mais comuns são:
+    - `strlen`: retorna o tamanho da *string*.
+    - `strcpy`: copia uma *string* para outra.
+    - `strcat`: concatena duas *strings*.
+    - `strcmp`: compara duas *strings*.
+    - `strchr`: procura um caractere em uma *string*.
+    - `strstr`: procura uma *string* em outra.
+
+
+---
+
+## Exemplo
+
+```python
+# em python
+s = "Hello"
+s2 = s
+print(s)
+print(len(s))
+```
+
+```c
+// em C
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char s1[] = "Hello";
+    char s2[100];
+    strcpy(s2, s1); // Copia s1 para s2
+    printf("%s\n", s2);
+    printf("%d\n", strlen(s2)); // Tamanho de s2
+    return 0;
+}
+```
+
+---
+
+### Tamanho de *strings* (`strlen`)
+
+O comprimento (*lenth*) de uma *string* é o número de caracteres antes do caractere nulo `'\0'`.
+
+```c
+char s[100] = "Hello";
+int len = strlen(s);
+printf("%d", len); // Imprime 5
+```
+Embora o vetor `s` tenha tamanho 100, o comprimento da *string* é 5.
+
+
+---
+### Iterando sobre *strings*
+
+Podemos usar o `strlen` para iterar sobre os caracteres de uma *string*.
+
+```c
+char s[] = "Hello";
+for (int i = 0; i < strlen(s); i++){
+    printf("%c\n", s[i]);
+    // processa s[i], cada caractere da string
+}
+```
+
+---
+
+### Atribuindo *strings* (`strcpy`)
+
+#### Literais
+Você não pode simplesmente atribuir um literal de *string* a uma variável de *string*.
+
+```c
+char s[100];
+s = "Hello"; // Não funciona
+```
+Para isso, você deve usar a função `strcpy`.
+
+```c
+char s[100];
+strcpy(s, "Hello");
+```
+
+---
+
+#### Variáveis
+Até podemos atribuir uma variável de *string* a outra, mas isso não copia o conteúdo da *string*.
+
+```c
+char s1[100] = "Hello";
+char s2[100];
+s2 = s1; // s2 recebe o endereço de s1
+```
+Para copiar o conteúdo de uma *string* para outra, use a função `strcpy`.
+
+```c
+char s1[100] = "Hello";
+char s2[100];
+strcpy(s2, s1); // s2 recebe o conteúdo de s1
+```
+
+---
+
+### Concatenando *strings* (`strcat`)
+
+```python
+# em Python
+s1 = "Hello"
+s2 = " World"
+s1 += s2
+```
+
+```c
+// em C
+char s1[100] = "Hello";
+char s2[] = " World";
+strcat(s1, s2); // s1 = "Hello World"
+```
+
+- É necessário que `s1` tenha espaço suficiente para armazenar a *string* resultante.
+- `strcat` não verifica se há espaço suficiente em `s1`.
+
+---
+
+### Comparando *strings* (`strcmp`)
+
+```python
+# em Python
+s1 = "Hello"
+s2 = "Hello"
+if s1 == s2:
+    print("Iguais")
+```
+
+```c
+// em C
+char s1[] = "Hello";
+char s2[] = "Hello";
+if (strcmp(s1, s2) == 0)
+    printf("Iguais");
+```
+- `strcmp` retorna `0` se as *strings* forem **iguais**.
+- `strcmp` retorna um valor **negativo** se `s1` for **menor** que `s2`.
+- `strcmp` retorna um valor **positivo** se `s1` for **maior** que `s2`.
+
+---
+
+```python
+# em Python
+s1 = "Hello"
+s2 = "World"
+if s1 < s2:
+    print("s1 vem antes de s2")
+```
+
+```c
+// em C
+char s1[] = "Hello";
+char s2[] = "World";
+if (strcmp(s1, s2) < 0)
+    printf("s1 vem antes de s2");
+```
+
+---
+
+### Comparando *strings* ignorando a caixa (`strcasecmp`)
+
+```python
+# em Python
+s1 = "Hello"
+s2 = "hello"
+if s1.lower() == s2.lower():
+    print("Iguais")
+```
+
+```c
+// em C
+char s1[] = "Hello";
+char s2[] = "hello";
+if (strcasecmp(s1, s2) == 0)
+    printf("Iguais");
+```
+
+- `strcasecmp` compara *strings* ignorando a caixa.
+- `strcasecmp` apresenta mesma semântica do `strcmp` para comparação.
+
+---
+
+### Procurando um caractere em uma *string* (`strchr`)
+
+```python
+# em Python
+s = "Hello"
+if 'e' in s:
+    print("Achou")
+```
+
+```c
+// em C
+char s[] = "Hello";
+if (strchr(s, 'e') != NULL)
+    printf("Achou");
+```
+
+- `strchr` retorna um **ponteiro** para a primeira ocorrência do caractere na *string*.
+- Se o caractere não for encontrado, `strchr` retorna `NULL`.
+- `NULL` é interpretado como ponteiro inválido em *C*.
+
+---
+
+### Procurando uma *string* em outra (`strstr`)
+
+```python
+# em Python
+s = "Hello World"
+if "World" in s:
+    print("Achou")
+```
+
+```c
+// em C
+char s[] = "Hello World";
+if (strstr(s, "World") != NULL)
+    printf("Achou");
+```
+
+- `strstr` retorna um **ponteiro** para a primeira ocorrência da *string* na *string*.
+- Se a *string* não for encontrada, `strstr` retorna `NULL`.
+
+---
+
+### Mudança de caixa ( Maiscula/Minuscula)
+
+Aqui será necessário usar a biblioteca `ctype.h`, que contém funções para manipulação de caracteres.
+
+```c
+#include <ctype.h>
+#include <stdio.h>
+
+int main(){
+    char s[] = "Hello";
+    for (int i = 0; s[i] != '\0'; i++){
+        s[i] = toupper(s[i]); // Converte para maiúsculas
+        // s[i] = tolower(s[i]); // Converte para minúsculas
+    }
+    printf("%s", s); // Imprime "HELLO"
+    return 0;
+}
+```
+O código acima converte todos os caracteres da *string* para maiúsculas um-a-um.
+
+---
+
+### Formatando *strings* (`sprintf`)
+
+```python
+# em Python
+a = 10.53
+s = f"O número é {a:.2f}"
+```
+
+```c
+// em C
+double a = 10.53;
+char s[100];
+sprintf(s, "O número é %.2lf", a);
+```
+- `sprintf` formata uma *string* e a armazena em outra *string*.
+- `s` deve ter espaço suficiente para armazenar a *string* formatada.
+- `%.2lf` formata `a` como um número de ponto flutuante com duas casas decimais.
+
+---
+
+#### Formatação Python vs C
+
+| Descrição | Python | C |
+|---|---|---|
+| Número inteiro com 5 dígitos | `{a:5d}` | `%5d` |
+| Número inteiro com 5 dígitos, preenchido com zeros | `{a:05d}` | `%05d` |
+| Número inteiro com sinal | `{a:+d}` | `%+d` |
+| Número inteiro com 5 dígitos, alinhado à esquerda | `{a:<5d}` | `%-5d` |
+| Número de ponto flutuante com 2 casas decimais | `{a:.2f}` | `%.2lf` |
+| Número de ponto flutuante, notação científica | `{a:.2e}` | `%.2e` |
+| *String* com 10 caracteres, alinhada à esquerda | `{s:<10}` | `%-10s` |
+| *String* com 10 caracteres, centralizada | `{s:^10}` | Não tem |
+
+
+---
+
+# Exercícios
+
+Escreva um programa em *C* que:
+1. Lê uma *string* do teclado e imprime o tamanho da *string*.
+2. Lê duas *strings* do teclado e imprime a concatenação das *strings*.
+3. Lê uma *string* do teclado e imprime a *string* em maiúsculas.
+4. Lê uma *string* do teclado e imprime a *string* em minúsculas.
+5. Lê uma *string* do teclado e imprime a *string* invertida.
+6. Lê uma *string* do teclado e imprime a quantidade de vogais na *string*.
+
+
