@@ -140,7 +140,7 @@ Você inventasse uma máquina que pudesse receber os **ingredientes** e a **rece
 Neste curso, vamos aprender a **programar** em **Python**, em seguida, aprenderemos um pouco de **C**.
 
 
-![bg right:40% 50%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png)
+![bg right:40% 50%](images/1200px-Python-logo-notext.svg_361e56a2.png)
 
 ---
 
@@ -162,7 +162,7 @@ Neste curso, vamos aprender a **programar** em **Python**, em seguida, aprendere
 
 [Fonte](https://aws.amazon.com/pt/what-is/python/#:~:text=altera%C3%A7%C3%B5es%20no%20c%C3%B3digo.-,Qual%20%C3%A9%20a%20hist%C3%B3ria%20do%20Python%3F,manter%20ocupado%20durante%20o%20Natal.)
 
-![bg right:15% fit drop-shadow 90%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png)
+![bg right:15% fit drop-shadow 90%](images/1200px-Python-logo-notext.svg_361e56a2.png)
 
 
 ---
@@ -1170,7 +1170,7 @@ else:
 - É uma das características **mais importantes** da programação, já que computadores são muito **bons em repetir** tarefas.
 
 
-![bg left:50% 100%](https://media.giphy.com/media/TabwFck9vEt44/giphy.gif?cid=ecf05e4786uq6o0xdqdllunbpfu7f3cjefhol0d0uwno2ods&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+![bg left:50% 100%](images/giphy_5b07c8e0.gif)
 
 ---
 
@@ -1310,7 +1310,7 @@ print("Soma:", soma)
 * um programa com *if's* fica um pouco mais complicado, mas ainda é fácil, pois é possível **visualizar** todas as possibilidades.
 * Um programa com *loops* é mais complicado, pois é necessário **acompanhar** o estado das variáveis ao longo das iterações.
 
-![bg right:50%](https://media.giphy.com/media/VgGcTrBJWRHc5Cut9v/giphy.gif?cid=ecf05e47za8qjglrokfydx9xwnefnalkbas4f6c2lyw4hf2v&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+![bg right:50%](images/giphy_73bd40af.gif)
 
 ---
 
@@ -1381,7 +1381,7 @@ for x in range(100):
 99
 ```
 
-![bg right:50%](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJwOHNsZG9xbzZmYm9senRlMmlnczA1Nnc3bHNyc3l2MWVnczB6eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/yKxo7c9Q6pZoUzAfPu/giphy.gif)
+![bg right:50%](images/giphy_d8414f64.gif)
 
 ---
 

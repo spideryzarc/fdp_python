@@ -24,7 +24,7 @@ style: |
 Neste módulo, vamos aprender os conceitos **básicos** da linguagem de programação *C*, sob a perspectiva de um programador iniciante Python.
 
 
-![bg right 39% 80%](https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg)
+![bg right 39% 80%](images/The_C_Programming_Language_logo.svg)
 
 ---
 
