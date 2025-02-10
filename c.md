@@ -1434,16 +1434,16 @@ sprintf(s, "O número é %.2lf", a);
 
 #### Formatação Python vs C
 
-| Descrição | Python | C |
-|---|---|---|
-| Número inteiro com 5 dígitos | `{a:5d}` | `%5d` |
-| Número inteiro com 5 dígitos, preenchido com zeros | `{a:05d}` | `%05d` |
-| Número inteiro com sinal | `{a:+d}` | `%+d` |
-| Número inteiro com 5 dígitos, alinhado à esquerda | `{a:<5d}` | `%-5d` |
-| Número de ponto flutuante com 2 casas decimais | `{a:.2f}` | `%.2lf` |
-| Número de ponto flutuante, notação científica | `{a:.2e}` | `%.2e` |
-| *String* com 10 caracteres, alinhada à esquerda | `{s:<10}` | `%-10s` |
-| *String* com 10 caracteres, centralizada | `{s:^10}` | Não tem |
+| Descrição                                          | Python       | C         |
+| -------------------------------------------------- | ------------ | --------- |
+| Número inteiro com 5 dígitos                       | `f"{a:5d}"`  | `"%5d"`   |
+| Número inteiro com 5 dígitos, preenchido com zeros | `f"{a:05d}"` | `"%05d"`  |
+| Número inteiro com sinal                           | `f"{a:+d}"`  | `"%+d"`   |
+| Número inteiro com 5 dígitos, alinhado à esquerda  | `"f{a:<5d}"` | `"%-5d"`  |
+| Número de ponto flutuante com 2 casas decimais     | `f"{a:.2f}"` | `"%.2lf"` |
+| Número de ponto flutuante, notação científica      | `f"{a:.2e}"` | `"%.2e"`  |
+| *String* com 10 caracteres, alinhada à esquerda    | `f"{s:<10}"` | `"%-10s"` |
+| *String* com 10 caracteres, centralizada           | `f"{s:^10}"` | Não tem   |
 
 
 ---
@@ -1458,4 +1458,79 @@ Escreva um programa em *C* que:
 5. Lê uma *string* do teclado e imprime a *string* invertida.
 6. Lê uma *string* do teclado e imprime a quantidade de vogais na *string*.
 
+---
+
+# Ponteiros
+
+
+- **Ponteiros** são variáveis que armazenam **endereços de memória**.
+- Em *C*, ponteiros são usados para acessar e manipular variáveis diretamente na memória.
+
+---
+
+## Declarando ponteiros
+
+- Um ponteiro é declarado com o operador `*` após o tipo de dado.
+
+```c
+int x = 10;
+int *p; // Declara um ponteiro para um inteiro
+p = &x; // Atribui o endereço de x ao ponteiro p
+*p = 20; // Altera o valor de x para 20 através do ponteiro p
+```
+- `&` é o operador de **referência** que retorna o **endereço de memória** de uma variável.
+- `*` é o operador de **derreferência** que retorna o **conteúdo** de um endereço de memória.
+
+---
+
+### Alguns comentários sobre ponteiros
+
+- Outras linguagens de programação, como Python, escondem ponteiros do programador.
+- Ponteiros são uma das características mais poderosas e perigosas de *C*.
+- Ponteiros são usados para:
+  - Manipular vetores e matrizes,
+  - Alocar memória dinamicamente,
+  - Passar argumentos por referência para funções,
+  - Construir estruturas de dados complexas (listas encadeadas, árvores, grafos, etc).
+  
+> Neste curso, não vamos nos aprofunar em ponteiros, mas é importante entender o conceito básico.
+
+---
+
+### Passagem de argumentos por referência
+
+- Em *C*, argumentos de funções são passados por **valor** por padrão.
+- Alterar um argumento dentro deuma função, não afeta a variável original.
+
+```c
+void dobro(int x){
+    x = 2 * x;
+}
+
+int main(){
+    int a = 10;
+    dobro(a);
+    printf("%d", a); // Imprime 10
+    return 0;
+}
+```
+---
+
+Se quisermos alterar a variável original, podemos passar o argumento por **referência**.
+
+```c
+void dobro(int *x){
+    *x = 2 * (*x);
+}
+
+int main(){
+    int a = 10;
+    dobro(&a);
+    printf("%d", a); // Imprime 20
+    return 0;
+}
+```
+<br>
+
+> A reutilização de `&` e `*` faz a coisa parecer mais confusa do que realmete é.  
 
