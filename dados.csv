@@ -1,0 +1,1242 @@
+MAT,Nome,Disciplina,Nota1,Nota2,Frequência (%)
+MAT036,Rafael Xande Martins,Inteligência Artificial,2.4,2.6,84
+MAT186,Eduardo Zeca Ferreira,Engenharia de Software,7.6,10.0,82
+MAT442,João Zeca Oliveira,Banco de Dados,2.0,8.6,62
+MAT162,Zélio Ferreira,Álgebra Linear,7.1,0.5,61
+MAT182,Wanessa Ursula Ferreira,Segurança da Informação,0.6,2.6,93
+MAT038,Rafael Raul Monteiro,Cálculo I,7.8,2.1,55
+MAT073,Carlos Lucas Lima,Programação I,3.8,7.9,89
+MAT174,Bruno Teixeira,Banco de Dados,9.3,7.3,88
+MAT053,Karla Tatiana Carvalho,Química Geral,7.4,5.6,71
+MAT108,Leonardo Machado,Sistemas Operacionais,4.9,9.2,100
+MAT423,Ana Santos,Álgebra Linear,6.2,9.2,83
+MAT170,Ximena Yara Silva,Cálculo II,9.3,4.9,63
+MAT310,Tiago Vitor Monteiro,Cálculo I,4.2,6.8,98
+MAT243,Pedro Ubirajara Almeida,Física I,7.4,7.5,65
+MAT287,Tiago Gomes,Química Geral,7.6,0.5,61
+MAT080,Helena Silvana Lima,Física I,3.5,3.6,57
+MAT369,Sofia Costa,Física I,5.2,6.1,65
+MAT080,Helena Silvana Lima,Lógica para Computação,1.6,3.9,84
+MAT316,Yuri Lucas Teixeira,Redes de Computadores,7.9,6.3,77
+MAT306,Ximena Wanda Araújo,Programação II,8.4,4.0,61
+MAT485,Miguel Santos,Engenharia de Software,2.2,6.5,75
+MAT348,Isabela Nunes,Álgebra Linear,4.6,5.9,53
+MAT285,Wanessa Ursula Costa,Engenharia de Software,2.1,4.1,86
+MAT102,Nicolas Almeida,Banco de Dados,5.6,3.3,81
+MAT284,Eduardo Ferreira,Álgebra Linear,1.0,7.6,89
+MAT239,Nicolas Costa,Engenharia de Software,2.5,6.0,90
+MAT130,Karla Rocha,Química Geral,6.1,3.8,85
+MAT053,Karla Tatiana Carvalho,Probabilidade e Estatística,1.7,1.4,96
+MAT100,Olivia Wanda Souza,Física I,1.4,8.8,85
+MAT257,Rafael Costa,Segurança da Informação,5.5,3.2,75
+MAT209,Rafael Felipe Gomes,Química Orgânica,7.0,2.4,79
+MAT415,Bruno Silva,Cálculo II,6.3,7.2,52
+MAT389,Daniela Silva,Engenharia de Software,1.5,3.1,67
+MAT141,Yuri Zeca Monteiro,Programação II,1.2,1.4,91
+MAT208,Leonardo Ubirajara Martins,Física I,9.6,3.0,100
+MAT115,Yasmin Mendes,Lógica para Computação,6.3,3.8,83
+MAT470,Vinícius Xande Oliveira,Programação II,8.8,1.2,57
+MAT422,Eduardo Pereira,Segurança da Informação,1.7,0.4,63
+MAT099,Vinícius Alex Mendes,Engenharia de Software,1.8,2.2,82
+MAT081,Ursula Ribeiro,Inteligência Artificial,6.8,9.1,76
+MAT178,Joana Cristina Mendes,Segurança da Informação,6.6,4.8,92
+MAT008,Joana Valéria Araújo,Segurança da Informação,2.1,7.8,73
+MAT198,Ursula Giovana Lima,Probabilidade e Estatística,1.3,3.4,56
+MAT429,Karla Carvalho,Estrutura de Dados,0.2,7.7,56
+MAT113,Daniela Lara Teixeira,Programação I,2.3,1.6,99
+MAT096,Eduardo Xande Almeida,Cálculo I,8.1,1.9,89
+MAT009,Daniela Martins,Segurança da Informação,6.4,8.0,88
+MAT137,Isabela Gomes,Química Geral,1.0,2.5,87
+MAT434,Carlos Wesley Barbosa,Cálculo I,2.9,6.6,69
+MAT411,Ubirajara Diego Gomes,Segurança da Informação,9.9,8.6,51
+MAT017,Daniela Lara Lima,Sistemas Operacionais,8.6,1.0,54
+MAT303,Bruno Henrique Santos,Sistemas Operacionais,4.7,5.0,53
+MAT132,Leonardo Mendes,Lógica para Computação,3.1,6.2,64
+MAT443,Yuri Diego Carvalho,Cálculo I,1.1,3.2,69
+MAT132,Leonardo Mendes,Física I,2.8,8.8,64
+MAT030,Ximena Machado,Redes de Computadores,8.6,9.0,92
+MAT219,Eduardo Ribeiro,Física II,6.3,3.4,87
+MAT242,Fernanda Lima,Estrutura de Dados,4.9,6.1,71
+MAT319,Helena Teixeira,Cálculo I,4.2,8.7,57
+MAT359,Ubirajara Wesley Nunes,Álgebra Linear,3.8,6.6,59
+MAT432,Leonardo Lucas Oliveira,Lógica para Computação,3.0,4.4,81
+MAT186,Eduardo Zeca Ferreira,Estrutura de Dados,8.7,6.2,69
+MAT126,Vitória Valéria Ferreira,Física II,3.9,6.7,81
+MAT410,Pedro Zeca Souza,Banco de Dados,8.5,2.2,99
+MAT388,Xavier Ferreira,Cálculo II,7.0,5.2,82
+MAT445,Carlos Oliveira,Segurança da Informação,0.9,3.1,62
+MAT326,Joana Monteiro,Química Orgânica,7.2,5.7,53
+MAT297,Rafael Ferreira,Física II,4.6,2.9,91
+MAT497,Ubirajara Júlio Oliveira,Redes de Computadores,4.8,8.8,72
+MAT443,Yuri Diego Carvalho,Programação II,5.6,7.8,64
+MAT206,Sofia Martins,Sistemas Operacionais,1.2,8.7,98
+MAT322,Olivia Wanda Almeida,Lógica para Computação,2.8,3.5,88
+MAT446,Zélio Monteiro,Lógica para Computação,3.8,9.7,86
+MAT133,Ximena Ursula Santos,Cálculo II,1.7,7.8,57
+MAT010,Fernanda Lara Carvalho,Segurança da Informação,3.1,9.2,88
+MAT119,Tatiana Araújo,Computação Gráfica,8.2,5.5,91
+MAT105,Wanessa Gomes,Banco de Dados,1.9,8.3,62
+MAT472,Eduardo Gomes,Química Geral,9.2,2.1,68
+MAT029,Yuri Mendes,Álgebra Linear,9.5,8.7,81
+MAT472,Eduardo Gomes,Sistemas Operacionais,7.3,0.1,84
+MAT388,Xavier Ferreira,Matemática Discreta,9.3,7.7,90
+MAT057,Zuleide Carvalho,Probabilidade e Estatística,1.2,7.8,76
+MAT410,Pedro Zeca Souza,Química Geral,3.4,6.5,58
+MAT219,Eduardo Ribeiro,Computação Gráfica,9.0,8.8,70
+MAT158,Xavier Vitor Ribeiro,Cálculo II,6.6,8.9,80
+MAT381,Pedro Ribeiro,Cálculo II,6.6,0.5,80
+MAT194,Zélio Martins,Banco de Dados,0.6,5.2,86
+MAT034,Wanessa Lima,Cálculo I,1.8,5.5,60
+MAT137,Isabela Gomes,Física I,4.3,5.0,99
+MAT147,Tatiana Rocha,Cálculo I,1.1,9.3,98
+MAT271,Bruno Ribeiro,Álgebra Linear,3.5,9.0,77
+MAT265,Leonardo Raul Monteiro,Cálculo I,0.6,8.0,51
+MAT304,Pedro Costa,Programação II,10.0,2.5,99
+MAT469,Vinícius Lima,Programação I,8.9,8.6,73
+MAT477,Olivia Nunes,Programação II,3.4,6.8,74
+MAT238,Carlos Oliveira,Programação I,7.9,7.4,63
+MAT018,Yuri Pereira,Estrutura de Dados,6.2,8.8,66
+MAT117,Daniela Gomes,Matemática Discreta,0.2,8.9,94
+MAT411,Ubirajara Diego Gomes,Física II,6.1,0.2,81
+MAT226,Helena Tatiana Costa,Lógica para Computação,2.8,8.4,87
+MAT088,Vitória Almeida,Programação I,5.1,1.4,62
+MAT033,Joana Lima,Redes de Computadores,3.0,0.1,52
+MAT276,Bruno Silva,Química Geral,1.8,4.1,75
+MAT435,Zuleide Viviane Lima,Matemática Discreta,0.5,8.3,62
+MAT145,Rafael Yago Martins,Cálculo II,6.3,5.1,63
+MAT161,Pedro Ubirajara Araújo,Cálculo II,4.8,6.1,84
+MAT346,Zuleide Nunes,Álgebra Linear,3.0,9.8,80
+MAT126,Vitória Valéria Ferreira,Programação I,2.6,1.1,90
+MAT312,Ursula Machado,Estrutura de Dados,7.2,7.0,50
+MAT264,Yasmin Martins,Computação Gráfica,5.3,4.3,78
+MAT072,Miguel Lucas Ribeiro,Programação I,1.5,7.8,67
+MAT222,Olivia Viviane Lima,Inteligência Artificial,7.5,4.5,87
+MAT358,Isabela Wanda Mendes,Matemática Discreta,4.0,0.2,80
+MAT221,Vinícius Wesley Santos,Lógica para Computação,4.0,3.9,82
+MAT190,Wagner Santos,Lógica para Computação,9.5,9.3,90
+MAT022,Nicolas Silva,Sistemas Operacionais,8.6,7.6,80
+MAT442,João Zeca Oliveira,Física II,8.5,0.9,83
+MAT484,Isabela Ribeiro,Física II,5.7,7.8,100
+MAT428,Pedro Gomes,Redes de Computadores,7.6,3.4,56
+MAT460,Daniela Teixeira,Lógica para Computação,1.4,8.4,63
+MAT147,Tatiana Rocha,Lógica para Computação,2.3,3.3,90
+MAT253,Ana Gomes,Banco de Dados,8.7,7.2,88
+MAT062,Gabriel Samuel Ferreira,Probabilidade e Estatística,8.0,5.9,83
+MAT171,João Machado,Probabilidade e Estatística,1.8,7.4,61
+MAT127,Ana Souza,Cálculo II,6.2,5.8,98
+MAT075,Olivia Ferreira,Computação Gráfica,8.8,5.2,60
+MAT154,Wanessa Ferreira,Programação I,3.8,9.5,72
+MAT350,Rafael Souza,Computação Gráfica,6.1,5.9,54
+MAT467,Olivia Ingrid Costa,Física II,6.8,2.6,54
+MAT285,Wanessa Ursula Costa,Redes de Computadores,5.6,1.2,70
+MAT376,Bruno Gomes,Inteligência Artificial,6.6,5.2,72
+MAT207,Eduardo Costa,Química Geral,3.0,7.0,54
+MAT466,Tatiana Ferreira,Química Orgânica,3.9,4.5,56
+MAT303,Bruno Henrique Santos,Cálculo I,5.8,4.9,72
+MAT307,Tatiana Araújo,Programação I,6.8,4.8,82
+MAT046,Joana Ingrid Costa,Redes de Computadores,9.2,2.6,76
+MAT304,Pedro Costa,Estrutura de Dados,5.4,5.4,99
+MAT486,Tiago Santos,Computação Gráfica,0.3,3.9,62
+MAT020,Wanessa Elisa Souza,Computação Gráfica,3.9,5.7,92
+MAT179,Zélio Júlio Almeida,Álgebra Linear,3.1,9.6,61
+MAT281,Pedro Ricardo Santos,Programação I,8.3,9.6,62
+MAT355,Ana Costa,Física II,8.8,9.3,54
+MAT104,Wanessa Nunes,Sistemas Operacionais,4.4,6.7,59
+MAT121,Ximena Ferreira,Redes de Computadores,8.3,2.9,84
+MAT160,Leonardo Lima,Cálculo I,1.9,4.6,98
+MAT114,Daniela Xuxa Carvalho,Programação I,7.1,8.0,50
+MAT365,Wagner Martins,Matemática Discreta,2.6,0.8,57
+MAT368,Carlos Martins,Física II,5.1,7.6,75
+MAT052,Olivia Santos,Cálculo II,1.5,4.5,58
+MAT373,Wanessa Barbosa,Programação I,7.2,2.7,81
+MAT176,Zuleide Mendes,Álgebra Linear,5.2,4.0,62
+MAT433,Joana Elisa Gomes,Programação II,0.2,7.6,59
+MAT369,Sofia Costa,Lógica para Computação,0.8,6.2,56
+MAT374,Carlos Júlio Silva,Sistemas Operacionais,6.4,8.3,55
+MAT333,Karla Oliveira,Química Geral,9.0,4.3,87
+MAT474,Wagner Oliveira,Física I,6.9,4.3,99
+MAT136,Zuleide Teixeira,Banco de Dados,3.8,1.6,91
+MAT011,Leonardo Felipe Almeida,Inteligência Artificial,3.3,3.4,96
+MAT406,Yasmin Mendes,Física I,4.2,5.6,69
+MAT261,Ubirajara Ubirajara Souza,Programação I,5.3,0.3,86
+MAT104,Wanessa Nunes,Probabilidade e Estatística,1.7,8.1,93
+MAT401,Yasmin Souza,Álgebra Linear,0.4,2.3,89
+MAT121,Ximena Ferreira,Física II,2.0,3.8,99
+MAT047,Ubirajara Gomes,Banco de Dados,5.1,0.4,71
+MAT441,Ximena Elisa Pereira,Física II,0.6,1.9,70
+MAT312,Ursula Machado,Lógica para Computação,3.6,3.6,98
+MAT344,Isabela Barbosa,Cálculo I,9.4,5.4,75
+MAT008,Joana Valéria Araújo,Engenharia de Software,1.4,1.0,82
+MAT291,Fernanda Raquel Teixeira,Cálculo I,0.5,2.9,86
+MAT263,Carlos Teixeira,Sistemas Operacionais,1.8,3.5,53
+MAT122,Sofia Teixeira,Computação Gráfica,3.7,4.9,62
+MAT352,Miguel Vitor Santos,Cálculo II,9.3,5.1,53
+MAT426,Miguel Pedro Gomes,Química Geral,6.0,1.6,66
+MAT329,Wagner Oliveira,Física II,2.1,9.0,90
+MAT433,Joana Elisa Gomes,Álgebra Linear,8.7,0.7,73
+MAT217,Wagner Ubirajara Gomes,Engenharia de Software,1.6,5.2,59
+MAT138,Leonardo Silva,Estrutura de Dados,1.8,4.9,93
+MAT095,Nicolas Henrique Carvalho,Matemática Discreta,3.8,2.7,50
+MAT359,Ubirajara Wesley Nunes,Programação I,9.4,7.0,79
+MAT170,Ximena Yara Silva,Computação Gráfica,5.5,0.4,94
+MAT351,Leonardo Zeca Ribeiro,Banco de Dados,9.9,7.5,70
+MAT195,Wanessa Souza,Química Orgânica,9.0,9.4,94
+MAT398,Wanessa Ingrid Machado,Álgebra Linear,2.5,7.9,61
+MAT201,Karla Yara Nunes,Cálculo II,3.7,8.8,93
+MAT468,Wanessa Ferreira,Estrutura de Dados,8.9,9.2,84
+MAT414,Carlos Mendes,Sistemas Operacionais,0.6,7.9,88
+MAT037,Wagner Nunes,Química Geral,3.7,3.1,76
+MAT189,Gabriel Costa,Lógica para Computação,9.0,2.2,78
+MAT359,Ubirajara Wesley Nunes,Química Geral,7.9,4.9,53
+MAT244,Fernanda Teixeira,Programação I,7.5,0.7,66
+MAT412,Vitória Beatriz Almeida,Física I,4.7,0.0,80
+MAT384,Ubirajara Oliveira,Cálculo I,2.9,1.2,91
+MAT097,Mariana Almeida,Física I,9.6,7.5,78
+MAT392,Rafael Ferreira,Física I,5.7,3.5,87
+MAT474,Wagner Oliveira,Engenharia de Software,0.5,1.7,88
+MAT050,Zélio Samuel Almeida,Química Geral,4.9,6.7,90
+MAT138,Leonardo Silva,Programação II,3.6,4.2,61
+MAT404,Carlos Costa,Redes de Computadores,6.2,5.1,51
+MAT144,Daniela Ferreira,Programação II,1.3,8.5,89
+MAT461,Helena Lara Nunes,Banco de Dados,9.2,1.4,92
+MAT419,Zuleide Ursula Silva,Inteligência Artificial,0.9,3.5,72
+MAT076,Wagner Wesley Monteiro,Sistemas Operacionais,2.9,3.8,94
+MAT313,Yuri Henrique Mendes,Química Geral,4.8,0.8,85
+MAT471,João Oliveira,Física II,1.2,2.8,54
+MAT134,Zuleide Ferreira,Física I,0.9,6.9,72
+MAT042,Eduardo Ferreira,Estrutura de Dados,6.5,1.9,97
+MAT486,Tiago Santos,Banco de Dados,6.4,9.0,96
+MAT471,João Oliveira,Cálculo II,8.1,2.7,72
+MAT116,João Almeida,Engenharia de Software,0.4,7.5,62
+MAT499,Thiago Pedro Silva,Estrutura de Dados,3.3,2.1,51
+MAT417,Vitória Tatiana Araújo,Redes de Computadores,6.3,6.3,86
+MAT108,Leonardo Machado,Computação Gráfica,7.4,5.1,53
+MAT493,Tiago Júlio Oliveira,Segurança da Informação,3.9,6.8,68
+MAT171,João Machado,Álgebra Linear,9.8,9.1,65
+MAT404,Carlos Costa,Química Geral,3.7,1.5,72
+MAT492,Zuleide Viviane Pereira,Química Geral,8.6,3.9,80
+MAT420,Wagner Martins,Lógica para Computação,0.0,1.1,87
+MAT111,Nicolas Tadeu Costa,Programação II,2.0,3.7,78
+MAT056,Pedro Silva,Cálculo II,4.9,2.8,63
+MAT380,Yasmin Carvalho,Redes de Computadores,3.7,2.7,94
+MAT349,Isabela Tatiana Lima,Redes de Computadores,2.7,0.2,68
+MAT425,Wanessa Paula Martins,Sistemas Operacionais,9.8,9.1,52
+MAT324,Eduardo Souza,Engenharia de Software,3.7,2.4,55
+MAT085,Ubirajara Ribeiro,Programação II,6.4,6.2,61
+MAT489,Miguel Martins,Álgebra Linear,1.8,1.7,53
+MAT478,Fernanda Xuxa Gomes,Estrutura de Dados,6.0,5.2,78
+MAT479,Yasmin Mendes,Química Geral,3.3,4.7,52
+MAT353,Wagner Carvalho,Programação I,5.5,0.9,87
+MAT346,Zuleide Nunes,Banco de Dados,1.1,0.9,69
+MAT166,Yuri Ribeiro,Probabilidade e Estatística,8.8,9.0,94
+MAT423,Ana Santos,Programação I,8.3,9.8,88
+MAT232,Vinícius Monteiro,Sistemas Operacionais,0.7,5.9,62
+MAT495,Yasmin Barbosa,Física II,3.6,1.4,51
+MAT283,Gabriel Pereira,Física II,2.8,8.4,60
+MAT184,Yasmin Almeida,Estrutura de Dados,5.7,9.8,64
+MAT354,Zuleide Rocha,Probabilidade e Estatística,7.0,0.3,78
+MAT387,Olivia Paula Souza,Química Geral,9.0,6.0,51
+MAT484,Isabela Ribeiro,Química Geral,6.7,2.8,87
+MAT005,Daniela Wanda Gomes,Segurança da Informação,6.7,2.7,61
+MAT472,Eduardo Gomes,Segurança da Informação,9.4,4.1,75
+MAT292,Vinícius Ferreira,Probabilidade e Estatística,1.1,6.2,51
+MAT091,Zélio Machado,Cálculo II,1.3,2.9,78
+MAT298,Daniela Martins,Cálculo I,5.5,5.0,50
+MAT187,Renata Natália Silva,Álgebra Linear,7.0,2.3,85
+MAT271,Bruno Ribeiro,Química Geral,7.1,9.2,78
+MAT415,Bruno Silva,Lógica para Computação,0.8,2.7,82
+MAT351,Leonardo Zeca Ribeiro,Lógica para Computação,9.3,8.7,70
+MAT288,Helena Costa,Sistemas Operacionais,2.0,5.6,67
+MAT169,Karla Monteiro,Redes de Computadores,5.9,0.6,76
+MAT071,Carlos Costa,Probabilidade e Estatística,2.0,5.4,61
+MAT361,Helena Costa,Engenharia de Software,5.3,6.6,97
+MAT357,Helena Tatiana Costa,Inteligência Artificial,6.1,6.0,93
+MAT371,Ana Raquel Martins,Física I,4.4,6.9,84
+MAT444,Rafael Barbosa,Lógica para Computação,8.0,9.5,62
+MAT023,Pedro Oliveira,Computação Gráfica,7.1,7.8,78
+MAT118,Wanessa Natália Teixeira,Física I,7.7,8.5,87
+MAT094,Isabela Viviane Carvalho,Física I,5.9,7.4,93
+MAT424,Vitória Souza,Álgebra Linear,5.5,1.8,77
+MAT375,Olivia Valéria Oliveira,Cálculo II,3.8,3.1,74
+MAT260,João Samuel Machado,Lógica para Computação,8.1,5.9,52
+MAT341,Leonardo Ribeiro,Probabilidade e Estatística,3.4,3.6,98
+MAT252,Tiago Machado,Programação I,1.9,3.9,99
+MAT402,Bruno Wesley Carvalho,Cálculo I,5.5,4.8,56
+MAT078,João Almeida,Sistemas Operacionais,9.0,6.4,85
+MAT312,Ursula Machado,Segurança da Informação,9.5,1.1,56
+MAT364,Gabriel Zeca Gomes,Computação Gráfica,7.8,9.2,69
+MAT476,Miguel Yago Santos,Química Orgânica,2.7,1.1,100
+MAT101,Ubirajara Martins,Redes de Computadores,9.8,9.9,80
+MAT142,Gabriel Monteiro,Química Orgânica,7.7,1.8,64
+MAT287,Tiago Gomes,Matemática Discreta,9.0,4.9,68
+MAT327,Vitória Souza,Matemática Discreta,2.1,0.1,62
+MAT362,Zuleide Carvalho,Cálculo I,1.7,2.1,80
+MAT142,Gabriel Monteiro,Engenharia de Software,6.8,5.7,86
+MAT390,Nicolas Samuel Carvalho,Probabilidade e Estatística,3.2,8.5,90
+MAT276,Bruno Silva,Probabilidade e Estatística,7.8,7.8,76
+MAT242,Fernanda Lima,Química Geral,7.3,9.0,78
+MAT202,Helena Gomes,Química Geral,4.6,8.5,95
+MAT301,Nicolas Lucas Costa,Estrutura de Dados,5.2,8.2,90
+MAT147,Tatiana Rocha,Química Orgânica,4.0,9.7,54
+MAT058,Wanessa Silva,Inteligência Artificial,4.2,6.4,100
+MAT431,João Ricardo Barbosa,Química Geral,5.6,1.7,76
+MAT087,Wagner Felipe Machado,Redes de Computadores,1.7,9.4,62
+MAT202,Helena Gomes,Estrutura de Dados,3.0,6.4,54
+MAT227,Mariana Carvalho,Álgebra Linear,4.6,4.1,51
+MAT368,Carlos Martins,Inteligência Artificial,8.3,7.3,55
+MAT107,Ursula Santos,Matemática Discreta,7.2,8.7,80
+MAT246,Vitória Natália Almeida,Engenharia de Software,9.9,0.0,76
+MAT198,Ursula Giovana Lima,Cálculo I,1.9,9.8,70
+MAT336,Yuri Rocha,Computação Gráfica,7.9,7.7,93
+MAT443,Yuri Diego Carvalho,Cálculo II,0.4,0.7,90
+MAT213,Ana Barbosa,Química Orgânica,9.7,8.9,88
+MAT164,Yasmin Paula Ferreira,Química Geral,7.0,6.6,76
+MAT083,Bruno Nunes,Sistemas Operacionais,3.0,1.1,62
+MAT397,Isabela Almeida,Física II,4.4,3.4,68
+MAT491,Xavier Carvalho,Lógica para Computação,4.1,9.3,59
+MAT350,Rafael Souza,Sistemas Operacionais,6.1,0.5,56
+MAT277,Daniela Beatriz Ribeiro,Banco de Dados,3.4,4.0,61
+MAT332,Mariana Paula Barbosa,Física I,2.7,1.5,90
+MAT197,João Pedro Pereira,Banco de Dados,7.3,10.0,51
+MAT489,Miguel Martins,Computação Gráfica,1.8,8.5,64
+MAT113,Daniela Lara Teixeira,Sistemas Operacionais,0.5,3.8,82
+MAT184,Yasmin Almeida,Química Orgânica,7.6,4.3,74
+MAT177,Sofia Giovana Oliveira,Química Geral,2.7,4.2,98
+MAT155,Leonardo Machado,Probabilidade e Estatística,6.6,2.1,57
+MAT223,Ximena Ingrid Costa,Programação I,6.5,4.5,94
+MAT242,Fernanda Lima,Física I,4.5,0.7,88
+MAT493,Tiago Júlio Oliveira,Matemática Discreta,4.0,2.1,65
+MAT384,Ubirajara Oliveira,Matemática Discreta,2.8,6.9,53
+MAT140,Olivia Valéria Almeida,Inteligência Artificial,8.1,8.1,91
+MAT036,Rafael Xande Martins,Química Orgânica,2.4,6.3,63
+MAT064,Vinícius Júlio Ribeiro,Química Geral,8.1,7.7,58
+MAT092,Nicolas Ricardo Machado,Matemática Discreta,8.1,4.1,87
+MAT079,Thiago Gomes,Banco de Dados,3.1,7.0,75
+MAT321,Joana Rocha,Sistemas Operacionais,8.8,5.2,56
+MAT204,Olivia Rocha,Cálculo I,9.8,0.1,73
+MAT310,Tiago Vitor Monteiro,Programação II,0.3,2.7,62
+MAT447,Eduardo Felipe Oliveira,Redes de Computadores,5.7,5.0,99
+MAT221,Vinícius Wesley Santos,Matemática Discreta,9.4,6.2,72
+MAT363,Ximena Lima,Segurança da Informação,8.5,7.4,81
+MAT362,Zuleide Carvalho,Engenharia de Software,7.9,7.3,64
+MAT188,Vitória Mendes,Física II,1.4,8.0,93
+MAT345,Gabriel Wesley Santos,Física I,7.7,7.3,72
+MAT324,Eduardo Souza,Inteligência Artificial,7.7,2.8,91
+MAT024,Gabriel Gomes,Engenharia de Software,5.9,4.5,91
+MAT165,Fernanda Raquel Lima,Engenharia de Software,1.4,0.8,91
+MAT189,Gabriel Costa,Programação II,4.4,6.2,56
+MAT103,Karla Raquel Rocha,Redes de Computadores,3.2,0.4,51
+MAT143,Yuri Almeida,Química Geral,9.2,9.7,54
+MAT034,Wanessa Lima,Química Orgânica,6.6,1.1,79
+MAT241,Carlos Samuel Araújo,Banco de Dados,6.1,7.4,98
+MAT129,Bruno Nunes,Segurança da Informação,2.4,6.6,63
+MAT213,Ana Barbosa,Física I,6.8,0.5,82
+MAT070,Thiago Alex Carvalho,Probabilidade e Estatística,7.2,5.8,89
+MAT215,Ximena Tatiana Ferreira,Cálculo II,6.2,2.9,50
+MAT048,Daniela Gomes,Redes de Computadores,4.2,5.4,100
+MAT315,Daniela Araújo,Banco de Dados,7.4,5.4,84
+MAT433,Joana Elisa Gomes,Matemática Discreta,8.1,3.9,83
+MAT145,Rafael Yago Martins,Estrutura de Dados,7.0,3.8,89
+MAT421,Yuri Pereira,Redes de Computadores,6.8,6.8,65
+MAT012,Nicolas Ribeiro,Cálculo II,5.4,3.4,91
+MAT016,Tiago Pereira,Programação I,6.0,2.1,65
+MAT255,Tatiana Elisa Mendes,Álgebra Linear,5.7,7.7,86
+MAT030,Ximena Machado,Cálculo I,9.3,7.3,90
+MAT202,Helena Gomes,Programação I,5.8,9.9,53
+MAT045,Pedro Zeca Santos,Matemática Discreta,7.1,3.5,52
+MAT106,Nicolas Nunes,Probabilidade e Estatística,5.8,4.2,78
+MAT330,Gabriel Ubirajara Ribeiro,Química Orgânica,9.0,6.2,94
+MAT335,Karla Paula Gomes,Cálculo II,3.2,8.7,84
+MAT491,Xavier Carvalho,Banco de Dados,8.8,7.7,93
+MAT387,Olivia Paula Souza,Engenharia de Software,0.4,1.1,57
+MAT035,Ximena Xuxa Ribeiro,Banco de Dados,8.7,1.0,54
+MAT339,Zélio Otávio Souza,Física II,3.1,8.1,69
+MAT062,Gabriel Samuel Ferreira,Álgebra Linear,6.2,1.4,59
+MAT076,Wagner Wesley Monteiro,Redes de Computadores,3.9,4.0,81
+MAT159,Tiago Barbosa,Física I,5.9,6.2,59
+MAT137,Isabela Gomes,Programação I,2.6,7.1,85
+MAT263,Carlos Teixeira,Banco de Dados,3.3,9.8,95
+MAT103,Karla Raquel Rocha,Engenharia de Software,1.3,6.1,89
+MAT300,Zuleide Paula Ferreira,Computação Gráfica,5.8,7.0,83
+MAT302,Ubirajara Lucas Monteiro,Estrutura de Dados,5.1,6.6,95
+MAT098,Ximena Paula Souza,Sistemas Operacionais,1.7,3.0,88
+MAT459,Vinícius Barbosa,Cálculo I,9.6,0.7,66
+MAT294,Nicolas Henrique Martins,Lógica para Computação,4.4,1.7,83
+MAT298,Daniela Martins,Banco de Dados,7.8,4.1,90
+MAT304,Pedro Costa,Programação I,4.0,7.9,82
+MAT386,Tatiana Ribeiro,Química Orgânica,2.6,8.2,56
+MAT125,Rafael Marcelo Silva,Redes de Computadores,5.8,8.5,93
+MAT436,Tiago Pereira,Química Geral,9.7,1.0,64
+MAT093,Sofia Beatriz Souza,Computação Gráfica,0.6,3.1,55
+MAT314,Eduardo Pereira,Química Orgânica,1.6,7.5,93
+MAT405,Leonardo Pereira,Sistemas Operacionais,3.5,9.0,51
+MAT143,Yuri Almeida,Engenharia de Software,0.8,6.7,64
+MAT180,Helena Rocha,Sistemas Operacionais,7.8,1.3,62
+MAT327,Vitória Souza,Cálculo I,1.0,7.0,96
+MAT295,Joana Rocha,Probabilidade e Estatística,8.1,7.8,59
+MAT253,Ana Gomes,Redes de Computadores,1.1,8.6,100
+MAT120,Wanessa Araújo,Banco de Dados,8.1,4.7,60
+MAT286,Mariana Ferreira,Química Orgânica,0.8,6.5,53
+MAT117,Daniela Gomes,Probabilidade e Estatística,1.1,5.6,50
+MAT207,Eduardo Costa,Computação Gráfica,7.8,0.3,89
+MAT043,Eduardo Costa,Álgebra Linear,2.6,7.5,92
+MAT309,Fernanda Carvalho,Cálculo II,8.2,1.4,83
+MAT410,Pedro Zeca Souza,Cálculo II,4.6,2.7,86
+MAT456,Tatiana Zélia Mendes,Programação II,6.5,5.2,88
+MAT252,Tiago Machado,Lógica para Computação,8.6,2.0,87
+MAT151,Ana Barbosa,Programação II,7.9,9.9,55
+MAT282,Zélio Marcelo Ferreira,Engenharia de Software,1.6,4.8,68
+MAT461,Helena Lara Nunes,Redes de Computadores,8.2,5.9,91
+MAT004,Yasmin Zélia Costa,Cálculo II,9.2,0.1,84
+MAT402,Bruno Wesley Carvalho,Banco de Dados,6.5,0.8,61
+MAT383,Miguel Ricardo Oliveira,Redes de Computadores,4.8,6.8,87
+MAT457,Tatiana Cristina Machado,Sistemas Operacionais,1.4,7.8,92
+MAT047,Ubirajara Gomes,Programação II,0.0,7.4,94
+MAT311,Ana Oliveira,Engenharia de Software,1.1,0.9,78
+MAT203,Carlos Wesley Lima,Lógica para Computação,0.3,3.8,75
+MAT291,Fernanda Raquel Teixeira,Computação Gráfica,8.9,5.3,80
+MAT294,Nicolas Henrique Martins,Banco de Dados,6.5,6.3,84
+MAT233,Thiago Ricardo Barbosa,Álgebra Linear,9.8,4.3,91
+MAT099,Vinícius Alex Mendes,Física II,5.0,4.3,53
+MAT418,Carlos Pedro Monteiro,Química Orgânica,3.3,5.7,51
+MAT073,Carlos Lucas Lima,Química Geral,9.5,8.0,73
+MAT069,Karla Teixeira,Computação Gráfica,6.8,8.7,54
+MAT019,Thiago Ribeiro,Cálculo I,5.6,0.5,57
+MAT200,Daniela Wanda Pereira,Engenharia de Software,4.3,5.9,76
+MAT451,Wanessa Nunes,Cálculo I,9.0,4.2,57
+MAT389,Daniela Silva,Inteligência Artificial,8.2,1.5,70
+MAT213,Ana Barbosa,Matemática Discreta,1.0,4.1,66
+MAT439,Isabela Zélia Almeida,Cálculo II,6.9,4.6,83
+MAT341,Leonardo Ribeiro,Química Orgânica,6.6,5.5,77
+MAT229,Rafael Diego Teixeira,Segurança da Informação,6.3,4.9,70
+MAT355,Ana Costa,Probabilidade e Estatística,3.5,8.6,86
+MAT066,Ana Paula Carvalho,Matemática Discreta,0.5,5.2,99
+MAT231,Ubirajara Zeca Oliveira,Estrutura de Dados,1.2,8.1,61
+MAT289,Rafael Machado,Cálculo II,9.9,8.5,65
+MAT494,Fernanda Zélia Monteiro,Química Orgânica,3.2,6.6,95
+MAT191,Yuri Martins,Física I,6.4,7.3,91
+MAT408,Zuleide Lima,Programação II,3.8,4.2,91
+MAT465,Karla Beatriz Santos,Programação I,4.1,1.2,92
+MAT045,Pedro Zeca Santos,Inteligência Artificial,4.3,0.4,97
+MAT228,Fernanda Ingrid Souza,Segurança da Informação,6.9,8.7,82
+MAT114,Daniela Xuxa Carvalho,Banco de Dados,0.4,6.3,52
+MAT258,Isabela Paula Martins,Programação I,0.1,2.9,62
+MAT159,Tiago Barbosa,Engenharia de Software,9.5,0.6,78
+MAT483,Zélio Henrique Pereira,Computação Gráfica,7.6,9.2,68
+MAT475,Vitória Costa,Física II,1.4,3.2,50
+MAT492,Zuleide Viviane Pereira,Matemática Discreta,5.6,9.8,92
+MAT103,Karla Raquel Rocha,Programação II,6.1,6.7,87
+MAT127,Ana Souza,Álgebra Linear,5.0,8.9,59
+MAT416,Helena Silva,Química Geral,2.3,3.2,84
+MAT403,Gabriel Monteiro,Programação I,6.6,0.2,84
+MAT210,João Pereira,Física I,3.4,3.2,55
+MAT059,Tiago Felipe Ferreira,Química Orgânica,0.1,0.5,73
+MAT497,Ubirajara Júlio Oliveira,Física I,3.2,8.3,65
+MAT318,Bruno Lima,Engenharia de Software,3.9,7.7,60
+MAT194,Zélio Martins,Química Geral,1.2,6.9,65
+MAT167,Pedro Carvalho,Física I,3.3,4.2,52
+MAT199,Ana Ingrid Machado,Banco de Dados,3.7,5.1,92
+MAT461,Helena Lara Nunes,Matemática Discreta,2.8,7.2,99
+MAT227,Mariana Carvalho,Cálculo I,6.8,1.7,65
+MAT485,Miguel Santos,Programação I,5.4,1.7,85
+MAT211,Miguel Souza,Cálculo II,2.0,0.7,92
+MAT040,Helena Cristina Machado,Matemática Discreta,6.7,3.7,55
+MAT364,Gabriel Zeca Gomes,Física I,10.0,1.0,60
+MAT243,Pedro Ubirajara Almeida,Química Geral,2.3,2.1,73
+MAT033,Joana Lima,Cálculo I,6.2,9.2,82
+MAT496,Eduardo Marcelo Souza,Redes de Computadores,8.4,7.9,97
+MAT190,Wagner Santos,Segurança da Informação,3.0,2.2,94
+MAT413,Bruno Wesley Teixeira,Programação I,1.6,3.8,79
+MAT358,Isabela Wanda Mendes,Computação Gráfica,9.8,2.7,97
+MAT456,Tatiana Zélia Mendes,Lógica para Computação,9.3,3.8,82
+MAT234,Rafael Ricardo Machado,Computação Gráfica,0.4,4.6,66
+MAT184,Yasmin Almeida,Programação II,6.8,3.8,59
+MAT068,Bruno Otávio Machado,Engenharia de Software,6.0,5.8,52
+MAT067,Carlos Ribeiro,Computação Gráfica,7.6,5.7,72
+MAT264,Yasmin Martins,Programação II,1.1,6.2,85
+MAT002,Nicolas Diego Oliveira,Estrutura de Dados,8.7,9.6,71
+MAT217,Wagner Ubirajara Gomes,Química Geral,9.6,0.9,88
+MAT380,Yasmin Carvalho,Inteligência Artificial,7.9,7.3,85
+MAT306,Ximena Wanda Araújo,Inteligência Artificial,8.2,0.2,77
+MAT338,Ubirajara Yago Barbosa,Estrutura de Dados,2.6,5.7,87
+MAT151,Ana Barbosa,Probabilidade e Estatística,1.2,4.5,82
+MAT193,Yuri Henrique Costa,Química Geral,7.3,7.3,86
+MAT056,Pedro Silva,Inteligência Artificial,4.4,1.0,51
+MAT427,Vitória Natália Santos,Cálculo II,3.9,3.7,73
+MAT167,Pedro Carvalho,Cálculo I,2.6,1.5,55
+MAT048,Daniela Gomes,Física II,3.6,3.6,50
+MAT440,Isabela Raquel Souza,Estrutura de Dados,5.8,2.4,87
+MAT183,Tiago Ricardo Ferreira,Engenharia de Software,1.1,6.6,80
+MAT187,Renata Natália Silva,Programação II,7.0,0.8,56
+MAT134,Zuleide Ferreira,Sistemas Operacionais,4.6,6.6,100
+MAT348,Isabela Nunes,Redes de Computadores,6.1,9.6,87
+MAT021,Rafael Mendes,Química Orgânica,9.8,8.4,52
+MAT106,Nicolas Nunes,Programação I,2.2,3.7,88
+MAT458,Helena Raquel Ferreira,Segurança da Informação,7.6,0.5,59
+MAT250,Nicolas Pereira,Probabilidade e Estatística,3.1,5.7,97
+MAT220,Ana Gomes,Segurança da Informação,5.9,1.7,53
+MAT353,Wagner Carvalho,Cálculo II,0.8,7.8,80
+MAT457,Tatiana Cristina Machado,Física I,8.4,1.7,85
+MAT063,Pedro Vitor Ferreira,Matemática Discreta,5.7,1.6,60
+MAT286,Mariana Ferreira,Inteligência Artificial,7.2,8.3,72
+MAT311,Ana Oliveira,Inteligência Artificial,9.8,5.5,93
+MAT454,Isabela Santos,Matemática Discreta,8.1,8.3,80
+MAT355,Ana Costa,Programação I,9.1,5.4,86
+MAT086,Helena Tatiana Monteiro,Matemática Discreta,3.0,8.2,68
+MAT274,Vinícius Júlio Mendes,Cálculo I,4.8,7.9,67
+MAT255,Tatiana Elisa Mendes,Redes de Computadores,1.4,9.7,69
+MAT130,Karla Rocha,Engenharia de Software,8.4,7.4,56
+MAT422,Eduardo Pereira,Engenharia de Software,4.3,2.5,58
+MAT468,Wanessa Ferreira,Engenharia de Software,7.9,8.4,82
+MAT236,Daniela Silva,Lógica para Computação,4.5,0.8,76
+MAT078,João Almeida,Inteligência Artificial,2.3,7.8,78
+MAT174,Bruno Teixeira,Redes de Computadores,0.9,8.3,56
+MAT023,Pedro Oliveira,Física II,9.1,5.1,56
+MAT370,Karla Xuxa Almeida,Cálculo II,9.5,4.9,50
+MAT426,Miguel Pedro Gomes,Computação Gráfica,7.2,4.4,92
+MAT476,Miguel Yago Santos,Segurança da Informação,5.7,1.0,71
+MAT290,Thiago Carvalho,Matemática Discreta,7.1,0.1,87
+MAT241,Carlos Samuel Araújo,Programação II,8.6,6.1,60
+MAT135,Tiago Wesley Silva,Engenharia de Software,1.4,3.3,60
+MAT431,João Ricardo Barbosa,Engenharia de Software,1.9,0.4,96
+MAT151,Ana Barbosa,Segurança da Informação,9.2,0.7,95
+MAT329,Wagner Oliveira,Química Geral,2.4,9.2,53
+MAT232,Vinícius Monteiro,Probabilidade e Estatística,5.1,4.3,70
+MAT120,Wanessa Araújo,Estrutura de Dados,1.4,3.6,73
+MAT032,Daniela Ingrid Oliveira,Segurança da Informação,3.6,3.2,67
+MAT058,Wanessa Silva,Engenharia de Software,8.1,8.2,83
+MAT292,Vinícius Ferreira,Química Orgânica,6.5,4.9,91
+MAT412,Vitória Beatriz Almeida,Programação II,10.0,5.9,95
+MAT127,Ana Souza,Programação II,5.9,2.8,85
+MAT293,Wanessa Teixeira,Programação I,7.9,4.1,52
+MAT299,Ursula Rocha,Cálculo II,6.6,5.9,77
+MAT107,Ursula Santos,Computação Gráfica,1.1,0.4,79
+MAT479,Yasmin Mendes,Computação Gráfica,5.5,5.4,90
+MAT310,Tiago Vitor Monteiro,Inteligência Artificial,2.0,8.8,52
+MAT497,Ubirajara Júlio Oliveira,Banco de Dados,3.3,1.8,72
+MAT440,Isabela Raquel Souza,Programação I,7.3,1.5,51
+MAT256,Pedro Henrique Pereira,Banco de Dados,3.3,3.2,97
+MAT169,Karla Monteiro,Química Orgânica,9.0,3.6,94
+MAT401,Yasmin Souza,Programação II,2.0,5.9,60
+MAT111,Nicolas Tadeu Costa,Computação Gráfica,4.7,0.0,85
+MAT087,Wagner Felipe Machado,Química Geral,0.7,4.5,58
+MAT339,Zélio Otávio Souza,Segurança da Informação,2.2,0.1,77
+MAT296,Vinícius Souza,Sistemas Operacionais,5.5,9.5,59
+MAT283,Gabriel Pereira,Engenharia de Software,6.7,7.8,78
+MAT395,Sofia Tatiana Araújo,Inteligência Artificial,5.4,1.1,68
+MAT356,Yasmin Nunes,Programação I,4.4,3.9,73
+MAT365,Wagner Martins,Engenharia de Software,1.8,1.2,55
+MAT464,Olivia Lara Costa,Sistemas Operacionais,1.4,5.7,87
+MAT015,Vitória Natália Costa,Química Orgânica,2.6,7.9,52
+MAT027,Nicolas Yago Lima,Probabilidade e Estatística,6.5,0.9,68
+MAT460,Daniela Teixeira,Química Orgânica,8.1,1.7,82
+MAT313,Yuri Henrique Mendes,Sistemas Operacionais,1.0,6.3,72
+MAT155,Leonardo Machado,Banco de Dados,0.5,8.4,94
+MAT272,Ximena Ferreira,Segurança da Informação,6.2,5.5,62
+MAT194,Zélio Martins,Física I,8.9,0.9,75
+MAT372,Joana Barbosa,Álgebra Linear,4.0,3.1,95
+MAT203,Carlos Wesley Lima,Segurança da Informação,1.1,3.2,95
+MAT496,Eduardo Marcelo Souza,Cálculo I,9.4,5.7,87
+MAT396,Ana Santos,Lógica para Computação,1.6,1.4,61
+MAT478,Fernanda Xuxa Gomes,Inteligência Artificial,5.3,4.2,88
+MAT303,Bruno Henrique Santos,Probabilidade e Estatística,0.7,5.0,80
+MAT054,Miguel Lima,Química Orgânica,2.5,5.3,90
+MAT046,Joana Ingrid Costa,Inteligência Artificial,3.1,4.8,68
+MAT342,Xavier Lima,Química Geral,2.0,4.9,76
+MAT209,Rafael Felipe Gomes,Cálculo II,2.3,6.8,58
+MAT055,Joana Silvana Rocha,Inteligência Artificial,2.4,8.8,63
+MAT487,Ursula Nunes,Lógica para Computação,8.4,7.2,86
+MAT336,Yuri Rocha,Segurança da Informação,8.2,7.1,60
+MAT441,Ximena Elisa Pereira,Física I,4.7,1.0,75
+MAT424,Vitória Souza,Lógica para Computação,6.2,6.1,90
+MAT031,Gabriel Rocha,Cálculo I,9.9,7.1,57
+MAT382,Vinícius Santos,Cálculo II,2.4,4.7,83
+MAT427,Vitória Natália Santos,Estrutura de Dados,9.3,0.0,73
+MAT275,Miguel Vitor Ferreira,Física II,7.7,9.3,59
+MAT141,Yuri Zeca Monteiro,Banco de Dados,4.1,2.2,89
+MAT163,Joana Natália Rocha,Lógica para Computação,8.4,1.5,81
+MAT416,Helena Silva,Matemática Discreta,4.8,1.6,79
+MAT119,Tatiana Araújo,Química Geral,6.8,6.6,89
+MAT437,Leonardo Oliveira,Cálculo II,3.7,2.4,60
+MAT299,Ursula Rocha,Lógica para Computação,2.8,2.7,77
+MAT490,Ximena Almeida,Física II,7.8,7.0,79
+MAT079,Thiago Gomes,Inteligência Artificial,6.9,7.5,91
+MAT081,Ursula Ribeiro,Sistemas Operacionais,3.1,5.3,73
+MAT270,Thiago Marcelo Martins,Segurança da Informação,8.2,1.5,97
+MAT186,Eduardo Zeca Ferreira,Programação I,8.9,6.7,66
+MAT203,Carlos Wesley Lima,Inteligência Artificial,4.6,6.2,64
+MAT330,Gabriel Ubirajara Ribeiro,Computação Gráfica,5.9,2.6,87
+MAT411,Ubirajara Diego Gomes,Estrutura de Dados,3.4,2.4,100
+MAT438,Bruno Pedro Gomes,Química Geral,9.8,5.0,98
+MAT338,Ubirajara Yago Barbosa,Matemática Discreta,8.4,2.0,84
+MAT459,Vinícius Barbosa,Sistemas Operacionais,3.6,1.2,84
+MAT165,Fernanda Raquel Lima,Lógica para Computação,2.7,8.5,99
+MAT366,Joana Almeida,Programação I,5.5,7.5,80
+MAT261,Ubirajara Ubirajara Souza,Matemática Discreta,6.4,7.4,66
+MAT447,Eduardo Felipe Oliveira,Química Geral,9.4,1.4,62
+MAT171,João Machado,Engenharia de Software,1.0,0.6,60
+MAT413,Bruno Wesley Teixeira,Cálculo I,5.0,3.8,64
+MAT349,Isabela Tatiana Lima,Matemática Discreta,3.7,4.2,53
+MAT065,Tiago Ferreira,Engenharia de Software,7.0,2.8,87
+MAT233,Thiago Ricardo Barbosa,Química Geral,9.1,3.7,91
+MAT107,Ursula Santos,Segurança da Informação,2.2,6.0,84
+MAT221,Vinícius Wesley Santos,Cálculo I,0.5,6.9,88
+MAT123,Eduardo Rocha,Matemática Discreta,7.0,4.5,52
+MAT026,João Lima,Banco de Dados,6.4,0.6,68
+MAT439,Isabela Zélia Almeida,Programação I,6.5,7.2,96
+MAT054,Miguel Lima,Lógica para Computação,8.3,0.5,72
+MAT297,Rafael Ferreira,Engenharia de Software,2.9,0.7,64
+MAT169,Karla Monteiro,Probabilidade e Estatística,8.0,8.8,65
+MAT379,Nicolas Henrique Santos,Cálculo II,5.6,0.8,54
+MAT091,Zélio Machado,Banco de Dados,6.8,4.6,95
+MAT197,João Pedro Pereira,Física II,0.3,6.6,94
+MAT481,Miguel Xande Ferreira,Programação I,4.3,2.0,85
+MAT083,Bruno Nunes,Probabilidade e Estatística,0.0,7.2,83
+MAT487,Ursula Nunes,Álgebra Linear,8.7,3.1,77
+MAT331,João Machado,Cálculo II,5.8,5.5,72
+MAT276,Bruno Silva,Banco de Dados,4.4,9.0,59
+MAT090,Vinícius Xande Ferreira,Segurança da Informação,1.6,8.8,88
+MAT041,Miguel Costa,Inteligência Artificial,5.4,1.1,93
+MAT160,Leonardo Lima,Cálculo II,9.9,5.4,60
+MAT468,Wanessa Ferreira,Química Orgânica,1.6,1.1,92
+MAT379,Nicolas Henrique Santos,Probabilidade e Estatística,7.3,5.0,77
+MAT115,Yasmin Mendes,Programação II,1.7,1.5,79
+MAT259,Zuleide Silvana Pereira,Física I,4.8,0.9,74
+MAT317,Wanessa Natália Souza,Matemática Discreta,1.7,3.5,78
+MAT004,Yasmin Zélia Costa,Segurança da Informação,8.7,2.2,74
+MAT052,Olivia Santos,Programação I,6.7,2.8,65
+MAT177,Sofia Giovana Oliveira,Redes de Computadores,1.5,8.0,82
+MAT124,Fernanda Souza,Redes de Computadores,7.0,6.6,60
+MAT235,Mariana Xuxa Carvalho,Física I,8.7,3.1,88
+MAT289,Rafael Machado,Cálculo I,9.9,8.8,86
+MAT482,Leonardo Barbosa,Sistemas Operacionais,6.5,9.1,53
+MAT417,Vitória Tatiana Araújo,Engenharia de Software,8.9,4.0,93
+MAT257,Rafael Costa,Lógica para Computação,9.4,2.4,77
+MAT201,Karla Yara Nunes,Lógica para Computação,2.6,1.6,73
+MAT035,Ximena Xuxa Ribeiro,Segurança da Informação,5.9,3.0,68
+MAT196,Sofia Monteiro,Segurança da Informação,4.7,8.0,51
+MAT409,Xavier Alex Pereira,Engenharia de Software,9.2,9.2,82
+MAT247,Helena Souza,Física II,1.9,4.5,50
+MAT039,Rafael Henrique Monteiro,Sistemas Operacionais,6.8,7.3,83
+MAT371,Ana Raquel Martins,Programação I,3.2,5.3,84
+MAT179,Zélio Júlio Almeida,Programação I,7.9,0.3,71
+MAT434,Carlos Wesley Barbosa,Estrutura de Dados,1.2,4.7,85
+MAT363,Ximena Lima,Física I,1.2,6.4,68
+MAT323,João Almeida,Programação II,9.3,1.8,70
+MAT279,Pedro Alex Ribeiro,Cálculo I,5.4,7.2,57
+MAT047,Ubirajara Gomes,Probabilidade e Estatística,6.4,1.2,63
+MAT001,João Felipe Araújo,Matemática Discreta,6.4,8.8,92
+MAT490,Ximena Almeida,Probabilidade e Estatística,5.8,5.4,99
+MAT209,Rafael Felipe Gomes,Segurança da Informação,0.7,4.4,85
+MAT301,Nicolas Lucas Costa,Engenharia de Software,6.4,1.1,72
+MAT077,Isabela Rocha,Probabilidade e Estatística,0.4,2.3,58
+MAT132,Leonardo Mendes,Banco de Dados,5.1,8.5,76
+MAT084,Eduardo Souza,Física I,6.1,8.7,76
+MAT248,Wagner Marcelo Lima,Álgebra Linear,8.5,2.8,83
+MAT458,Helena Raquel Ferreira,Física II,5.9,7.8,88
+MAT448,Pedro Nunes,Banco de Dados,0.3,9.7,72
+MAT129,Bruno Nunes,Estrutura de Dados,8.0,5.8,97
+MAT199,Ana Ingrid Machado,Química Geral,0.3,1.6,80
+MAT378,Gabriel Raul Rocha,Banco de Dados,6.7,8.6,58
+MAT445,Carlos Oliveira,Cálculo I,2.7,6.2,94
+MAT364,Gabriel Zeca Gomes,Cálculo I,5.7,2.0,63
+MAT003,Miguel Santos,Segurança da Informação,3.2,2.0,95
+MAT246,Vitória Natália Almeida,Física I,2.8,6.5,99
+MAT028,Ubirajara Mendes,Sistemas Operacionais,3.5,8.2,76
+MAT183,Tiago Ricardo Ferreira,Redes de Computadores,8.3,6.2,63
+MAT195,Wanessa Souza,Banco de Dados,2.7,7.9,55
+MAT051,Isabela Ribeiro,Cálculo II,2.2,8.9,81
+MAT112,Ximena Ferreira,Lógica para Computação,1.9,0.9,80
+MAT321,Joana Rocha,Cálculo II,1.4,2.2,80
+MAT090,Vinícius Xande Ferreira,Engenharia de Software,5.7,2.7,59
+MAT268,Tatiana Barbosa,Segurança da Informação,2.8,9.2,78
+MAT337,Xavier Souza,Estrutura de Dados,8.8,8.9,95
+MAT483,Zélio Henrique Pereira,Segurança da Informação,2.9,6.2,70
+MAT444,Rafael Barbosa,Química Orgânica,2.3,1.4,64
+MAT334,Wagner Vitor Araújo,Engenharia de Software,4.7,9.3,98
+MAT093,Sofia Beatriz Souza,Probabilidade e Estatística,3.3,8.0,100
+MAT282,Zélio Marcelo Ferreira,Sistemas Operacionais,7.4,8.0,66
+MAT086,Helena Tatiana Monteiro,Programação II,5.4,0.6,81
+MAT287,Tiago Gomes,Física II,4.6,6.0,59
+MAT345,Gabriel Wesley Santos,Matemática Discreta,4.2,6.0,56
+MAT102,Nicolas Almeida,Química Geral,2.0,3.3,76
+MAT214,Eduardo Rocha,Física I,2.3,7.8,68
+MAT154,Wanessa Ferreira,Redes de Computadores,6.4,5.0,61
+MAT399,Carlos Barbosa,Cálculo II,7.5,5.9,75
+MAT074,Joana Valéria Ferreira,Engenharia de Software,9.0,6.4,57
+MAT285,Wanessa Ursula Costa,Álgebra Linear,3.8,8.9,79
+MAT153,Tiago Felipe Ribeiro,Química Orgânica,6.2,8.8,51
+MAT458,Helena Raquel Ferreira,Computação Gráfica,4.8,3.0,98
+MAT168,Zuleide Araújo,Física II,8.8,8.4,98
+MAT176,Zuleide Mendes,Redes de Computadores,6.6,2.1,69
+MAT087,Wagner Felipe Machado,Estrutura de Dados,10.0,6.7,70
+MAT278,Leonardo Ubirajara Machado,Química Orgânica,9.1,9.7,86
+MAT024,Gabriel Gomes,Cálculo II,8.0,7.4,76
+MAT264,Yasmin Martins,Lógica para Computação,8.8,3.1,84
+MAT191,Yuri Martins,Estrutura de Dados,1.9,8.1,64
+MAT417,Vitória Tatiana Araújo,Física II,9.2,8.3,79
+MAT473,Leonardo Silva,Álgebra Linear,6.4,4.5,69
+MAT200,Daniela Wanda Pereira,Cálculo I,9.6,4.7,51
+MAT500,Miguel Gomes,Inteligência Artificial,8.0,8.5,95
+MAT448,Pedro Nunes,Cálculo II,2.9,3.5,83
+MAT157,Ubirajara Vitor Silva,Química Geral,4.2,6.8,93
+MAT247,Helena Souza,Engenharia de Software,8.3,9.3,94
+MAT328,Tatiana Valéria Souza,Estrutura de Dados,7.0,9.4,56
+MAT464,Olivia Lara Costa,Matemática Discreta,3.1,0.1,57
+MAT222,Olivia Viviane Lima,Lógica para Computação,9.6,6.2,76
+MAT114,Daniela Xuxa Carvalho,Cálculo I,4.0,0.1,99
+MAT377,Zélio Henrique Carvalho,Matemática Discreta,0.2,8.5,64
+MAT068,Bruno Otávio Machado,Álgebra Linear,5.2,8.6,94
+MAT266,Eduardo Samuel Silva,Cálculo II,2.3,4.1,69
+MAT495,Yasmin Barbosa,Programação II,4.6,0.5,81
+MAT464,Olivia Lara Costa,Redes de Computadores,6.5,8.0,94
+MAT131,Helena Ursula Oliveira,Programação II,4.9,6.9,55
+MAT421,Yuri Pereira,Computação Gráfica,6.6,4.2,94
+MAT081,Ursula Ribeiro,Cálculo II,4.0,1.4,68
+MAT350,Rafael Souza,Matemática Discreta,3.5,8.4,60
+MAT291,Fernanda Raquel Teixeira,Banco de Dados,7.6,1.4,63
+MAT449,Karla Santos,Engenharia de Software,8.0,6.8,62
+MAT168,Zuleide Araújo,Física I,0.5,8.4,99
+MAT180,Helena Rocha,Computação Gráfica,6.0,6.1,55
+MAT377,Zélio Henrique Carvalho,Cálculo I,1.6,8.5,72
+MAT482,Leonardo Barbosa,Computação Gráfica,1.3,0.2,68
+MAT446,Zélio Monteiro,Probabilidade e Estatística,3.8,7.1,83
+MAT366,Joana Almeida,Sistemas Operacionais,4.7,9.9,70
+MAT314,Eduardo Pereira,Engenharia de Software,7.6,6.0,81
+MAT049,Tatiana Gomes,Segurança da Informação,9.4,7.6,92
+MAT405,Leonardo Pereira,Física I,5.2,1.1,83
+MAT308,Miguel Lucas Pereira,Engenharia de Software,3.3,3.8,73
+MAT245,Tatiana Giovana Gomes,Redes de Computadores,4.4,9.6,89
+MAT317,Wanessa Natália Souza,Segurança da Informação,7.2,1.7,97
+MAT082,Miguel Costa,Cálculo I,8.1,9.3,84
+MAT296,Vinícius Souza,Física II,1.4,4.7,61
+MAT229,Rafael Diego Teixeira,Probabilidade e Estatística,8.1,0.2,91
+MAT116,João Almeida,Cálculo II,0.6,5.1,77
+MAT452,Ubirajara Araújo,Redes de Computadores,5.0,7.7,85
+MAT344,Isabela Barbosa,Lógica para Computação,9.2,8.6,61
+MAT494,Fernanda Zélia Monteiro,Física I,0.8,3.4,85
+MAT002,Nicolas Diego Oliveira,Redes de Computadores,4.2,2.4,69
+MAT455,Fernanda Beatriz Carvalho,Física I,9.4,5.4,83
+MAT466,Tatiana Ferreira,Cálculo II,4.8,7.4,51
+MAT398,Wanessa Ingrid Machado,Inteligência Artificial,4.1,2.7,85
+MAT247,Helena Souza,Lógica para Computação,9.5,1.1,54
+MAT434,Carlos Wesley Barbosa,Química Orgânica,8.5,4.7,76
+MAT152,Helena Raquel Monteiro,Cálculo II,4.0,9.8,94
+MAT071,Carlos Costa,Segurança da Informação,2.0,6.0,67
+MAT309,Fernanda Carvalho,Banco de Dados,6.5,6.3,66
+MAT158,Xavier Vitor Ribeiro,Engenharia de Software,4.7,6.8,56
+MAT249,Olivia Viviane Gomes,Álgebra Linear,1.9,4.1,54
+MAT129,Bruno Nunes,Física II,5.1,9.9,88
+MAT027,Nicolas Yago Lima,Programação II,4.9,1.2,67
+MAT249,Olivia Viviane Gomes,Probabilidade e Estatística,2.7,0.4,100
+MAT482,Leonardo Barbosa,Física II,8.8,5.9,90
+MAT002,Nicolas Diego Oliveira,Programação II,4.7,6.6,55
+MAT280,Gabriel Costa,Segurança da Informação,5.6,9.6,70
+MAT085,Ubirajara Ribeiro,Física I,1.2,9.8,57
+MAT392,Rafael Ferreira,Engenharia de Software,9.3,0.5,61
+MAT390,Nicolas Samuel Carvalho,Matemática Discreta,6.9,9.8,56
+MAT352,Miguel Vitor Santos,Física I,3.3,3.2,56
+MAT381,Pedro Ribeiro,Química Geral,9.9,3.4,58
+MAT498,Miguel Araújo,Química Orgânica,0.7,6.9,59
+MAT088,Vitória Almeida,Cálculo I,0.1,6.6,74
+MAT072,Miguel Lucas Ribeiro,Química Orgânica,8.8,5.1,57
+MAT481,Miguel Xande Ferreira,Álgebra Linear,0.9,6.8,81
+MAT237,Olivia Paula Gomes,Engenharia de Software,9.0,8.4,97
+MAT292,Vinícius Ferreira,Álgebra Linear,4.7,6.3,92
+MAT005,Daniela Wanda Gomes,Sistemas Operacionais,6.5,0.2,53
+MAT082,Miguel Costa,Engenharia de Software,4.9,2.4,93
+MAT470,Vinícius Xande Oliveira,Engenharia de Software,2.3,5.1,90
+MAT204,Olivia Rocha,Engenharia de Software,9.2,8.6,93
+MAT418,Carlos Pedro Monteiro,Álgebra Linear,9.0,8.4,85
+MAT248,Wagner Marcelo Lima,Redes de Computadores,2.0,0.4,79
+MAT061,Isabela Lara Mendes,Probabilidade e Estatística,6.6,9.7,95
+MAT432,Leonardo Lucas Oliveira,Probabilidade e Estatística,9.3,4.6,97
+MAT333,Karla Oliveira,Matemática Discreta,8.9,4.9,62
+MAT265,Leonardo Raul Monteiro,Lógica para Computação,9.4,7.9,75
+MAT225,Isabela Ursula Monteiro,Química Geral,2.2,9.0,51
+MAT328,Tatiana Valéria Souza,Segurança da Informação,0.0,0.6,66
+MAT267,João Monteiro,Engenharia de Software,7.9,6.8,71
+MAT279,Pedro Alex Ribeiro,Física I,3.2,2.7,73
+MAT499,Thiago Pedro Silva,Probabilidade e Estatística,5.3,7.7,96
+MAT340,Isabela Rocha,Estrutura de Dados,6.2,8.5,64
+MAT010,Fernanda Lara Carvalho,Programação II,0.7,5.5,56
+MAT345,Gabriel Wesley Santos,Computação Gráfica,3.8,0.0,63
+MAT215,Ximena Tatiana Ferreira,Lógica para Computação,0.4,1.4,59
+MAT013,Vinícius Samuel Mendes,Lógica para Computação,6.0,3.9,66
+MAT061,Isabela Lara Mendes,Segurança da Informação,4.9,4.5,100
+MAT372,Joana Barbosa,Matemática Discreta,5.1,8.5,78
+MAT014,Gabriel Martins,Química Orgânica,2.2,2.5,51
+MAT224,Ubirajara Santos,Física I,8.1,6.3,81
+MAT035,Ximena Xuxa Ribeiro,Álgebra Linear,4.5,3.0,82
+MAT066,Ana Paula Carvalho,Física I,9.9,7.5,93
+MAT170,Ximena Yara Silva,Segurança da Informação,5.9,5.3,87
+MAT128,Leonardo Barbosa,Lógica para Computação,8.0,0.9,59
+MAT360,Wanessa Natália Pereira,Cálculo I,6.2,6.4,68
+MAT105,Wanessa Gomes,Programação II,7.3,6.8,88
+MAT392,Rafael Ferreira,Sistemas Operacionais,9.4,9.3,63
+MAT453,Isabela Xuxa Ribeiro,Cálculo I,1.9,8.9,53
+MAT211,Miguel Souza,Álgebra Linear,1.3,5.9,95
+MAT226,Helena Tatiana Costa,Segurança da Informação,8.8,0.9,77
+MAT391,Leonardo Alex Monteiro,Sistemas Operacionais,4.5,5.5,85
+MAT360,Wanessa Natália Pereira,Probabilidade e Estatística,10.0,4.6,70
+MAT049,Tatiana Gomes,Sistemas Operacionais,3.8,1.7,98
+MAT068,Bruno Otávio Machado,Matemática Discreta,4.3,3.5,98
+MAT160,Leonardo Lima,Engenharia de Software,4.1,3.8,82
+MAT191,Yuri Martins,Inteligência Artificial,2.7,9.3,57
+MAT440,Isabela Raquel Souza,Engenharia de Software,1.1,1.9,87
+MAT373,Wanessa Barbosa,Cálculo II,6.4,5.4,63
+MAT239,Nicolas Costa,Inteligência Artificial,6.3,5.9,87
+MAT006,Wagner Martins,Engenharia de Software,4.1,7.1,96
+MAT356,Yasmin Nunes,Cálculo II,0.2,4.8,59
+MAT252,Tiago Machado,Inteligência Artificial,0.5,9.8,66
+MAT098,Ximena Paula Souza,Matemática Discreta,7.4,8.3,66
+MAT385,Vinícius Souza,Lógica para Computação,5.2,5.7,77
+MAT406,Yasmin Mendes,Programação II,1.0,4.3,70
+MAT165,Fernanda Raquel Lima,Estrutura de Dados,9.1,3.8,94
+MAT089,Tiago Pereira,Lógica para Computação,4.5,6.3,82
+MAT089,Tiago Pereira,Cálculo I,0.6,4.8,75
+MAT167,Pedro Carvalho,Programação II,4.9,2.1,63
+MAT149,Fernanda Almeida,Segurança da Informação,2.9,9.8,98
+MAT070,Thiago Alex Carvalho,Química Geral,0.6,2.8,61
+MAT216,Tatiana Machado,Estrutura de Dados,0.9,9.5,50
+MAT280,Gabriel Costa,Química Orgânica,9.7,3.0,60
+MAT224,Ubirajara Santos,Redes de Computadores,9.2,7.6,95
+MAT280,Gabriel Costa,Lógica para Computação,4.5,1.7,94
+MAT232,Vinícius Monteiro,Álgebra Linear,3.7,2.5,77
+MAT315,Daniela Araújo,Computação Gráfica,0.4,2.0,57
+MAT135,Tiago Wesley Silva,Programação II,0.6,3.7,76
+MAT343,Xavier Mendes,Lógica para Computação,9.0,6.6,70
+MAT320,Leonardo Diego Barbosa,Química Orgânica,8.0,4.0,90
+MAT230,Daniela Lima,Programação II,8.6,6.0,84
+MAT038,Rafael Raul Monteiro,Computação Gráfica,2.5,3.0,50
+MAT406,Yasmin Mendes,Química Orgânica,7.1,1.7,58
+MAT228,Fernanda Ingrid Souza,Química Orgânica,9.0,3.6,91
+MAT356,Yasmin Nunes,Inteligência Artificial,8.6,9.2,51
+MAT424,Vitória Souza,Matemática Discreta,9.2,1.5,83
+MAT131,Helena Ursula Oliveira,Física I,3.8,2.2,93
+MAT376,Bruno Gomes,Física I,1.3,3.8,85
+MAT284,Eduardo Ferreira,Lógica para Computação,9.3,9.8,94
+MAT473,Leonardo Silva,Lógica para Computação,5.1,3.3,54
+MAT150,Vinícius Costa,Inteligência Artificial,5.0,4.9,91
+MAT185,Wanessa Beatriz Gomes,Segurança da Informação,8.4,9.9,51
+MAT407,Zélio Ribeiro,Química Orgânica,2.8,0.1,53
+MAT044,Isabela Tatiana Souza,Banco de Dados,2.4,1.4,88
+MAT206,Sofia Martins,Química Orgânica,6.8,6.2,70
+MAT226,Helena Tatiana Costa,Programação I,3.9,0.4,76
+MAT272,Ximena Ferreira,Inteligência Artificial,5.0,4.4,59
+MAT423,Ana Santos,Lógica para Computação,6.3,3.9,64
+MAT400,Ana Giovana Barbosa,Computação Gráfica,2.0,9.7,74
+MAT365,Wagner Martins,Redes de Computadores,7.7,5.6,92
+MAT025,Fernanda Xuxa Gomes,Inteligência Artificial,3.7,1.9,62
+MAT063,Pedro Vitor Ferreira,Estrutura de Dados,8.7,0.5,67
+MAT205,João Henrique Martins,Banco de Dados,5.8,8.6,78
+MAT325,Eduardo Samuel Ferreira,Física I,7.8,4.8,74
+MAT337,Xavier Souza,Álgebra Linear,5.5,7.3,93
+MAT318,Bruno Lima,Cálculo II,1.1,8.4,87
+MAT233,Thiago Ricardo Barbosa,Inteligência Artificial,2.4,4.9,56
+MAT241,Carlos Samuel Araújo,Segurança da Informação,2.9,6.1,91
+MAT427,Vitória Natália Santos,Banco de Dados,0.9,3.7,50
+MAT100,Olivia Wanda Souza,Programação II,9.6,1.6,86
+MAT315,Daniela Araújo,Cálculo II,1.1,9.0,80
+MAT323,João Almeida,Lógica para Computação,6.1,1.4,80
+MAT138,Leonardo Silva,Computação Gráfica,3.9,2.2,92
+MAT259,Zuleide Silvana Pereira,Computação Gráfica,8.3,10.0,96
+MAT162,Zélio Ferreira,Inteligência Artificial,7.5,9.2,70
+MAT397,Isabela Almeida,Inteligência Artificial,2.0,1.2,86
+MAT449,Karla Santos,Redes de Computadores,6.3,1.5,54
+MAT483,Zélio Henrique Pereira,Engenharia de Software,7.7,0.1,62
+MAT478,Fernanda Xuxa Gomes,Lógica para Computação,4.4,8.9,51
+MAT120,Wanessa Araújo,Cálculo I,2.0,6.4,58
+MAT146,Tiago Raul Martins,Estrutura de Dados,0.4,2.7,95
+MAT250,Nicolas Pereira,Inteligência Artificial,8.1,3.3,98
+MAT475,Vitória Costa,Química Geral,2.5,7.4,97
+MAT395,Sofia Tatiana Araújo,Física II,0.9,8.1,94
+MAT212,Gabriel Martins,Matemática Discreta,6.4,2.5,65
+MAT139,Miguel Monteiro,Cálculo I,4.9,8.9,68
+MAT394,Daniela Mendes,Física I,8.0,7.2,82
+MAT308,Miguel Lucas Pereira,Redes de Computadores,3.0,6.6,64
+MAT429,Karla Carvalho,Banco de Dados,5.5,8.5,54
+MAT090,Vinícius Xande Ferreira,Química Geral,1.3,2.9,62
+MAT321,Joana Rocha,Química Orgânica,3.2,9.8,75
+MAT275,Miguel Vitor Ferreira,Matemática Discreta,4.5,5.2,65
+MAT173,Leonardo Gomes,Cálculo II,9.5,7.7,67
+MAT329,Wagner Oliveira,Engenharia de Software,4.1,7.5,61
+MAT033,Joana Lima,Lógica para Computação,10.0,4.8,70
+MAT096,Eduardo Xande Almeida,Inteligência Artificial,7.2,5.5,100
+MAT014,Gabriel Martins,Cálculo II,8.4,9.4,57
+MAT017,Daniela Lara Lima,Estrutura de Dados,10.0,6.7,62
+MAT040,Helena Cristina Machado,Computação Gráfica,4.7,1.0,50
+MAT172,Isabela Viviane Teixeira,Programação II,7.8,4.3,74
+MAT257,Rafael Costa,Estrutura de Dados,9.8,8.8,74
+MAT021,Rafael Mendes,Cálculo II,3.1,8.7,93
+MAT386,Tatiana Ribeiro,Programação II,5.6,4.2,51
+MAT225,Isabela Ursula Monteiro,Física I,4.2,4.3,93
+MAT430,Karla Paula Martins,Cálculo I,5.8,1.5,78
+MAT218,Yasmin Lara Lima,Segurança da Informação,6.8,5.8,79
+MAT148,Miguel Silva,Banco de Dados,0.2,5.0,68
+MAT239,Nicolas Costa,Segurança da Informação,3.3,5.5,89
+MAT060,Miguel Almeida,Probabilidade e Estatística,0.2,7.4,63
+MAT322,Olivia Wanda Almeida,Sistemas Operacionais,2.4,3.8,87
+MAT118,Wanessa Natália Teixeira,Computação Gráfica,3.5,9.1,94
+MAT039,Rafael Henrique Monteiro,Lógica para Computação,7.1,2.9,76
+MAT212,Gabriel Martins,Programação I,8.9,3.1,68
+MAT080,Helena Silvana Lima,Matemática Discreta,5.0,2.6,87
+MAT367,Tatiana Souza,Química Orgânica,7.8,3.8,97
+MAT133,Ximena Ursula Santos,Probabilidade e Estatística,8.6,6.6,66
+MAT173,Leonardo Gomes,Cálculo I,2.4,6.1,50
+MAT108,Leonardo Machado,Programação II,2.9,2.9,75
+MAT367,Tatiana Souza,Programação I,8.3,2.9,60
+MAT348,Isabela Nunes,Física I,8.9,7.5,78
+MAT003,Miguel Santos,Cálculo I,3.5,2.4,68
+MAT240,Ana Beatriz Oliveira,Química Orgânica,5.5,1.2,86
+MAT500,Miguel Gomes,Sistemas Operacionais,4.2,6.2,66
+MAT152,Helena Raquel Monteiro,Cálculo I,0.6,1.8,67
+MAT017,Daniela Lara Lima,Matemática Discreta,2.5,9.8,92
+MAT238,Carlos Oliveira,Cálculo II,7.6,4.6,78
+MAT262,Fernanda Paula Ferreira,Probabilidade e Estatística,2.9,3.6,82
+MAT173,Leonardo Gomes,Lógica para Computação,7.6,9.2,69
+MAT460,Daniela Teixeira,Física I,6.3,8.4,62
+MAT220,Ana Gomes,Álgebra Linear,1.5,4.1,74
+MAT110,Ximena Gomes,Probabilidade e Estatística,0.8,0.3,97
+MAT007,Gabriel Ubirajara Martins,Banco de Dados,7.0,3.3,50
+MAT325,Eduardo Samuel Ferreira,Química Orgânica,4.3,4.0,97
+MAT112,Ximena Ferreira,Cálculo I,7.3,4.6,86
+MAT399,Carlos Barbosa,Probabilidade e Estatística,0.7,2.4,94
+MAT438,Bruno Pedro Gomes,Sistemas Operacionais,6.7,9.4,73
+MAT320,Leonardo Diego Barbosa,Computação Gráfica,9.2,5.2,85
+MAT360,Wanessa Natália Pereira,Engenharia de Software,4.6,2.3,90
+MAT404,Carlos Costa,Física I,1.8,1.0,86
+MAT144,Daniela Ferreira,Cálculo II,7.9,1.8,70
+MAT260,João Samuel Machado,Física I,1.3,8.3,68
+MAT290,Thiago Carvalho,Lógica para Computação,0.1,3.9,64
+MAT237,Olivia Paula Gomes,Probabilidade e Estatística,8.1,5.7,69
+MAT106,Nicolas Nunes,Física I,9.4,3.9,98
+MAT489,Miguel Martins,Engenharia de Software,4.2,1.3,88
+MAT185,Wanessa Beatriz Gomes,Álgebra Linear,4.3,4.1,91
+MAT393,Joana Oliveira,Computação Gráfica,9.2,0.2,62
+MAT091,Zélio Machado,Matemática Discreta,3.0,3.6,51
+MAT042,Eduardo Ferreira,Química Geral,8.1,8.8,100
+MAT274,Vinícius Júlio Mendes,Programação I,3.9,7.0,90
+MAT230,Daniela Lima,Cálculo I,9.7,7.1,62
+MAT298,Daniela Martins,Probabilidade e Estatística,7.3,1.1,67
+MAT146,Tiago Raul Martins,Segurança da Informação,3.1,9.9,61
+MAT059,Tiago Felipe Ferreira,Sistemas Operacionais,4.3,5.0,65
+MAT097,Mariana Almeida,Segurança da Informação,6.3,9.6,56
+MAT044,Isabela Tatiana Souza,Computação Gráfica,6.8,6.8,64
+MAT223,Ximena Ingrid Costa,Redes de Computadores,1.1,1.2,75
+MAT399,Carlos Barbosa,Sistemas Operacionais,3.6,0.2,62
+MAT139,Miguel Monteiro,Química Orgânica,6.6,1.6,86
+MAT043,Eduardo Costa,Programação II,6.4,8.9,73
+MAT237,Olivia Paula Gomes,Programação I,5.4,9.6,50
+MAT190,Wagner Santos,Computação Gráfica,9.0,3.8,96
+MAT455,Fernanda Beatriz Carvalho,Lógica para Computação,3.4,3.6,91
+MAT418,Carlos Pedro Monteiro,Inteligência Artificial,9.8,3.5,100
+MAT123,Eduardo Rocha,Probabilidade e Estatística,2.0,9.9,99
+MAT455,Fernanda Beatriz Carvalho,Cálculo I,5.5,2.1,65
+MAT268,Tatiana Barbosa,Banco de Dados,2.6,5.5,96
+MAT238,Carlos Oliveira,Estrutura de Dados,6.3,4.8,87
+MAT269,Wanessa Valéria Lima,Programação II,1.5,5.8,80
+MAT324,Eduardo Souza,Programação II,7.4,2.6,98
+MAT055,Joana Silvana Rocha,Cálculo II,9.6,8.5,89
+MAT025,Fernanda Xuxa Gomes,Segurança da Informação,9.2,6.6,70
+MAT269,Wanessa Valéria Lima,Segurança da Informação,2.1,4.8,66
+MAT343,Xavier Mendes,Banco de Dados,2.3,5.8,86
+MAT149,Fernanda Almeida,Cálculo I,1.9,3.8,74
+MAT450,Carlos Raul Costa,Segurança da Informação,4.4,4.7,89
+MAT445,Carlos Oliveira,Inteligência Artificial,4.3,5.3,86
+MAT467,Olivia Ingrid Costa,Probabilidade e Estatística,5.4,2.1,83
+MAT109,Gabriel Carvalho,Química Orgânica,5.0,6.2,92
+MAT146,Tiago Raul Martins,Programação I,5.4,8.0,51
+MAT294,Nicolas Henrique Martins,Química Orgânica,0.8,0.8,67
+MAT142,Gabriel Monteiro,Estrutura de Dados,4.0,8.9,93
+MAT463,Joana Monteiro,Computação Gráfica,9.0,7.3,51
+MAT006,Wagner Martins,Redes de Computadores,2.9,5.6,98
+MAT148,Miguel Silva,Redes de Computadores,2.2,5.4,64
+MAT391,Leonardo Alex Monteiro,Programação II,8.6,2.3,61
+MAT028,Ubirajara Mendes,Física I,4.5,4.1,97
+MAT382,Vinícius Santos,Estrutura de Dados,1.8,5.0,94
+MAT212,Gabriel Martins,Álgebra Linear,1.7,1.7,65
+MAT307,Tatiana Araújo,Cálculo II,6.0,9.0,69
+MAT374,Carlos Júlio Silva,Probabilidade e Estatística,2.1,5.5,67
+MAT235,Mariana Xuxa Carvalho,Cálculo I,0.3,1.0,97
+MAT095,Nicolas Henrique Carvalho,Computação Gráfica,2.3,3.6,98
+MAT384,Ubirajara Oliveira,Física I,8.1,8.0,74
+MAT009,Daniela Martins,Química Geral,9.5,1.6,74
+MAT342,Xavier Lima,Programação II,9.6,10.0,54
+MAT354,Zuleide Rocha,Programação II,0.5,6.4,57
+MAT175,Tiago Júlio Gomes,Computação Gráfica,9.2,2.8,62
+MAT451,Wanessa Nunes,Química Geral,8.3,0.4,76
+MAT224,Ubirajara Santos,Cálculo I,7.5,4.6,98
+MAT249,Olivia Viviane Gomes,Programação II,9.5,2.2,61
+MAT162,Zélio Ferreira,Física I,5.9,3.2,63
+MAT373,Wanessa Barbosa,Estrutura de Dados,6.2,5.4,52
+MAT022,Nicolas Silva,Cálculo I,1.7,5.4,58
+MAT487,Ursula Nunes,Engenharia de Software,0.6,10.0,94
+MAT492,Zuleide Viviane Pereira,Química Orgânica,1.6,9.3,73
+MAT457,Tatiana Cristina Machado,Probabilidade e Estatística,5.5,6.4,73
+MAT256,Pedro Henrique Pereira,Probabilidade e Estatística,9.6,7.2,86
+MAT074,Joana Valéria Ferreira,Segurança da Informação,7.7,5.3,54
+MAT181,Nicolas Oliveira,Química Orgânica,5.7,2.0,64
+MAT430,Karla Paula Martins,Química Orgânica,0.1,4.4,96
+MAT270,Thiago Marcelo Martins,Matemática Discreta,2.6,3.4,50
+MAT018,Yuri Pereira,Computação Gráfica,1.9,5.5,50
+MAT409,Xavier Alex Pereira,Álgebra Linear,3.0,9.3,95
+MAT353,Wagner Carvalho,Programação II,7.6,4.1,57
+MAT026,João Lima,Física II,7.3,5.3,57
+MAT331,João Machado,Redes de Computadores,0.2,9.9,82
+MAT342,Xavier Lima,Banco de Dados,4.7,9.0,76
+MAT471,João Oliveira,Redes de Computadores,0.6,1.2,61
+MAT385,Vinícius Souza,Probabilidade e Estatística,8.6,3.0,50
+MAT477,Olivia Nunes,Química Orgânica,7.0,1.0,95
+MAT293,Wanessa Teixeira,Redes de Computadores,1.6,9.9,99
+MAT436,Tiago Pereira,Banco de Dados,8.1,6.3,97
+MAT128,Leonardo Barbosa,Computação Gráfica,9.7,1.0,99
+MAT357,Helena Tatiana Costa,Segurança da Informação,8.0,4.1,55
+MAT281,Pedro Ricardo Santos,Cálculo I,7.6,6.7,78
+MAT465,Karla Beatriz Santos,Física I,5.5,1.2,67
+MAT240,Ana Beatriz Oliveira,Segurança da Informação,7.6,6.1,59
+MAT057,Zuleide Carvalho,Inteligência Artificial,5.2,6.8,94
+MAT266,Eduardo Samuel Silva,Segurança da Informação,1.3,2.9,68
+MAT302,Ubirajara Lucas Monteiro,Engenharia de Software,1.5,7.1,93
+MAT015,Vitória Natália Costa,Lógica para Computação,1.1,6.1,92
+MAT043,Eduardo Costa,Redes de Computadores,1.1,8.3,89
+MAT437,Leonardo Oliveira,Banco de Dados,5.6,7.1,50
+MAT054,Miguel Lima,Engenharia de Software,6.5,0.2,74
+MAT112,Ximena Ferreira,Engenharia de Software,7.1,2.0,54
+MAT204,Olivia Rocha,Probabilidade e Estatística,3.7,7.8,70
+MAT086,Helena Tatiana Monteiro,Lógica para Computação,3.3,6.6,51
+MAT282,Zélio Marcelo Ferreira,Programação I,9.0,4.5,58
+MAT428,Pedro Gomes,Física II,3.6,0.1,70
+MAT051,Isabela Ribeiro,Segurança da Informação,2.5,8.8,98
+MAT498,Miguel Araújo,Cálculo II,4.5,1.3,76
+MAT076,Wagner Wesley Monteiro,Química Geral,3.7,4.4,66
+MAT154,Wanessa Ferreira,Física II,4.0,6.2,100
+MAT488,Fernanda Natália Araújo,Matemática Discreta,2.2,6.0,57
+MAT157,Ubirajara Vitor Silva,Álgebra Linear,6.5,5.5,61
+MAT140,Olivia Valéria Almeida,Programação I,5.4,2.0,94
+MAT019,Thiago Ribeiro,Sistemas Operacionais,5.5,9.6,63
+MAT236,Daniela Silva,Matemática Discreta,4.7,7.8,63
+MAT288,Helena Costa,Física I,8.4,2.2,88
+MAT469,Vinícius Lima,Química Orgânica,6.9,4.0,85
+MAT032,Daniela Ingrid Oliveira,Computação Gráfica,4.2,8.8,57
+MAT101,Ubirajara Martins,Probabilidade e Estatística,3.2,6.1,81
+MAT306,Ximena Wanda Araújo,Probabilidade e Estatística,4.5,6.9,99
+MAT351,Leonardo Zeca Ribeiro,Física I,9.7,6.6,62
+MAT039,Rafael Henrique Monteiro,Probabilidade e Estatística,6.1,1.9,90
+MAT175,Tiago Júlio Gomes,Programação I,1.7,7.4,63
+MAT419,Zuleide Ursula Silva,Programação I,1.9,7.8,87
+MAT181,Nicolas Oliveira,Cálculo II,6.3,0.1,63
+MAT175,Tiago Júlio Gomes,Programação II,4.0,1.9,62
+MAT057,Zuleide Carvalho,Banco de Dados,1.8,1.0,74
+MAT228,Fernanda Ingrid Souza,Computação Gráfica,8.6,9.3,60
+MAT288,Helena Costa,Inteligência Artificial,1.0,9.3,71
+MAT208,Leonardo Ubirajara Martins,Cálculo II,5.0,9.4,95
+MAT453,Isabela Xuxa Ribeiro,Álgebra Linear,4.9,8.1,52
+MAT188,Vitória Mendes,Segurança da Informação,1.3,8.8,87
+MAT139,Miguel Monteiro,Engenharia de Software,9.5,7.5,53
+MAT178,Joana Cristina Mendes,Banco de Dados,9.7,2.4,90
+MAT055,Joana Silvana Rocha,Química Orgânica,8.1,4.4,55
+MAT192,Miguel Barbosa,Cálculo II,5.4,2.9,71
+MAT374,Carlos Júlio Silva,Cálculo I,2.4,2.5,89
+MAT109,Gabriel Carvalho,Inteligência Artificial,4.8,9.1,74
+MAT077,Isabela Rocha,Estrutura de Dados,9.8,0.1,89
+MAT145,Rafael Yago Martins,Física II,9.8,3.5,76
+MAT115,Yasmin Mendes,Álgebra Linear,0.2,9.0,51
+MAT182,Wanessa Ursula Ferreira,Engenharia de Software,4.5,5.3,82
+MAT479,Yasmin Mendes,Química Orgânica,9.7,0.1,78
+MAT319,Helena Teixeira,Química Orgânica,9.7,9.9,58
+MAT050,Zélio Samuel Almeida,Estrutura de Dados,1.1,2.2,80
+MAT156,Carlos Ricardo Lima,Lógica para Computação,0.1,3.1,94
+MAT333,Karla Oliveira,Cálculo II,0.3,4.2,89
+MAT462,Mariana Oliveira,Cálculo II,2.8,9.8,97
+MAT222,Olivia Viviane Lima,Probabilidade e Estatística,0.3,8.2,87
+MAT449,Karla Santos,Matemática Discreta,7.5,9.4,56
+MAT181,Nicolas Oliveira,Inteligência Artificial,3.3,7.4,56
+MAT197,João Pedro Pereira,Sistemas Operacionais,3.9,8.4,62
+MAT361,Helena Costa,Cálculo II,8.1,6.7,81
+MAT207,Eduardo Costa,Banco de Dados,7.7,5.5,57
+MAT491,Xavier Carvalho,Cálculo II,6.0,1.6,90
+MAT480,Vitória Carvalho,Segurança da Informação,4.9,1.3,79
+MAT403,Gabriel Monteiro,Química Geral,9.9,7.8,79
+MAT335,Karla Paula Gomes,Programação I,0.1,1.4,61
+MAT454,Isabela Santos,Estrutura de Dados,6.1,4.5,77
+MAT286,Mariana Ferreira,Engenharia de Software,4.5,6.6,93
+MAT271,Bruno Ribeiro,Sistemas Operacionais,7.4,5.3,71
+MAT007,Gabriel Ubirajara Martins,Cálculo II,6.5,9.5,55
+MAT332,Mariana Paula Barbosa,Redes de Computadores,9.2,0.4,76
+MAT193,Yuri Henrique Costa,Cálculo II,9.4,2.5,95
+MAT284,Eduardo Ferreira,Matemática Discreta,2.7,5.1,90
+MAT117,Daniela Gomes,Computação Gráfica,6.1,6.0,83
+MAT192,Miguel Barbosa,Lógica para Computação,4.1,4.6,92
+MAT193,Yuri Henrique Costa,Física I,8.8,4.7,97
+MAT470,Vinícius Xande Oliveira,Banco de Dados,8.8,3.7,81
+MAT133,Ximena Ursula Santos,Química Geral,0.7,0.8,78
+MAT134,Zuleide Ferreira,Química Orgânica,1.3,0.5,98
+MAT214,Eduardo Rocha,Inteligência Artificial,3.8,9.4,63
+MAT297,Rafael Ferreira,Segurança da Informação,8.3,6.0,93
+MAT254,Rafael Martins,Engenharia de Software,0.2,2.8,95
+MAT318,Bruno Lima,Probabilidade e Estatística,1.5,5.2,100
+MAT383,Miguel Ricardo Oliveira,Lógica para Computação,1.9,0.1,58
+MAT244,Fernanda Teixeira,Matemática Discreta,0.4,8.9,55
+MAT395,Sofia Tatiana Araújo,Engenharia de Software,2.6,5.8,100
+MAT217,Wagner Ubirajara Gomes,Estrutura de Dados,2.4,6.0,57
+MAT216,Tatiana Machado,Química Geral,6.8,1.6,59
+MAT273,Rafael Vitor Santos,Estrutura de Dados,2.5,2.2,79
+MAT034,Wanessa Lima,Lógica para Computação,4.7,4.6,54
+MAT254,Rafael Martins,Inteligência Artificial,6.0,8.5,76
+MAT254,Rafael Martins,Lógica para Computação,8.4,3.5,85
+MAT436,Tiago Pereira,Redes de Computadores,3.1,9.3,79
+MAT060,Miguel Almeida,Sistemas Operacionais,0.4,6.8,59
+MAT234,Rafael Ricardo Machado,Estrutura de Dados,1.3,2.4,53
+MAT375,Olivia Valéria Oliveira,Computação Gráfica,4.4,9.0,84
+MAT085,Ubirajara Ribeiro,Segurança da Informação,6.5,4.4,98
+MAT166,Yuri Ribeiro,Química Geral,6.3,1.9,100
+MAT208,Leonardo Ubirajara Martins,Lógica para Computação,8.5,0.4,79
+MAT073,Carlos Lucas Lima,Física II,8.6,8.1,99
+MAT255,Tatiana Elisa Mendes,Programação I,1.7,2.2,94
+MAT258,Isabela Paula Martins,Computação Gráfica,8.8,0.4,94
+MAT336,Yuri Rocha,Matemática Discreta,6.8,2.5,75
+MAT045,Pedro Zeca Santos,Cálculo I,1.9,0.5,82
+MAT136,Zuleide Teixeira,Engenharia de Software,7.9,3.3,61
+MAT196,Sofia Monteiro,Inteligência Artificial,8.5,6.1,56
+MAT065,Tiago Ferreira,Física I,2.0,7.0,94
+MAT210,João Pereira,Cálculo II,3.4,0.5,65
+MAT067,Carlos Ribeiro,Química Geral,6.4,8.3,55
+MAT004,Yasmin Zélia Costa,Banco de Dados,8.4,0.1,82
+MAT001,João Felipe Araújo,Cálculo II,3.2,0.7,73
+MAT274,Vinícius Júlio Mendes,Sistemas Operacionais,0.5,1.5,72
+MAT172,Isabela Viviane Teixeira,Programação I,1.5,7.0,66
+MAT400,Ana Giovana Barbosa,Redes de Computadores,5.7,1.6,81
+MAT362,Zuleide Carvalho,Química Geral,4.1,7.8,63
+MAT496,Eduardo Marcelo Souza,Programação II,3.7,3.5,89
+MAT277,Daniela Beatriz Ribeiro,Programação II,3.9,0.5,51
+MAT163,Joana Natália Rocha,Cálculo II,3.9,1.2,64
+MAT084,Eduardo Souza,Química Orgânica,4.2,2.9,50
+MAT110,Ximena Gomes,Cálculo II,9.2,4.2,96
+MAT328,Tatiana Valéria Souza,Cálculo I,6.4,0.7,70
+MAT437,Leonardo Oliveira,Química Orgânica,4.1,9.5,64
+MAT334,Wagner Vitor Araújo,Química Geral,4.5,2.5,81
+MAT258,Isabela Paula Martins,Engenharia de Software,1.6,1.6,92
+MAT210,João Pereira,Sistemas Operacionais,3.7,9.6,63
+MAT144,Daniela Ferreira,Computação Gráfica,5.5,6.8,52
+MAT005,Daniela Wanda Gomes,Inteligência Artificial,2.9,8.4,65
+MAT431,João Ricardo Barbosa,Probabilidade e Estatística,5.1,3.5,68
+MAT340,Isabela Rocha,Segurança da Informação,4.3,3.9,66
+MAT305,Xavier Felipe Barbosa,Banco de Dados,1.0,6.2,68
+MAT452,Ubirajara Araújo,Física II,5.6,2.9,54
+MAT156,Carlos Ricardo Lima,Inteligência Artificial,3.3,4.0,94
+MAT444,Rafael Barbosa,Álgebra Linear,2.2,9.9,63
+MAT435,Zuleide Viviane Lima,Física I,3.4,1.5,78
+MAT079,Thiago Gomes,Segurança da Informação,6.9,5.1,53
+MAT205,João Henrique Martins,Computação Gráfica,7.6,8.4,68
+MAT016,Tiago Pereira,Programação II,4.2,8.0,73
+MAT390,Nicolas Samuel Carvalho,Programação II,2.2,0.2,56
+MAT473,Leonardo Silva,Matemática Discreta,2.2,6.1,78
+MAT011,Leonardo Felipe Almeida,Física II,6.3,5.0,95
+MAT225,Isabela Ursula Monteiro,Computação Gráfica,8.0,4.5,66
+MAT251,Daniela Silvana Silva,Programação I,3.6,1.6,95
+MAT066,Ana Paula Carvalho,Cálculo II,2.9,1.0,51
+MAT295,Joana Rocha,Física I,6.7,2.3,77
+MAT425,Wanessa Paula Martins,Inteligência Artificial,1.2,6.9,70
+MAT245,Tatiana Giovana Gomes,Programação II,7.7,8.4,91
+MAT020,Wanessa Elisa Souza,Física I,0.7,7.5,81
+MAT088,Vitória Almeida,Química Orgânica,2.5,3.6,64
+MAT125,Rafael Marcelo Silva,Álgebra Linear,9.3,7.7,52
+MAT123,Eduardo Rocha,Programação II,4.9,6.6,98
+MAT176,Zuleide Mendes,Matemática Discreta,0.9,0.7,78
+MAT094,Isabela Viviane Carvalho,Banco de Dados,3.6,0.5,56
+MAT126,Vitória Valéria Ferreira,Engenharia de Software,3.0,1.1,100
+MAT192,Miguel Barbosa,Programação II,8.9,7.9,95
+MAT400,Ana Giovana Barbosa,Programação I,7.9,2.9,60
+MAT177,Sofia Giovana Oliveira,Inteligência Artificial,5.7,3.8,56
+MAT218,Yasmin Lara Lima,Banco de Dados,2.1,3.6,100
+MAT245,Tatiana Giovana Gomes,Lógica para Computação,9.0,2.9,72
+MAT272,Ximena Ferreira,Engenharia de Software,7.8,0.7,81
+MAT498,Miguel Araújo,Sistemas Operacionais,0.1,8.5,74
+MAT069,Karla Teixeira,Programação I,9.4,4.1,84
+MAT092,Nicolas Ricardo Machado,Redes de Computadores,8.4,4.5,66
+MAT236,Daniela Silva,Programação II,1.3,2.0,87
+MAT305,Xavier Felipe Barbosa,Química Orgânica,5.1,1.2,58
+MAT332,Mariana Paula Barbosa,Inteligência Artificial,6.3,0.9,53
+MAT265,Leonardo Raul Monteiro,Redes de Computadores,1.8,1.6,94
+MAT378,Gabriel Raul Rocha,Redes de Computadores,4.3,6.0,56
+MAT277,Daniela Beatriz Ribeiro,Química Orgânica,2.6,8.3,58
+MAT189,Gabriel Costa,Estrutura de Dados,6.6,9.5,100
+MAT116,João Almeida,Física I,4.7,6.2,54
+MAT013,Vinícius Samuel Mendes,Engenharia de Software,8.7,4.4,97
+MAT008,Joana Valéria Araújo,Química Geral,4.9,8.7,62
+MAT041,Miguel Costa,Computação Gráfica,4.3,2.6,65
+MAT394,Daniela Mendes,Química Geral,8.8,4.4,77
+MAT122,Sofia Teixeira,Estrutura de Dados,3.4,2.3,58
+MAT393,Joana Oliveira,Sistemas Operacionais,0.7,3.7,77
+MAT195,Wanessa Souza,Sistemas Operacionais,9.0,1.6,98
+MAT037,Wagner Nunes,Probabilidade e Estatística,4.7,4.9,61
+MAT118,Wanessa Natália Teixeira,Engenharia de Software,5.1,2.8,71
+MAT251,Daniela Silvana Silva,Banco de Dados,8.5,5.3,74
+MAT377,Zélio Henrique Carvalho,Banco de Dados,1.2,5.6,65
+MAT448,Pedro Nunes,Estrutura de Dados,2.5,6.1,68
+MAT064,Vinícius Júlio Ribeiro,Segurança da Informação,9.7,0.6,60
+MAT396,Ana Santos,Inteligência Artificial,6.5,7.3,93
+MAT231,Ubirajara Zeca Oliveira,Banco de Dados,4.6,1.5,90
+MAT347,Ubirajara Almeida,Cálculo I,9.1,8.6,58
+MAT124,Fernanda Souza,Álgebra Linear,9.9,9.6,89
+MAT075,Olivia Ferreira,Sistemas Operacionais,8.1,2.1,75
+MAT124,Fernanda Souza,Química Geral,1.6,1.3,94
+MAT149,Fernanda Almeida,Lógica para Computação,4.8,7.1,99
+MAT031,Gabriel Rocha,Química Geral,9.1,0.5,51
+MAT093,Sofia Beatriz Souza,Redes de Computadores,9.9,5.9,66
+MAT267,João Monteiro,Redes de Computadores,0.4,3.7,97
+MAT150,Vinícius Costa,Cálculo I,6.0,4.7,61
+MAT347,Ubirajara Almeida,Física II,1.3,9.9,68
+MAT326,Joana Monteiro,Lógica para Computação,9.3,1.1,69
+MAT463,Joana Monteiro,Programação II,5.9,4.5,54
+MAT369,Sofia Costa,Física II,4.5,1.0,53
+MAT072,Miguel Lucas Ribeiro,Redes de Computadores,3.1,1.4,54
+MAT326,Joana Monteiro,Programação I,9.0,9.5,85
+MAT490,Ximena Almeida,Estrutura de Dados,1.7,7.1,93
+MAT442,João Zeca Oliveira,Cálculo I,7.0,3.3,56
+MAT153,Tiago Felipe Ribeiro,Computação Gráfica,6.8,7.2,90
+MAT488,Fernanda Natália Araújo,Programação I,4.6,1.9,87
+MAT450,Carlos Raul Costa,Banco de Dados,6.8,4.3,90
+MAT480,Vitória Carvalho,Programação II,2.2,2.4,85
+MAT317,Wanessa Natália Souza,Álgebra Linear,3.9,4.2,54
+MAT041,Miguel Costa,Química Geral,9.4,4.7,72
+MAT331,João Machado,Engenharia de Software,0.3,6.3,77
+MAT188,Vitória Mendes,Programação I,9.4,7.0,50
+MAT319,Helena Teixeira,Estrutura de Dados,5.8,2.2,99
+MAT376,Bruno Gomes,Química Geral,5.2,5.5,88
+MAT453,Isabela Xuxa Ribeiro,Estrutura de Dados,1.0,8.2,51
+MAT178,Joana Cristina Mendes,Redes de Computadores,0.4,2.4,54
+MAT164,Yasmin Paula Ferreira,Segurança da Informação,5.0,9.1,66
+MAT029,Yuri Mendes,Redes de Computadores,0.4,0.2,73
+MAT179,Zélio Júlio Almeida,Física II,1.3,6.3,70
+MAT409,Xavier Alex Pereira,Física II,9.6,4.3,99
+MAT040,Helena Cristina Machado,Química Geral,3.6,7.6,57
+MAT408,Zuleide Lima,Lógica para Computação,1.7,7.6,69
+MAT161,Pedro Ubirajara Araújo,Engenharia de Software,7.3,7.7,54
+MAT366,Joana Almeida,Inteligência Artificial,8.5,6.5,84
+MAT159,Tiago Barbosa,Redes de Computadores,2.4,6.3,92
+MAT105,Wanessa Gomes,Cálculo I,9.9,0.5,65
+MAT447,Eduardo Felipe Oliveira,Álgebra Linear,3.2,3.3,72
+MAT370,Karla Xuxa Almeida,Física I,5.9,2.0,81
+MAT278,Leonardo Ubirajara Machado,Física II,4.4,4.4,53
+MAT459,Vinícius Barbosa,Álgebra Linear,1.3,6.8,88
+MAT414,Carlos Mendes,Banco de Dados,2.6,8.8,74
+MAT420,Wagner Martins,Álgebra Linear,9.9,7.7,68
+MAT251,Daniela Silvana Silva,Computação Gráfica,8.8,7.6,88
+MAT062,Gabriel Samuel Ferreira,Estrutura de Dados,1.2,0.8,61
+MAT500,Miguel Gomes,Engenharia de Software,8.2,6.1,75
+MAT012,Nicolas Ribeiro,Física I,0.0,5.7,75
+MAT300,Zuleide Paula Ferreira,Álgebra Linear,7.5,8.0,88
+MAT029,Yuri Mendes,Lógica para Computação,9.8,0.6,77
+MAT262,Fernanda Paula Ferreira,Cálculo II,6.3,9.3,61
+MAT407,Zélio Ribeiro,Inteligência Artificial,2.7,3.7,54
+MAT387,Olivia Paula Souza,Física II,8.2,2.5,85
+MAT273,Rafael Vitor Santos,Sistemas Operacionais,1.3,0.0,71
+MAT064,Vinícius Júlio Ribeiro,Lógica para Computação,4.1,3.6,79
+MAT316,Yuri Lucas Teixeira,Segurança da Informação,5.8,3.2,78
+MAT347,Ubirajara Almeida,Física I,2.8,9.1,70
+MAT053,Karla Tatiana Carvalho,Computação Gráfica,2.0,2.8,99
+MAT462,Mariana Oliveira,Física II,5.3,7.7,83
+MAT003,Miguel Santos,Química Orgânica,6.6,5.4,77
+MAT302,Ubirajara Lucas Monteiro,Redes de Computadores,0.8,2.9,53

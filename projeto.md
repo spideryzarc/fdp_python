@@ -1,8 +1,13 @@
 ---
-title: "Cronograma: Fundamentos de Programação"
-author: Albert E. F. Muritiba
-date: 22-02-2024
-output: pdf_document
+title: "Projeto Final: Análise de Desempenho Acadêmico com Python"
+author: "Albert E. F. Muritiba"
+date: "12/02/2025"
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 2
+mainfont: "Times New Roman"
+geometry: margin=1in
 ---
 
 # Projeto Final: Análise de Desempenho Acadêmico com Python
@@ -10,77 +15,84 @@ output: pdf_document
 ## Objetivo Geral
 Desenvolver um programa em Python para realizar a análise estatística de um conjunto de dados fictício de desempenho acadêmico. O objetivo é aplicar conceitos de programação aprendidos ao longo do semestre, incluindo manipulação de coleções, uso de funções, cálculos estatísticos e visualizações gráficas.
 
----
+
+
+## Restrições
+
+Para fins didáticos, não será permitido o uso da biblioteca `pandas`, porque ela já fornece todas as funcionalidades necessárias para a análise de dados. O objetivo é que vocês apliquem os conceitos aprendidos em aula para realizar a leitura, estruturação e análise dos dados de forma manual.
+
+
 
 ## Conjunto de Dados
-Um arquivo CSV será fornecido contendo informações sobre o desempenho de uma turma fictícia. O formato será:
+Um arquivo CSV será fornecido contendo informações sobre o desempenho acadêmico de uma faculdade fictícia. O arquivo terá as seguintes colunas:
 
-| ID   | Nome               | Disciplina       | Nota1 | Nota2 | Frequência (%) |
+| MAT  | Nome               | Disciplina       | Nota1 | Nota2 | Frequência (%) |
 |------|--------------------|------------------|-------|-------|----------------|
 | 1    | Ana Beatriz Silva  | Estatística      | 8.5   | 7.0   | 90             |
 | 2    | João Alex Pereira  | Matemática       | 6.0   | 5.5   | 75             |
 | ...  | ...                | ...              | ...   | ...   | ...            |
 
----
+
 
 ## Requisitos do Programa
 
 ### 1. **Leitura e Estruturação dos Dados**
-   - Importar os dados do arquivo CSV utilizando a biblioteca `pandas`.
-   - Mostrar as 5 primeiras linhas dos dados no console para validação.
+   - Importar os dados do arquivo CSV fornecido.
+   - Mostrar as 5 primeiras e últimas linhas do conjunto de dados.
+   - Imprimir a lista dos alunos sem repetições.
+   - Exibir a lista de disciplinas sem repetições.
 
 ### 2. **Cálculos Estatísticos**
    - Calcular as seguintes estatísticas:
      - Média, mediana e desvio padrão das notas (separadas por disciplina).
-     - Frequência média da turma.
-   - Identificar os alunos com desempenho abaixo da média em cada disciplina.
+     - Qual disciplina tem a maior e menor média de notas.
+     - Frequência média dos alunos.
+     - Quantidade de alunos aprovados, em recuperação e reprovados:
+       - Aprovado: Média das notas >= 7.0 e Frequência >= 75%.
+       - Recuperação: Média das notas >= 5.0 e < 7.0 e Frequência >= 75%.
+       - Reprovado: Média das notas < 5.0 ou Frequência < 75%.
 
 ### 3. **Classificação do Desempenho**
-   - Criar uma nova coluna indicando a situação do aluno:
-     - **"Aprovado"**: Média ≥ 7 e frequência ≥ 75%.
-     - **"Recuperação"**: 5 ≤ Média < 7.
-     - **"Reprovado"**: Média < 5 ou frequência < 75%.
+   - Calcular as seguintes estatísticas:
+     - Média, mediana e desvio padrão das notas (separadas por aluno).
+     - Top 3 alunos com a maior e menor média geral.
+     - Top 3 alunos com a maior e menor frequência.
+   - Para cada disciplina:
+     - Quantidade de alunos aprovados, em recuperação e reprovados.
+     - Identificar os alunos acima da média da disciplina.
+     - Identificar os alunos com frequência abaixo de 75%.      
 
-### 4. **Visualizações Gráficas**
-   - Criar os seguintes gráficos:
-     - Histograma das notas (Nota1 e Nota2 separadamente).
-     - Gráfico de barras com a distribuição de alunos por situação ("Aprovado", "Recuperação", "Reprovado").
-     - Boxplot para comparar a dispersão das notas por disciplina.
 
-### 5. **Modularização**
-   - Estruturar o programa em funções bem definidas:
+### 4. **Modularização**
+   - Estruturar o programa em funções bem definidas, como:
      - `ler_dados()`: Leitura e carregamento dos dados.
      - `calcular_estatisticas()`: Realização dos cálculos estatísticos.
      - `classificar_alunos()`: Determinação da situação dos alunos.
-     - `gerar_graficos()`: Criação e exibição dos gráficos.
+   - Utilizar funções auxiliares para facilitar a organização do código.
 
----
 
-## Exemplo de Fluxo do Programa
-1. **Leitura do Arquivo**: 
-   - O programa lê o arquivo CSV e exibe as primeiras linhas para confirmação.
-2. **Cálculo de Estatísticas**: 
-   - O usuário escolhe calcular as estatísticas gerais ou apenas de uma disciplina.
-3. **Classificação de Alunos**: 
-   - A situação dos alunos é determinada e exibida.
-4. **Geração de Gráficos**: 
-   - Gráficos são exibidos para visualizar os dados de maneira intuitiva.
 
----
+
+## Saída do Programa
+
+Além de exibir as informações na tela, o programa deve gerar um arquivo de texto, relatório, contendo as estatísticas calculadas. O arquivo deve ser estruturado de forma clara e organizada, facilitando a leitura e interpretação dos resultados independentemente do código fonte.
+
+
 
 ## Avaliação
-- **Funcionalidade do Código**: 50%
-- **Organização do Código**: 20%
-- **Qualidade das Visualizações**: 20%
-- **Documentação e Relatório**: 10%
 
----
+- **Funcionalidade do Código**: 60%
+- **Organização do Código**: 20%
+- **Qualidade do Relatório**: 20%
+
+
 
 ## Entrega
 - **Formato**: Arquivo Python (.py) contendo o código e um relatório com as respostas para as análises realizadas.
 - **Data**: Até o último dia do semestre.
+- **Método de Submissão**: Enviar os arquivos na plataforma de ensino utilizada pela disciplina.
 
----
+
 
 ## Observação
 O conjunto de dados fictício será gerado e fornecido pelo professor, utilizando um script Python. O arquivo conterá informações simuladas para garantir que todos os alunos trabalhem com o mesmo material.

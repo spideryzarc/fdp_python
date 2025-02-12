@@ -1500,7 +1500,7 @@ p = &x; // Atribui o endereço de x ao ponteiro p
 ### Passagem de argumentos por referência
 
 - Em *C*, argumentos de funções são passados por **valor** por padrão.
-- Alterar um argumento dentro deuma função, não afeta a variável original.
+- Alterar um argumento dentro de uma função, não afeta a variável original.
 
 ```c
 void dobro(int x){
@@ -1532,5 +1532,168 @@ int main(){
 ```
 <br>
 
-> A reutilização de `&` e `*` faz a coisa parecer mais confusa do que realmete é.  
+> A reutilização de `&` e `*` faz a coisa parecer mais confusa do que realmente é.  
 
+---
+
+Nosso primeiro contato com ponteiros será com a função `scanf`.
+
+```c
+int x;
+scanf("%d", &x);
+```
+
+- `scanf` lê um inteiro do teclado e armazena na variável `x`.
+- `&` é usado para passar o **endereço de memória** de `x` para `scanf`.
+- `scanf` altera o valor de `x` **indiretamente**.
+
+---
+
+# Alocação dinâmica de memória
+
+Em Python, estamos acostumados a criar listas e dicionários sem nos preocupar com a memória. Em *C*, a memória é gerenciada manualmente.
+
+---
+
+## Alocando memória
+
+Há quatro funções principais para alocar e liberar memória em *C*:
+
+- `malloc`: aloca um bloco de memória.
+- `calloc`: aloca um bloco de memória e o inicializa com zero.
+- `realloc`: altera o tamanho de um bloco de memória.
+- `free`: libera um bloco de memória alocado.
+- Todas essas funções estão disponíveis na biblioteca `stdlib.h`.
+
+---
+
+### `malloc`
+
+- `malloc` aloca um bloco de memória de um tamanho específico.
+- Retorna um ponteiro para o início do bloco de memória alocado.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int *p = (int *)malloc(sizeof(int));
+    *p = 10;
+    printf("%d", *p); // Imprime 10
+    free(p); // Libera a memória alocada
+    return 0;
+}
+```
+
+- `sizeof` é um operador que retorna o tamanho em bytes de um tipo de dado.
+
+---
+
+### `calloc`
+
+- `calloc` aloca um bloco de memória de um tamanho específico e o **inicializa com zero**.
+- `calloc` recebe dois argumentos: o número de elementos e o tamanho de cada elemento.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int *p = (int *)calloc(1, sizeof(int));
+    printf("%d", *p); // Imprime 0
+    free(p); // Libera a memória alocada
+    return 0;
+}
+```
+
+---
+
+### `free`
+
+- `free` libera um bloco de memória alocado.
+- O ponteiro passado para `free` deve ser o mesmo que foi retornado por `malloc`, `calloc` ou `realloc`.
+- A ausência ou má utilização de `free` pode causar **vazamento de memória** (*memory leak*).
+- Linguagens de alto nível, como Python, gerenciam a memória automaticamente, se uma variável não é mais usada, a memória é liberada automaticamente.
+- Em *C*, o programador é responsável por liberar a memória alocada.
+
+---
+
+#### Alocando vetores dinamicamente
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int n;
+    scanf("%d", &n);
+    int *v = (int *)malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+        v[i] = i;
+    for (int i = 0; i < n; i++)
+        printf("%d ", v[i]);
+    free(v); // Libera a memória alocada
+    return 0;
+}
+```
+
+- `v` é um vetor de `n` inteiros alocado dinamicamente.
+- isto é, o tamanho do vetor é determinado em tempo de execução.
+
+---
+
+- Vetores alocados dinamicamente são **mais flexíveis** que vetores estáticos.
+- Podem ser maiores que o tamanho máximo permitido em vetores estáticos.
+- O tamanho do vetor não fica armazenado, automaticamente, em lugar nenhum.
+- O programador é totalmente responsável por gerenciar o vetor.
+- Um vetor em *C* é apenas um **ponteiro** para o primeiro elemento do vetor.
+  - `v[0]` é equivalente a `*v`.	
+  - `v` é equivalente a `&v[0]`.
+  - por isso, ao ler uma *string* com `scanf`, não devemos usar `&`.
+
+
+<br><br>
+
+> *C* possui *aritimética de ponteiros*, que permite acessar elementos de um vetor de forma mais direta, mas não vamos abordar isso neste curso.
+
+
+---
+
+### `realloc`
+
+- `realloc` altera o tamanho de um bloco de memória alocado.
+- `realloc` recebe dois argumentos: o ponteiro para o bloco de memória e o novo tamanho.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int *p = (int *)malloc(sizeof(int)); // Aloca espaço para um inteiro
+    *p = 10;
+    p = (int *)realloc(p, 2 * sizeof(int)); // Realoca espaço para dois inteiros
+    p[1] = 20;
+    printf("%d %d", p[0], p[1]); // Imprime 10 20
+    free(p); // Libera a memória alocada
+    return 0;
+}
+```
+> o retorno de `realloc` deve ser atribuído ao ponteiro original.
+
+<!-- _footer: "" -->
+
+---
+
+### Alocação dinâmica de matrizes
+
+Não abordaremos a alocação dinâmica de matrizes neste curso, mas é possível alocar matrizes dinamicamente em *C*.
+
+
+
+---
+
+# Exercícios
+
+Escreva um programa em *C* que:
+1. Lê um número inteiro `n` do teclado e aloca um vetor de `n` inteiros dinamicamente. Preenche o vetor com os números de `1` a `n` e imprime o vetor.
+2. Lê um número inteiro `n` do teclado e aloca uma vetor de `n` inteiros dinamicamente. Preenche o vetor com a sequência de Fibonacci de tamanho `n` e imprime o vetor.
+3. Lê um número inteiro `n` do teclado e aloca uma vetor de `n` inteiros dinamicamente. Lê `n` números do teclado e imprime o vetor, o maior, o menor número e a média dos números.
+
+
+---
