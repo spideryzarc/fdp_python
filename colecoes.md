@@ -28,10 +28,11 @@ Neste módulo, vamos estudar as **coleções** em Python. As coleções são est
 
 ---
 
+No módulo anterior, vimos que uma variável pode armazenar **um valor**. Por exemplo, a variável `x` pode armazenar o valor `10`.
+  
 # E se ...?
 
-* No módulo anterior, vimos que uma variável pode armazenar **um valor**. Por exemplo, a variável `x` pode armazenar o valor `10`.
-* Mas, e se quisermos armazenar dois valores?
+* quisermos armazenar dois valores?
   * Criamos duas variáveis `x` e `y`, certo?
 * E se quisermos armazenar 100 valores?
   * Criamos 100 variáveis, `x1`, `x2`, ..., `x100` , certo?
@@ -50,6 +51,7 @@ Obviamente, criar uma variável para cada valor não é prático. Para armazenar
   * **Dicionários** (`dict`)
 
 ---
+
 # Listas
 
 * Uma lista é uma coleção de valores, onde cada valor é identificado por um **índice** correspondente à sua **posição** na lista.
@@ -64,7 +66,7 @@ numeros = [1, 2, 3, 4, 5]
 ## Características gerais de uma lista
 
 - Uma lista pode conter **qualquer tipo de valor**.
-- Uma mesma lista pode conter **valores de tipos diferentes** (heterogênea).
+- Uma **mesma** lista pode conter **valores de tipos diferentes** (heterogênea).
 - Uma lista **não é um conjunto**, ou seja, 
   - os valores podem se **repetir**.
   - a **ordem** dos valores é importante.
@@ -91,12 +93,14 @@ print(lista)
 - Para acessar um elemento de uma lista, usamos o **índice** do elemento.
 - Python é ***zero based***, ou seja, os índices começam **sempre** em 0.
 - Portanto, o maior indice de uma lista com `n` elementos é `n-1`.
-- Por exemplo, para acessar o primeiro elemento da lista `numeros`, fazemos:
+- Por exemplo, 
 
 ```python
 numeros = [1, 2, 3, 4, 5]
-print(numeros[0]) 
+print(numeros[0])  # Acessa o primeiro elemento
 >>> 1
+print(numeros[4])  # Acessa o último elemento
+>>> 5
 ```
 
 ---
@@ -162,7 +166,7 @@ print(B)
 >>> [10, 5, 6]
 ```
 
-> O que aconteceu?
+- O que aconteceu?
 
 ---
 
@@ -216,7 +220,7 @@ Se desejamos **copiar** o conteúdo de uma lista para outra, sem que as listas s
 
 ```python
 A = [1, 2, 3]
-B = A.copy() # ou B = A[:]
+B = A.copy() # ou B[:] = A[:]
 B[0] = 10
 print(A)
 >>> [1, 2, 3]
@@ -269,9 +273,9 @@ print(numeros)
 >>> [1, 2, 10, 3, 4, 5]
 ```
 
-> A **posição** deve ser entre `0` e o tamanho da lista.
-> Os valores **após a posição** são **deslocados** para a direita.
-> Portanto, o método `insert` é **menos eficiente** que o `append`.
+- A **posição** deve ser entre `0` e o tamanho da lista.
+- Os valores **após a posição** são **deslocados** para a direita.
+- Portanto, o método `insert` é **menos eficiente** que o `append`.
 
 ---
 
@@ -286,7 +290,7 @@ print(numeros)
 
 <br>
 
-> **Experimente**, usar `append` no lugar de `extend` e veja o que acontece, o resultado é o mesmo?
+> **Experimente** usar `append` no lugar de `extend` e veja o que acontece, o resultado é o mesmo?
 
 ---
 
@@ -334,10 +338,8 @@ del numeros[2] # Remove o valor na posição 2
 print(numeros)
 >>> [1, 2, 4, 5]
 ```
-<br>
-<br>
 
-> Mais adiante, vamos ver que o comando `del` pode ser usado para remover vários elementos de uma lista de uma só vez.
+
 ---
 
 - Para remover **todos os elementos** de uma lista, usamos o método `clear`. [doc](https://docs.python.org/3/tutorial/datastructures.html)
@@ -380,7 +382,7 @@ resultado = numeros * 3
 print(resultado)
 >>> [1, 2, 3, 1, 2, 3, 1, 2, 3]
 ```
-
+- É muito comum usar a multiplicação de listas para criar listas com valores **iniciais**.
 ```python
 zeros = [0] * 5
 print(zeros)
@@ -516,16 +518,17 @@ while i < len(numeros):
 
 ## Listas (*modo hacker*)
 
-- Para se exibir para os amigos. você precisa dominar os conceitos de:
+- Para impressionar os amigos. você precisa dominar os conceitos de:
   - ***List Comprehension***
   - ***Slicing***
 
+![bg right:40%](images/young.jpg)
 
 ---
 
 ### *List Comprehension*
 
-- É uma forma **concisa** de criar listas em Python.
+- Forma **concisa** de criar listas em Python.
 - A sintaxe é:
   ```python
   [expressao for item in sequencia]
@@ -537,6 +540,8 @@ while i < len(numeros):
 
 ---
 #### Exemplos
+
+Criando uma lista com os quadrados dos números de 1 a 5:
 
 - Modo careta:
   ```python
@@ -571,7 +576,7 @@ while i < len(numeros):
 
 ---
 
-### *Slicing*
+### Fatiamento (*Slicing*)
 
 - É uma forma de **acessar** partes de uma lista através de **índices**.
 - Também conhecido como *fancy indexing*.
@@ -585,7 +590,7 @@ while i < len(numeros):
   - São os mesmos parâmetros da função `range`.
 
 
-![bg right:35% 90%](images/sir.png)
+![bg right:33% 90% drop-shadow](images/sir.png)
 
 ---
 
@@ -620,47 +625,28 @@ while i < len(numeros):
 
 ---
 
-##### Copiando uma lista:
-```python
-  numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-```
-
-- Modo plebeu:
-  ```python
-  copia = []
-  for i in numeros:
-      copia.append(i)
-  ```
-- Modo burguês:
-  ```python
-  copia = numeros.copy()
-  ```
-- Modo aristocrático:
-  ```python
-  copia = numeros[:]
-  ```
----
-
 ##### Invertendo uma lista:
 ```python
   numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-- Modo plebeu:
+- Modo *plebeu*:
   ```python
   for i in range(len(numeros)//2):
       aux = numeros[i]
       numeros[i] = numeros[-i-1]
       numeros[-i-1] = aux      
   ```
-- Modo burguês:
+- Modo *burguês*:
   ```python
   numeros.reverse()
   ```
-- Modo aristocrático:
+- Modo *aristocrático*:
   ```python
   numeros = numeros[::-1]
   ```
+
+![bg left:40% 90% drop-shadow](images/sir.png)
 
 ---
 
@@ -677,77 +663,80 @@ Usando *Comprehension* ou *Slicing*:
 
 ### Algoritmos básicos com listas
 
-- **Máximo** e **mínimo** de uma lista.
-  - modo careta:
-    ```python
-    maximo = numeros[0]
-    minimo = numeros[0]
-    for i in numeros:
-        if i > maximo:
-            maximo = i
-        if i < minimo:
-            minimo = i
-    ```
-  - modo descolado:
-    ```python
-    maximo = max(numeros) 
-    minimo = min(numeros)
-    ```
+#### **Máximo** e **mínimo** de uma lista.
+- modo *careta*:
+  ```python
+  maximo = numeros[0]
+  minimo = numeros[0]
+  for i in numeros:
+      if i > maximo:
+          maximo = i
+      if i < minimo:
+          minimo = i
+  ```
+- modo *descolado*:
+  ```python
+  maximo = max(numeros) 
+  minimo = min(numeros)
+  ```
 ---
 
-- **Soma** e **produto** dos elementos de uma lista.
-  - modo careta:
-    ```python
-    soma = 0
-    produto = 1
-    for i in numeros:
-        soma += i
-        produto *= i
-    ```
-  - modo descolado:
-    ```python
-    import math
-    soma = sum(numeros)
-    produto = math.prod(numeros)
-    ```
+#### **Soma** e **produto** dos elementos de uma lista.
+
+- modo *careta*:
+  ```python
+  soma = 0
+  produto = 1
+  for i in numeros:
+      soma += i
+      produto *= i
+  ```
+- modo *descolado*:
+  ```python
+  import math
+  soma = sum(numeros)
+  produto = math.prod(numeros)
+  ```
 
 ---
 
-- **Média** dos elementos de uma lista.
-  - modo careta:
-    ```python
-    soma = 0
-    for i in numeros:
-        soma += i
-    media = soma / len(numeros)
-    ```
-  - modo descolado:
-    ```python
-    media = sum(numeros) / len(numeros)
-    ```
-  - modo aristocrático:
-    ```python
-    from statistics import mean
-    media = mean(numeros)
-    ```
+#### **Média** dos elementos de uma lista.
+
+- modo *careta*:
+  ```python
+  soma = 0
+  for i in numeros:
+      soma += i
+  media = soma / len(numeros)
+  ```
+- modo *descolado*:
+  ```python
+  media = sum(numeros) / len(numeros)
+  ```
+- modo *aristocrático*:
+  ```python
+  from statistics import mean
+  media = mean(numeros)
+  ```
 ---
 
-- **Contagem** de elementos em uma lista. "Quantos `3` tem na lista?"
-  - modo careta:
-    ```python
-    contagem = 0
-    for i in numeros:
-        if i == 3:
-            contagem += 1
-    ```
-  - modo descolado:
-    ```python
-    contagem = numeros.count(3)
-    ```
+#### **Contagem** de elementos em uma lista. "Quantos `3` tem na lista?"
+- modo careta:
+  ```python
+  contagem = 0
+  for i in numeros:
+      if i == 3:
+          contagem += 1
+  ```
+- modo descolado:
+  ```python
+  contagem = numeros.count(3)
+  ```
 
-> É importante **conhecer** e **praticar** os modos careta, pois eles **reforçam** os conceitos básicos de programação e algoritmos. Contudo, é **mais eficiente** usar os modos descolado e aristocrático, pois eles são **mais rápidos** e **concisos**.
+> É importante **conhecer** e **praticar** os modos *careta*, pois eles **reforçam** os conceitos básicos de programação e algoritmos. Contudo, é **mais eficiente** usar os modos *descolado* e *aristocrático*, pois eles são **mais rápidos** e **concisos**.
 ---
-### Observações sobre listas
+
+### Alguns comentários
 
 * `max`, `min` e `sum` são exemplos de ***built-in functions***, ou seja, funções **nativas** do Python.
 * **Python é lento** e há uma **grande diferença de performance** entre um algoritmo escrito **passo-a-passo** em Python e um ***built-in function***.
@@ -760,7 +749,7 @@ Usando *Comprehension* ou *Slicing*:
 #### <!--fit --> Dizem que no Python, <br>**"menos é mais"**. Ou seja,<br> menos código<br>é mais **eficiente**, <br>é mais **elegante**.
 
 <!-- _class: invert -->
-<!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/dark_wood2.jpg') -->
+<!-- _backgroundImage: url("https://spideryzarc.github.io/labCD/bg/dark_wood2.jpg") -->
 
 ![bg right:20%](empty.svg)
 
@@ -838,7 +827,7 @@ print(t)
   >>> <generator object <genexpr> at 0x7f7f7f7f7f70>
   ```
 
-> **Geradores** são um tema avançado e serão abordados mais adiante.
+> **Geradores** são um tema avançado e não serão abordados neste curso.
 
 
 ---
@@ -919,13 +908,13 @@ Temos duas variáveis `a` e `b` e queremos trocar seus valores entre si (*swap*)
   a = 10
   b = 20
 ```
-- Modo careta:
+- Modo *careta*:
   ```python
   aux = a
   a = b
   b = aux
   ```
-- Modo descolado:
+- Modo *descolado*:
   ```python
   a, b = b, a
   ```
@@ -939,7 +928,7 @@ Temos duas variáveis `a` e `b` e queremos trocar seus valores entre si (*swap*)
 pontos = [(1, 2), (3, 4), (5, 6)]
 ```
 
-- Modo careta:
+- Modo *careta*:
   ```python
   for ponto in pontos:
     x = ponto[0]
@@ -947,7 +936,7 @@ pontos = [(1, 2), (3, 4), (5, 6)]
     print(x)
     print(y)
   ```
-- Modo descolado:
+- Modo *descolado*:
   ```python
   for x, y in pontos:
     print(x)
@@ -978,6 +967,7 @@ Usando tuplas:
 pares = {2, 4, 6}
 ```
 - Com poucas exceções, são **semelhantes** aos conjuntos da matemática.
+
 ---
 
 ### Características gerais de um conjunto
@@ -986,7 +976,7 @@ pares = {2, 4, 6}
 - Um conjunto **não** garante a **ordem** dos valores.
 - Um conjunto **não** suporta **índices** ou **slicing**.
 - Nem  todos os tipos de valores podem ser armazenados em um conjunto.
-  - Todos os tipos primitivos podem ser armazenados em um conjunto.
+  - Todos os **tipos primitivos podem ser armazenados** em um conjunto.
   - Listas, dicionários e outros conjuntos **não** podem ser armazenados em um conjunto.
 
 ---
@@ -1444,6 +1434,8 @@ print(d)
 >>> {'Alice': 9.5, 'Bob': 8.0, 'Carol': 7.5}
 ```
 
+<!-- _footer: '' -->
+
 ---
 
 ### Iterando sobre dicionários
@@ -1464,6 +1456,9 @@ print(d)
   for chave, valor in notas.items():
       print(chave, valor)
   ```
+
+<!-- _footer: '' -->
+
 ---
 
 ### Exercícios de fixação

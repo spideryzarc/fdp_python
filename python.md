@@ -24,7 +24,7 @@ style: |
 
 ![bg vertical right:35% 80%](empty.svg)
 
-<!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/light_desk.jpg') -->
+<!-- _backgroundImage: url('images/light_desk.jpg') -->
 <!-- _footer: "" -->
 ---
 
@@ -127,7 +127,7 @@ Você inventasse uma máquina que pudesse receber os **ingredientes** e a **rece
 ---
 
 <!-- _class: invert -->
-<!-- _backgroundImage: url('https://spideryzarc.github.io/labCD/bg/dark_lamp.jpg') -->
+<!-- _backgroundImage: url('images/dark_lamp.jpg') -->
 
 ##### <!--fit --> Saber **programar** é <br>saber **escrever a receita**<br> para  a **máquina** que faz o<br> **bolo**.
 
@@ -744,6 +744,8 @@ print(z)
 >>> True
 ```
 
+<!-- _footer: '' -->
+
 ---
 
 ### Teste Surpresa
@@ -862,9 +864,11 @@ print(y)
 9. leia três valores e exiba a média aritmética.
   
 
+<!-- _footer: '' -->
+
 ---
 
-## Tipo *String*
+# *Strings* (introdução)
 
 - `str`: Sequência de caracteres.
 - **Literais**:
@@ -876,7 +880,7 @@ print(y)
 
 ---
 
-### Conversão para *String*
+## Conversão para *String*
 
 - **str()**: Converte para string. [doc](https://docs.python.org/3/library/functions.html#func-str)
 
@@ -887,7 +891,7 @@ print(y)
 >>> "10"
 ```
 
-<br>
+<br><br>
 
 
 > Veremos **bem mais** sobre *strings* em aulas futuras, por enquanto, vamos focar em **números**.
@@ -896,9 +900,9 @@ print(y)
 
 # Comentários
 
-- **Comentários** são trechos de texto ignorados pelo interpretador.
+- **Comentários** são trechos de texto **ignorados** pelo interpretador.
 - São utilizados para **documentar** o código.
-- As vezes, são utilizados para **desativar** trechos de código para **depuração**.
+- As vezes, são utilizados para **desativar** trechos de código para **depuração** ou **teste**.
 - Em Python, os comentários são iniciados com `#`.
 
 ```python
@@ -906,14 +910,14 @@ print(y)
 print("Hello, World!")  # Este é outro comentário
 ```
 
-> Tudo após o `#` é ignorado pelo interpretador.
+- Tudo a direita o `#` é ignorado pelo interpretador.
 
 ---
 
 ## Comentários de Múltiplas Linhas
 
 - Python não possui um **comentário de múltiplas linhas**,
-- mas é possível utilizar **strings de múltiplas linhas**.
+- mas é possível utilizar **strings de múltiplas linhas** para o mesmo efeito.
 
 ```python
 """
@@ -922,23 +926,17 @@ de múltiplas linhas.
 """
 print("Hello, World!")
 ```
-
-> As strings de múltiplas linhas são **ignoradas** pelo interpretador, já que não são **atribuídas** a nenhuma variável.
+- As strings de múltiplas linhas são **ignoradas** pelo interpretador, já que não são **atribuídas** a nenhuma variável.
 
 ---
 
 # Seleção 
 
-- **Seleção** é a capacidade de **tomar decisões** com base em **condições**.
-- Também é conhecida como **estrutura de decisão** ou **desvio condicional**.
-- **Condição**: Expressão lógica que pode ser **verdadeira** ou **falsa**.
-- **Estrutura de Seleção**:
-  ```python
-  if condicao:
-      # bloco de código
-  ```
+É a capacidade de **tomar decisões** com base em **condições**.Também é conhecida como **estrutura de decisão** ou **desvio condicional**.
 
-> Outros tipos de variáveis podem ser usados em condições e são **convertidos** para *booleano* automaticamente. Vamos guardar isso para quando estivermos mais avançados.
+
+![bg left:40% 90% drop-shadow](images/desvio.png)
+
 ---
 
 ## Estrutura `if`
@@ -963,7 +961,7 @@ Antes de continuar, vamos falar sobre **bloco de código**.
 
 - Um **bloco de código** é um conjunto de instruções **alinhadas**.
 - O **alinhamento** é feito com **espaços** ou **tabulações**. (Dê preferência a **tabulações**).
-- Ao contrário de outras linguagens, Python **não** possui **delimitadores de bloco** (como `{}` nas linguagens C-like).
+- Ao contrário de outras linguagens, Python **não** possui **delimitadores de bloco** (como `{}` nas linguagens *C-like*).
 - Portanto, o **alinhamento** é **obrigatório** e interfere na **semântica** do código.
 
 ---
@@ -991,15 +989,15 @@ print("Fim")
 
 ---
 
-# Exemplos Errados
+# Exemplos de Erros
 
 ```python
 if x > 5:
-print("x é maior que 5")
+print("x é maior que 5") 
 ```
 ```python
 if x > 5:
-    print("x é maior que 5")
+    print("x é maior que 5") 
   print("Isso está errado")
 ```
 ```python
@@ -1020,7 +1018,7 @@ if x > 5: print("x é maior que 5")
 
 ```python
 if x > 5:
-    pass
+    pass # não faz nada
 print("Fim")    
 ```
 
@@ -1028,8 +1026,6 @@ print("Fim")
 
 ## Estrutura `if-else`
 
-- Se a **condição** for verdadeira, somente o **bloco de código 1** é executado.
-- Se a **condição** for falsa, somente o **bloco de código 2** é executado.
 
 ```python
 if condicao:
@@ -1037,6 +1033,8 @@ if condicao:
 else:
     # bloco de código 2
 ```
+- Se a **condição** for verdadeira, somente o **bloco de código 1** é executado.
+- Se a **condição** for falsa, somente o **bloco de código 2** é executado.
 
 
 ![bg right:40% 90% drop-shadow](images/if_else.drawio.svg)
@@ -1120,7 +1118,7 @@ else:
     # bloco de código 6  
 ```
 
-> Há uma outra estrutura chamada `match-case` que é mais recente e mais poderosa, mas não vamos abordá-la mais a frente.
+> Há uma outra estrutura chamada `match-case` que é mais recente e mais poderosa, mas não vamos abordá-la. [saiba mais](https://hub.asimov.academy/tutorial/entendendo-o-match-case-em-python/)
 
 ---
 
@@ -1147,6 +1145,9 @@ else:
 5. leia três valores e exiba se eles podem formar um triângulo. Caso positivo, exiba o tipo de triângulo (equilátero, isósceles ou escaleno). Dica: para formar um triângulo, a soma de dois lados menores deve ser maior que o terceiro lado.
 6. leia três valores e exiba a mediana.
 7. Um ano é bissexto se for divisível por 4, exceto os anos que são divisíveis por 100 mas não por 400. Leia um ano e exiba se ele é bissexto.
+
+
+<!-- _footer: '' -->
 
 ---
 
@@ -1243,7 +1244,8 @@ while x != 10:
 
 Para efeitos **didáticos**, vamos utilizar a **leitura de um número inteiro** para exemplificar algoritmos elementares. Quando o valor lido for 0, o *loop* **termina**.  
 
-- **Máximo ou Mínimo**: Encontrar o maior ou menor valor de uma sequência.
+### **Máximo ou Mínimo**
+Encontrar o maior ou menor valor de uma sequência.
 
 ```python
 x = int(input("Digite um número: "))
@@ -1253,30 +1255,29 @@ while x != 0: # Condição de parada
     x = int(input("Digite um número: "))
 print("Maior:", maior)
 ```
-
-> Modifique o código para encontrar o **menor** valor.
+- Modifique o código para encontrar o **menor** valor.
 
 ---
 
-- **Contagem**: Contar quantos elementos de uma sequência satisfazem uma condição.
+### **Contagem** 
+Contar quantos elementos de uma sequência satisfazem uma condição.
 
 ```python 
 x = int(input("Digite um número: "))
 cont = 0 #inicializa a variável com zero
 while x != 0:
-    if x % 2 == 0: cont = cont + 1 #incrementa o contador se o número for par
+    if x % 2 == 0: 
+      cont = cont + 1 #incrementa o contador se o número for par
     x = int(input("Digite um número: "))
 print("Quantidade de pares:", cont)
 ```
 
-<br>
-<br>
-
-> Modifique o código para contar a quantidade de **ímpares**.
+-  Modifique o código para contar a quantidade de **ímpares**.
 
 ---
 
-- **Somatório ou Produto**: Calcular a soma ou o produto dos elementos de uma sequência.
+## **Somatório ou Produto**
+Calcular a soma ou o produto dos elementos de uma sequência.
 
 ```python
 x = int(input("Digite um número: "))
@@ -1286,31 +1287,33 @@ while x != 0:
     x = int(input("Digite um número: "))
 print("Soma:", soma)
 ```
-<br>
-<br>
-
-> Modifique o código para calcular o **produto**.
-
->Modifique o código para calcular o **produto** apenas dos **ímpares** digitados.
+- Modifique o código para calcular o **produto**.
+- Modifique o código para calcular o **produto** apenas dos **ímpares** digitados.
 
 ---
 
-## Alguns Comentários
+## Alguns Comentários sobre *Loops*
 
 * **Variáveis de controle** devem ser **inicializadas** antes do *loop*.
-* Algumas pessoas podem ter dificuldade com a utilização de *loops*.
+* Algumas pessoas podem ter **dificuldade** com a utilização de *loops*.
 * **Prática** é a melhor forma de aprender a utilizá-los.
 * **Erros** são **normais** e **esperados**.
-  > Um quadro não é pintado linearmente, mas sim em camadas. Um livro não é escrito linearmente, mas sim em rascunhos e revisões. 
-  **Um programa não é escrito linearmente, mas sim em testes e correções.**
+  
+> Um quadro não é pintado linearmente, mas sim em camadas. Um livro não é escrito linearmente, mas sim em rascunhos e revisões. 
+
+### <!--fit--> **Um programa não é escrito linearmente, <br>mas sim em testes e correções.**
 
 ---
+
+## *Level Up*
 
 * Um programa linear é fácil de entender,
 * um programa com *if's* fica um pouco mais complicado, mas ainda é fácil, pois é possível **visualizar** todas as possibilidades.
-* Um programa com *loops* é mais complicado, pois é necessário **acompanhar** o estado das variáveis ao longo das iterações.
+* Um programa com *loops* é mais complicado, pois é necessário **acompanhar** o estado das variáveis ao longo das inúmeras iterações.
 
 ![bg right:50%](images/giphy_73bd40af.gif)
+
+<!-- _footer: '' -->
 
 ---
 
@@ -1319,7 +1322,6 @@ print("Soma:", soma)
 É um conceito **avançado**, mas que pode ajudar a entender o que um *loop* faz ou se ele está correto.
 
 - **Invariante**: Propriedade que é **verdadeira** antes e depois de cada **iteração**.
-- **Exemplo**:
   ```python
   n = int(input("Digite um número: "))
   soma = 0
@@ -1329,7 +1331,7 @@ print("Soma:", soma)
       soma = soma + x
   print(soma)
   ```
-  >**Invariante**: no fim de cada iteração, `soma` é a soma dos `x` primeiros números naturais.
+- No fim de cada iteração, `soma` é a soma dos `x` primeiros números naturais.
 
 ---
 
@@ -1355,9 +1357,8 @@ print("Soma:", soma)
 
 ## Estrutura `for`
 
-- Um bloco de código é executado **para cada elemento** de uma sequência.
-- A variável recebe cada elemento da sequência e o bloco de código é executado com a váriavel assumindo aquele valor.
-- **Sintaxe**:
+- Um bloco de código é executado **para cada elemento** de uma **sequência**.
+- A variável recebe cada elemento da sequência e o bloco de código é executado com a variável assumindo aquele valor.
   ```python
   for variavel in sequencia:
       # bloco de código
@@ -1541,20 +1542,19 @@ Uma vez que o número é encontrado, não há necessidade de continuar o *loop*.
 Geralmente usamos o `continue` para evitar aninhamento excessivo.
 
 ```python
-for i in range(3):
-    for j in range(3):
-        if i != j:
-            # bloco de código longo
+for i in range(100):
+  if i != 10:
+    # bloco de código que não deve ser executado para i == 10
 ```
 Alternativa com `continue`:
 ```python
-for i in range(3):
-    for j in range(3):
-        if i == j: continue
-        # bloco de código longo
+for i in range(100):
+  if i == 10:
+    continue
+  # bloco de código que não deve ser executado para i == 10
 ```
 
-Observe que o `bloco de código longo` fica menos deslocado.
+Observe que o `bloco de código longo` fica menos deslocado para a direita.
 
 > É bem **raro** usar `continue` quando estamos aprendendo, mas é bom saber que ele existe.
 
@@ -1563,7 +1563,8 @@ Observe que o `bloco de código longo` fica menos deslocado.
 ---
 
 ### `for` sem variável
-As vezes, não precisamos da variável do `for`.
+
+As vezes, não precisamos da variável do `for`, apenas queremos repetir um bloco de código um número fixo de vezes.
 
 ```python
 for _ in range(10):
@@ -1579,9 +1580,19 @@ O `_` é uma **convenção** para indicar que a variável não é usada.
 
 `for` e `while` podem ter um bloco de código `else`, porém vamos adiar a explicação desse conceito para mais adiante para não confundir com o `else` de `if`.
 
+```python
+for x in range(2,n):
+    if n % x == 0:
+        print("Não é primo")
+        break
+else:
+    print("É primo")
+```
+
+<br>
 <br>
 
-> Me lembrem de falar sobre o `else` em *loops* mais adiante.
+> Esse é um dos conceitos mais **confusos** e **específicos** de Python, então vamos deixar para mais adiante.
 
 ---
 
@@ -1598,6 +1609,7 @@ O `_` é uma **convenção** para indicar que a variável não é usada.
   x %= 5    # x = x % 5
   x **= 6   # x = x ** 6
   ```
+<br>
 
 > Python **não** possui operadores de incremento e decremento (`++` e `--`) bastante comuns em outras linguagens.
    
@@ -1616,8 +1628,8 @@ print(soma)
 
 ```python
 #fatorial de 5
-fatorial = 1
-for x in range(1, 6):
+fatorial = 1 
+for x in range(2, 6):
     fatorial *= x # É o mesmo que fatorial = fatorial * x
 print(fatorial)
 ```
@@ -1690,6 +1702,9 @@ print("Não é 5")
    - [ ] sei ler/interpretar, mas não sei escrever/criar.
    - [ ] sei ler/interpretar e escrever/criar.
 
+
+<!-- _footer: '' -->
+
 ---
 
 6. Em relação a estruturas de **Repetição**:
@@ -1714,11 +1729,9 @@ print("Não é 5")
 
 Este primeiro módulo foi uma **introdução** ao Python e à programação. Aprendemos sobre **variáveis**, **tipos de dados**, **operações aritméticas**, **saída de dados**, **entrada de dados**, **estruturas de seleção** e **estruturas de repetição**.
 
-Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso. No próximo módulo, vamos aprender sobre **coleções**.	
+Alguns do temas já abordados serão **revisitados e aprofundados** ao longo do curso. 
 
 
-
-
-
+![bg right:50% fit drop-shadow](images/caverna.jpg)
 
 

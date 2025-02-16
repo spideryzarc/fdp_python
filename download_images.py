@@ -9,7 +9,7 @@ from urllib.parse import urlsplit, unquote
 yes_to_all = "-y" in sys.argv
 
 if len(sys.argv) < 2:
-    print("Uso: python script.py <arquivo.md>")
+    print("Uso: python download_images.py <arquivo.md>")
     sys.exit(1)
 
 # Caminho do arquivo Markdown passado como argumento
@@ -22,7 +22,9 @@ if not os.path.exists(images_dir):
 
 def download_image(url):
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                       "AppleWebKit/537.36 (KHTML, like Gecko) "
+                       "Chrome/88.0.4324.150 Safari/537.36")
     }
     try:
         response = requests.get(url, headers=headers, stream=True)
@@ -40,7 +42,7 @@ def download_image(url):
     
     local_path = os.path.join(images_dir, filename)
     
-    # Adiciona um hash da URL ao nome do arquivo para garantir unicidade se o arquivo já existir
+    # Se o arquivo já existir, adicione um hash curto à nomenclatura para garantir unicidade
     if os.path.exists(local_path):
         url_hash = hashlib.md5(url.encode('utf-8')).hexdigest()[:8]
         filename, ext = os.path.splitext(filename)
@@ -57,10 +59,10 @@ def download_image(url):
 with open(md_file_path, "r", encoding="utf-8") as file:
     content = file.read()
 
-# Expressão regular para encontrar a sintaxe de imagem Markdown: ![texto](url)
-pattern = r'(!\[[^\]]*\]\()([^\)]+)(\))'
+# Expressão regular para encontrar imagens no padrão Markdown: ![texto](url)
+pattern_md = r'(!\[[^\]]*\]\()([^\)]+)(\))'
 
-def process_match(match):
+def process_match_md(match):
     inicio, url, fim = match.groups()
     if url.startswith("http://") or url.startswith("https://"):
         print(f"\nImagem encontrada: {url}")
@@ -74,8 +76,29 @@ def process_match(match):
                 return f"{inicio}{local_filename}{fim}"
     return match.group(0)
 
-# Atualiza o conteúdo do Markdown com os novos links conforme decisão do usuário
-new_content = re.sub(pattern, process_match, content)
+# Atualiza os links de imagens no formato Markdown
+new_content = re.sub(pattern_md, process_match_md, content)
+
+# Expressão regular para encontrar imagens de fundo no padrão de comentário:
+# Ex: <!-- _backgroundImage: url('https://...') -->
+pattern_bg = r'(<!--\s*_backgroundImage:\s*url\((["\'])([^"\']+)\2\)\s*-->)'
+
+def process_match_bg(match):
+    full_match, quote, url = match.group(1), match.group(2), match.group(3)
+    if url.startswith("http://") or url.startswith("https://"):
+        print(f"\nImagem de fundo encontrada: {url}")
+        if yes_to_all:
+            escolha = 's'
+        else:
+            escolha = input("Deseja substituir essa imagem de fundo por uma cópia local? [s/n]: ").strip().lower()
+        if escolha == 's':
+            local_filename = download_image(url)
+            if local_filename:
+                return f"<!-- _backgroundImage: url({quote}{local_filename}{quote}) -->"
+    return match.group(0)
+
+# Atualiza os links de imagens de fundo no conteúdo
+new_content = re.sub(pattern_bg, process_match_bg, new_content)
 
 # Sobrescreve o arquivo Markdown com as alterações
 with open(md_file_path, "w", encoding="utf-8") as file:
